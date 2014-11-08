@@ -64,6 +64,10 @@ module.exports = function (grunt) {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
+      less: {
+        files: ['<%= config.app %>/styles/{,*/}*.less'],
+        tasks: ['less:dist']
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -115,6 +119,17 @@ module.exports = function (grunt) {
         options: {
           base: '<%= config.dist %>',
           livereload: false
+        }
+      }
+    },
+
+    less: {
+      dist: {
+        options: {
+          paths: ["<%= config.app %>"]
+        },
+        files: {
+          "<%= config.app %>/styles/main.css": "<%= config.app %>/styles/afv.less"
         }
       }
     },

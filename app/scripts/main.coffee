@@ -16,6 +16,8 @@ window.AFV = do ->
   currentYear = 1994
   interval = null
 
+  DURATION = 1000
+
 
   tilesUrl = "https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png"
   attributions =
@@ -30,6 +32,7 @@ window.AFV = do ->
   _init = ->
     _initLineChart()
     _initCarbonEmissions()
+    _yearsHeatMap()
     map = L.map('map', _options).setView([36.421, -71.411], 4)
 
     zoom = L.control.zoom
@@ -48,7 +51,7 @@ window.AFV = do ->
       #   width: 60
       #   initial: currentYear
       #   duration: 1000
-      AFV.countSlider.init(1994, 2011, 1000, $('#year'))
+      AFV.years.init(1000, $('#year'))
 
       interval = setInterval ->
         if currentYear is 2010
@@ -58,7 +61,8 @@ window.AFV = do ->
           style: _getStyle
           onEachFeature: _onEachFeature
         ).addTo(map)
-      , 1000
+        AFV.years.setActiveYear(currentYear)
+      , DURATION
     )
 
   _onEachFeature = (feature, layer) ->
@@ -90,7 +94,11 @@ window.AFV = do ->
     opacity: 0.8
     color: '#fff'
     fillOpacity: 0.9
-    fillColor: getColor(feature.properties[currentYear])
+    fillColor: yearsScale(feature.properties[currentYear])
+
+  yearsScale = d3.scale.linear()
+        .domain([100000, 1000])
+        .range(['#bd0000', '#ff9090'])
 
   # get color depending on population density value
   getColor = (d) ->
@@ -186,6 +194,9 @@ window.AFV = do ->
     #   ]
 
     return
+
+  _yearsHeatMap =  (years) ->
+    years = us_total_afv_line_y
 
   init: ->
     _init()
