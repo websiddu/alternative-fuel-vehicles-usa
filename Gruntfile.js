@@ -28,6 +28,21 @@ module.exports = function (grunt) {
     // Project settings
     config: config,
 
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built from %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:websiddu/alternative-fuel-vehicles-usa.git',
+          branch: 'gh-pages'
+        }
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -418,6 +433,8 @@ module.exports = function (grunt) {
     'usemin',
     'htmlmin'
   ]);
+
+  grunt.registerTask('deploy', 'Deploy to Github Pages', ['build', 'buildcontrol']);
 
   grunt.registerTask('default', [
     'newer:jshint',

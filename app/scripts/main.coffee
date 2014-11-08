@@ -11,6 +11,10 @@ window.AFV = do ->
     # maxBounds: bounds
     zoomControl: false
 
+  min = 990
+  max = 66366
+  currentYear = 1994
+  interval = null
 
 
   tilesUrl = "https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png"
@@ -25,6 +29,7 @@ window.AFV = do ->
 
   _init = ->
     _initLineChart()
+    _initCarbonEmissions()
     map = L.map('map', _options).setView([36.421, -71.411], 4)
 
     zoom = L.control.zoom
@@ -36,10 +41,24 @@ window.AFV = do ->
     tiles.addTo(map);
 
     d3.json('data/us.states.json', (err, data) ->
-      statesLayer = L.geoJson(data,
-        style: _getStyle
-        onEachFeature: _onEachFeature
-      ).addTo(map)
+
+      # $('#year').kCounter
+      #   easing: 'swing'
+      #   height: 60
+      #   width: 60
+      #   initial: currentYear
+      #   duration: 1000
+      AFV.countSlider.init(1994, 2011, 1000, $('#year'))
+
+      interval = setInterval ->
+        if currentYear is 2010
+          clearInterval(interval)
+        currentYear+=1
+        statesLayer = L.geoJson(data,
+          style: _getStyle
+          onEachFeature: _onEachFeature
+        ).addTo(map)
+      , 1000
     )
 
   _onEachFeature = (feature, layer) ->
@@ -66,16 +85,63 @@ window.AFV = do ->
     # info.update(layer.feature.properties);
 
   _getStyle = (feature) ->
+
     weight: 1
     opacity: 0.8
     color: '#fff'
     fillOpacity: 0.9
-    fillColor: getColor(feature.properties.density)
+    fillColor: getColor(feature.properties[currentYear])
 
   # get color depending on population density value
   getColor = (d) ->
-    (if d > 1000 then "#8c2d04" else (if d > 500 then "#cc4c02" else (if d > 200 then "#ec7014" else (if d > 100 then "#fe9929" else (if d > 50 then "#fec44f" else (if d > 20 then "#fee391" else (if d > 10 then "#fff7bc" else "#ffffe5")))))))
+    low = [ # color of smallest datum
+      11
+      70
+      90
+    ]
+    high = [ # color of largest datum
+      15
+      82
+      45
+    ]
 
+    # delta represents where the value sits between the min and max
+    delta = (d - min) / (max - min)
+    color = []
+    i = 0
+
+    while i < 3
+      # calculate an integer color based on the delta
+      color[i] = (high[i] - low[i]) * delta + low[i]
+      i++
+    clr =  "hsl(#{color[0]}, #{color[1]}%, #{color[2]}%)"
+    return clr
+
+
+    # (if d > 10000 then "#8c2d04" else (if d > 5000 then "#cc4c02" else (if d > 2000 then "#ec7014" else (if d > 100 then "#fe9929" else (if d > 50 then "#fec44f" else (if d > 20 then "#fee391" else (if d > 10 then "#fff7bc" else "#ffffe5")))))))
+
+
+
+  _initCarbonEmissions = ->
+    nv.addGraph ->
+      chart = nv.models.lineChart()
+        .useInteractiveGuideline(true)
+        .transitionDuration(350)
+        .showLegend(true)
+        .showYAxis(true)
+        .showXAxis(true)
+
+      chart.xAxis
+        .axisLabel('Year')
+        .tickFormat(d3.format('r'))
+
+      chart.yAxis
+        .axisLabel('Count (thousnds)')
+
+      d3.select('#linegraph-carbon svg')
+          .datum(window.us_total_carbon)
+          .call(chart);
+      chart
 
   _initLineChart = ->
     nv.addGraph ->
@@ -94,14 +160,32 @@ window.AFV = do ->
         .axisLabel('Count (thousnds)')
         .tickFormat (d) ->
           parseInt(d/1000) + 'K'
-
-      console.log window.us_total_afv_line
-
       d3.select('#linegraph svg')
           .datum(window.us_total_afv_line)
           .call(chart);
       chart
+    # $('#linegraph').highcharts
+    #   chart:
+    #     type: "line"
 
+    #   title:
+    #     text: "Total AFV's"
+
+    #   xAxis:
+    #     categories: window.years
+
+    #   yAxis:
+    #     title:
+    #       text: false
+
+    #   series: [
+    #     {
+    #       name: "AFV"
+    #       data: window.us_total_afv_line_y
+    #     }
+    #   ]
+
+    return
 
   init: ->
     _init()

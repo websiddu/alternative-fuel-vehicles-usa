@@ -72,7 +72,14 @@ us_total_afv = [
     x: 2011
     y: 1191786
   }
+  # {
+  #   x: 2012
+  #   y: 1191786
+  # }
 ]
+
+window.years = [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012]
+window.us_total_afv_line_y = [4486, 22227, 353995, 380352, 383847, 407542, 455838, 425458, 471098, 531708, 564986, 589767, 634205, 695318, 775103, 823322, 938643, 1191786]
 
 
 us_toatl_veh = [
@@ -154,14 +161,49 @@ us_toatl_veh = [
   }
 ]
 
+
+total_carbon_emissions = [
+  # { x: 1990, y: 31.08}
+  # { x: 1991, y: 30.65}
+  # { x: 1992, y: 31.10}
+  # { x: 1993, y: 31.62}
+  { x: 1994, y: 32.33}
+  { x: 1995, y: 32.99}
+  { x: 1996, y: 33.95}
+  { x: 1997, y: 34.34}
+  { x: 1998, y: 35.08}
+  { x: 1999, y: 36.00}
+  { x: 2000, y: 36.85}
+  { x: 2001, y: 36.45}
+  { x: 2002, y: 37.25}
+  { x: 2003, y: 37.26}
+  { x: 2004, y: 38.60}
+  { x: 2005, y: 39.15}
+  { x: 2006, y: 39.76}
+  { x: 2007, y: 40.10}
+  { x: 2008, y: 37.83}
+  { x: 2009, y: 36.61}
+  { x: 2010, y: 37.07}
+  { x: 2011, y: 36.53}
+  { x: 2012, y: 35.87}
+]
+
+
 window.us_total_afv_line = [
   {
     values: us_total_afv
-    key: 'Number of AF Vehicles'
+    key: 'AF Vehicles'
   }
   {
     values: us_toatl_veh
-    key: 'Number of Vehicles'
+    key: 'All Vehicles'
   }
 ]
 
+window.us_total_carbon = [
+  {
+    values: total_carbon_emissions
+    key: "Carbon emissions"
+    color: "red"
+  }
+]
