@@ -20,6 +20,9 @@ window.AFV = do ->
 
   _playerData = null
 
+  popup = new L.Popup({ autoPan: false })
+  closeTooltip = null
+
 
   tilesUrl = "https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png"
   attributions =
@@ -66,6 +69,7 @@ window.AFV = do ->
     , DURATION
 
   _renderCMap = ->
+    map.removeLayer(statesLayer) if statesLayer?
     statesLayer = L.geoJson(_playerData,
       style: _getStyle
       onEachFeature: _onEachFeature
@@ -73,13 +77,59 @@ window.AFV = do ->
 
   _onEachFeature = (feature, layer) ->
     layer.on
-      mouseover: highlightFeature
-      mouseout: resetHighlight
+      mousemove: _highlightFeature
+      mouseout: _resetHighlight
+      click: _loadStatesRelatedGraphs
 
-  resetHighlight = (e) ->
+  _loadStatesRelatedGraphs = (e) ->
+    AFV.pausePlayer()
+    statesLayer.setStyle _setDisableStyle
+    _highlightOnClick(e.target)
+
+  _highlightOnClick = (layer) ->
+    layer.setStyle
+      weight: 1,
+      color: '#fff',
+      dashArray: '',
+      fillOpacity: 1
+
+  _setDisableStyle = (e) ->
+    weight: 0
+    color: '#666'
+    dashArray: ''
+    fillOpacity: 0.7
+
+  _resetHighlight = (e) ->
     statesLayer.resetStyle(e.target)
+    closeTooltip = window.setTimeout(->
+      map.closePopup()
+      return
+    , 100)
 
-  highlightFeature = (e) ->
+    # layer = e.target
+
+    # layer.setStyle
+    #   weight: 1
+    #   opacity: 0.8
+    #   color: '#fff'
+    #   fillOpacity: 0.9
+
+  _highlightFeature = (e) ->
+    layer = e.target
+    popup.setLatLng e.latlng
+    popup.setContent "<div class=\"marker-title\">" + layer.feature.properties.name + "</div>" + layer.feature.properties.density + " people per square mile"
+    popup.openOn map  unless popup._map
+    window.clearTimeout closeTooltip
+
+    # highlight feature
+    layer.setStyle
+      weight: 3
+      opacity: 0.3
+      fillOpacity: 0.9
+
+    layer.bringToFront()  if not L.Browser.ie and not L.Browser.opera
+
+
     layer = e.target
 
     layer.setStyle
