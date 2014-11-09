@@ -16,7 +16,7 @@ window.AFV = do ->
   currentYear = 1994
   interval = null
 
-  DURATION = 1000
+  DURATION = 700
 
   _playerData = null
 
@@ -43,8 +43,10 @@ window.AFV = do ->
     tiles = L.tileLayer(tilesUrl, attributions)
 
     map.addControl(zoom)
-    tiles.addTo(map);
+    tiles.addTo(map)
+    _renderMasterMap()
 
+  _renderMasterMap = ->
     d3.json('data/us.states.json', (err, data) ->
       _playerData = data
       _initPlayer()
