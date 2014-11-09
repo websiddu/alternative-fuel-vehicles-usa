@@ -6,22 +6,34 @@ AFV.years = do ->
   afvCount = window.us_total_afv_line_y
   windowWidth = window.innerWidth
   windowHeight = window.innerHeight
-  yearsWidth = windowWidth/1.82 - 60
+  yearsWidth = windowWidth/1.82
 
   yearsScale = d3.scale.linear()
         .domain([afvCount[afvCount.length - 1], afvCount[0]])
         .range(['#900019', '#ff859a'])
         #.range(if (typeMode) then ['#00363b', '#00d7ed'] else ['#3c0d15', '#f13452'])
 
-  _init = (duraiton, target) ->
+  _init = (target) ->
+    # Render the years UI
+    _renderYearsUI(target)
+    # Bind all the events
+    _bindEvents()
+    # Initilize the tooltip
+    _initTooltip()
+
+  _renderYearsUI = (target) ->
     yearsCount = years.length
-    yearWidth = yearsWidth/yearsCount
+    yearWidth = yearsWidth/(yearsCount + 1)
     i = 0
+    playPauseButton = """
+      <div class="playControls js_play_pause_controls" data-play-state="play" style='width: #{yearWidth}px'><em class="icon icon-pause js_play_pause_icon"></em></div>
+    """
+    target.append(playPauseButton)
+
     while i < yearsCount
-      console.log yearsScale(afvCount[i])
       toolTipContent = "<b class=afv-tooltip-title>#{afvCount[i]}</b> <br> Alt Fuel Vehicles"
       yearHtml = """
-        <div class="year-box js_tooltip" data-year='#{years[i]}' style='width: #{yearWidth}px;' data-toggle="tooltip" data-placement="top" data-original-title="#{toolTipContent}">
+        <div class="year-box js_tooltip js_year" data-year='#{years[i]}' style='width: #{yearWidth}px;' data-toggle="tooltip" data-placement="top" data-original-title="#{toolTipContent}">
           <div class="year-bar" style='background-color:#{yearsScale(afvCount[i])} '></div>
           <span class="year-text">#{years[i]}</span>
         </div>
@@ -29,18 +41,49 @@ AFV.years = do ->
       i++
       target.append(yearHtml)
 
-    # Initilize the tooltip
-    _initTooltip()
+  _bindEvents = ->
+    $(document).on 'click', '[data-year]', _handleYearClick
+    $(document).on 'click', '.js_play_pause_controls', _handlePlayer
+
+  _handlePlayer = (event) ->
+    _this = ($ @)
+    currentPlayState = _this.data('playState')
+    if currentPlayState is 'play'
+      AFV.pausePlayer()
+      _this.data('playState', 'pause')
+      _setPlayPauseIcon('play')
+    else
+      AFV.resumePlayer()
+      _this.data('playState', 'play')
+      _setPlayPauseIcon('pause')
 
 
+
+  _setPlayPauseIcon = (playerState) ->
+    ($ '.js_play_pause_icon').removeClass('icon-play icon-pause').addClass("icon-#{playerState}")
+
+  _clearHighlights = ->
+    ($ "[data-year]").removeClass('active')
+
+  _handleYearClick = (event) ->
+    year = ($ @).data('year')
+    AFV.pausePlayer()
+    AFV.years.setActiveYear(year)
+    AFV.loadCurrentYearMap(year)
 
   _initTooltip = ->
     $("[data-toggle='tooltip']").tooltip
       container: 'body'
       html: true
+      animation: true
+
+  reachedEnd: ->
+    playPauseButton = ($ '.js_play_pause_controls')
+    playPauseButton.data('playState', 'pause')
+    _setPlayPauseIcon('play')
 
   setActiveYear: (year) ->
-    ($ "[data-year]").removeClass('active')
+    _clearHighlights()
     ($ "[data-year='#{year}']").addClass('active')
 
   init: _init

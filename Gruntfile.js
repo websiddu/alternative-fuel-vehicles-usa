@@ -49,6 +49,10 @@ module.exports = function (grunt) {
         files: ['bower.json'],
         tasks: ['wiredep']
       },
+      webfont: {
+        files: ['<%= config.app %>/fonts/{,*/}*.svg'],
+        tasks: ['webfont:icons']
+      },
       coffee: {
         files: ['<%= config.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
         tasks: ['coffee:dist']
@@ -76,10 +80,34 @@ module.exports = function (grunt) {
           '<%= config.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '.tmp/scripts/{,*/}*.js',
-          '<%= config.app %>/images/{,*/}*'
+          '<%= config.app %>/images/{,*/}*',
+          '<%= config.app %>/fonts/{,*/}*'
         ]
       }
     },
+
+    webfont: {
+      icons: {
+        src: '<%= config.app %>/fonts/icons/*.svg',
+        dest: '<%= config.app %>/fonts/',
+        destCss: '<%= config.app %>/styles/utils/',
+        syntax: 'bootstrap',
+
+        options: {
+          stylesheet: 'less',
+          relativeFontPath: '../fonts/',
+          destHtml: '<%= config.app %>/fonts/',
+          font: 'icons',
+          hashes: false,
+          templateOptions: {
+            classPrefix: 'icon-'
+          }
+
+        },
+
+      }
+    },
+
 
     // The actual grunt server settings
     connect: {

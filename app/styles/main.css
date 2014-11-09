@@ -5497,7 +5497,7 @@ button.close {
   color: #ffffff;
   text-align: center;
   text-decoration: none;
-  background-color: #434a54;
+  background-color: #da4453;
   border-radius: 4px;
 }
 .tooltip-arrow {
@@ -5512,52 +5512,52 @@ button.close {
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #434a54;
+  border-top-color: #da4453;
 }
 .tooltip.top-left .tooltip-arrow {
   bottom: 0;
   left: 5px;
   border-width: 5px 5px 0;
-  border-top-color: #434a54;
+  border-top-color: #da4453;
 }
 .tooltip.top-right .tooltip-arrow {
   bottom: 0;
   right: 5px;
   border-width: 5px 5px 0;
-  border-top-color: #434a54;
+  border-top-color: #da4453;
 }
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
-  border-right-color: #434a54;
+  border-right-color: #da4453;
 }
 .tooltip.left .tooltip-arrow {
   top: 50%;
   right: 0;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
-  border-left-color: #434a54;
+  border-left-color: #da4453;
 }
 .tooltip.bottom .tooltip-arrow {
   top: 0;
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #434a54;
+  border-bottom-color: #da4453;
 }
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
   left: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #434a54;
+  border-bottom-color: #da4453;
 }
 .tooltip.bottom-right .tooltip-arrow {
   top: 0;
   right: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #434a54;
+  border-bottom-color: #da4453;
 }
 .popover {
   position: absolute;
@@ -7237,6 +7237,39 @@ Interactive Layer
 }
 .nvd3 line.nv-guideline {
   stroke: #ccc;
+}
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg?#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon {
+  font-family: "icons";
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-pause:before {
+  content: "\f101";
+}
+.icon-play:before {
+  content: "\f102";
 }
 @charset "UTF-8";
 /*!
@@ -10222,4 +10255,21 @@ header h1 {
 .afv-tooltip-title {
   font-weight: bold;
   font-size: 14px;
+}
+.playControls {
+  background: #ddd;
+  height: 45px;
+  float: left;
+  line-height: 45px;
+  text-align: center;
+  font-size: 22px;
+  color: #888;
+  transition: all 0.5s ease-in;
+}
+.playControls:hover {
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+.playControls:hover em {
+  color: #000;
 }

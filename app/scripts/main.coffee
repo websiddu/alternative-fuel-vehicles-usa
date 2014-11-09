@@ -18,6 +18,8 @@ window.AFV = do ->
 
   DURATION = 1000
 
+  _playerData = null
+
 
   tilesUrl = "https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png"
   attributions =
@@ -44,32 +46,33 @@ window.AFV = do ->
     tiles.addTo(map);
 
     d3.json('data/us.states.json', (err, data) ->
-
-      # $('#year').kCounter
-      #   easing: 'swing'
-      #   height: 60
-      #   width: 60
-      #   initial: currentYear
-      #   duration: 1000
-      AFV.years.init(1000, $('#year'))
-
-      interval = setInterval ->
-        if currentYear is 2010
-          clearInterval(interval)
-        currentYear+=1
-        statesLayer = L.geoJson(data,
-          style: _getStyle
-          onEachFeature: _onEachFeature
-        ).addTo(map)
-        AFV.years.setActiveYear(currentYear)
-      , DURATION
+      _playerData = data
+      _initPlayer()
+      AFV.years.init($('#year'))
     )
+
+  _initPlayer = ->
+    interval = setInterval ->
+      if currentYear > 2011
+        currentYear = 1994
+        AFV.pausePlayer()
+        AFV.years.reachedEnd()
+      else
+        _renderCMap()
+        AFV.years.setActiveYear(currentYear)
+        currentYear+=1
+    , DURATION
+
+  _renderCMap = ->
+    statesLayer = L.geoJson(_playerData,
+      style: _getStyle
+      onEachFeature: _onEachFeature
+    ).addTo(map)
 
   _onEachFeature = (feature, layer) ->
     layer.on
       mouseover: highlightFeature
       mouseout: resetHighlight
-
 
   resetHighlight = (e) ->
     statesLayer.resetStyle(e.target)
@@ -89,7 +92,6 @@ window.AFV = do ->
     # info.update(layer.feature.properties);
 
   _getStyle = (feature) ->
-
     weight: 1
     opacity: 0.8
     color: '#fff'
@@ -98,7 +100,7 @@ window.AFV = do ->
 
   yearsScale = d3.scale.linear()
         .domain([100000, 1000])
-        .range(['#bd0000', '#ff9090'])
+        .range(['#b70101', '#ec8787'])
 
   # get color depending on population density value
   getColor = (d) ->
@@ -195,8 +197,20 @@ window.AFV = do ->
 
     return
 
+
+
   _yearsHeatMap =  (years) ->
     years = us_total_afv_line_y
+
+  loadCurrentYearMap: (year) ->
+    currentYear = year
+    _renderCMap()
+
+  pausePlayer: ->
+    clearInterval(interval)
+
+  resumePlayer: ->
+    _initPlayer()
 
   init: ->
     _init()

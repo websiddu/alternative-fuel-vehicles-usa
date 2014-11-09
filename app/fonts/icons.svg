@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20141029 at Sat Nov  8 12:43:08 2014
+ By sid
+Copyright (c) 2014, sid
+</metadata>
+<defs>
+<font id="icons" horiz-adv-x="512" >
+  <font-face 
+    font-family="icons"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 5 9 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="0 -64 512 448"
+    underline-thickness="25"
+    underline-position="-52"
+    unicode-range="U+F101-F102"
+  />
+<missing-glyph 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".notdef" 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" 
+ />
+    <glyph glyph-name="uniF101" unicode="&#xf101;" 
+d="M256 -64q-106 0 -181 75t-75 181t75 181t181 75t181 -75t75 -181t-75 -181t-181 -75zM256 428q-98 0 -167 -69t-69 -167t69 -167t167 -69t167 69t69 167t-69 167t-167 69zM230 74h-82v236h82v-236zM169 95h41v194h-41v-194zM364 74h-82v236h82v-236zM302 95h41v194h-41
+v-194z" />
+    <glyph glyph-name="uniF102" unicode="&#xf102;" 
+d="M256 427q-97 0 -166 -69t-69 -166t69 -166t166 -69t166 69t69 166t-69 166t-166 69zM256 448q106 0 181 -75t75 -181t-75 -181t-181 -75t-181 75t-75 181t75 181t181 75zM181 70q-1 0 -5 2q-5 3 -5 9v222q0 6 5 9q6 4 11 0l192 -111q5 -3 5 -9t-5 -9l-192 -111
+q-4 -2 -6 -2zM192 284v-184l160 92z" />
+  </font>
+</defs></svg>
