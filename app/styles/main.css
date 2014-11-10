@@ -5840,6 +5840,7 @@ button.close {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
   box-shadow: none;
+  display: none;
 }
 .leaflet-container .leaflet-control-attribution a,
 .leaflet-container .map-info-container a {

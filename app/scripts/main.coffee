@@ -22,6 +22,7 @@ window.AFV = do ->
 
   popup = new L.Popup({ autoPan: false })
   closeTooltip = null
+  aStateIsActive = false
 
 
   tilesUrl = "https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png"
@@ -76,70 +77,86 @@ window.AFV = do ->
     ).addTo(map)
 
   _onEachFeature = (feature, layer) ->
+    feature.properties.isActive = false
     layer.on
-      mousemove: _highlightFeature
+      mousemove: _showTooltip
+      mouseover: _highlightFeature
       mouseout: _resetHighlight
       click: _loadStatesRelatedGraphs
 
   _loadStatesRelatedGraphs = (e) ->
-    AFV.pausePlayer()
-    statesLayer.setStyle _setDisableStyle
-    _highlightOnClick(e.target)
+    if e.target.feature.properties['isActive'] isnt true
+      statesLayer.eachLayer (layer) ->
+        layer.feature.properties.isActive = false
+
+      # map.fitBounds(layer.getBounds())
+      statesLayer.setStyle _setDisableStyle
+      aStateIsActive = true
+      AFV.pausePlayer()
+      e.target.setStyle _highlightOnClick(e)
+      e.target.feature.properties['isActive'] = true
+    else
+      statesLayer.eachLayer (layer) ->
+        layer.setStyle _getStyle(layer.feature)
+      aStateIsActive = false
+      e.target.feature.properties['isActive'] = false
+
+  _highlightFeature = (e) ->
+    e.target.setStyle _getHoverStyles(e)
+
+  _getHoverStyles = (e) ->
+    if aStateIsActive and e.target.feature.properties.isActive isnt true
+      weight: 2
+      color: '#fff'
+      dashArray: ''
+      fillOpacity: 0.3
+    else
+      weight: 2
+      color: '#fff'
 
   _highlightOnClick = (layer) ->
-    layer.setStyle
-      weight: 1,
-      color: '#fff',
-      dashArray: '',
-      fillOpacity: 1
+    weight: 1
+    color: '#fff',
+    dashArray: '',
+    fillOpacity: 1
 
   _setDisableStyle = (e) ->
     weight: 0
-    color: '#666'
     dashArray: ''
-    fillOpacity: 0.7
+    fillOpacity: 0.3
+
+  _getResetStyles = (e) ->
+    if aStateIsActive and e.target.feature.properties.isActive isnt true
+      weight: 0
+      color: '#fff'
+      dashArray: ''
+    else
+      weight: 1
+      opacity: 0.8
+      color: '#fff'
+      fillOpacity: 0.9
 
   _resetHighlight = (e) ->
-    statesLayer.resetStyle(e.target)
+    e.target.setStyle _getResetStyles(e)
+
     closeTooltip = window.setTimeout(->
       map.closePopup()
       return
     , 100)
 
-    # layer = e.target
-
-    # layer.setStyle
-    #   weight: 1
-    #   opacity: 0.8
-    #   color: '#fff'
-    #   fillOpacity: 0.9
-
-  _highlightFeature = (e) ->
+  _showTooltip = (e) ->
     layer = e.target
     popup.setLatLng e.latlng
-    popup.setContent "<div class=\"marker-title\">" + layer.feature.properties.name + "</div>" + layer.feature.properties.density + " people per square mile"
+    popup.setContent """
+        <div class='marker-title'>
+          #{layer.feature.properties.name}
+        </div>
+        #{layer.feature.properties.density} people per square mile
+      """
     popup.openOn map  unless popup._map
     window.clearTimeout closeTooltip
 
-    # highlight feature
-    layer.setStyle
-      weight: 3
-      opacity: 0.3
-      fillOpacity: 0.9
-
     layer.bringToFront()  if not L.Browser.ie and not L.Browser.opera
-
-
-    layer = e.target
-
-    layer.setStyle
-      weight: 1,
-      color: '#666',
-      dashArray: '',
-      fillOpacity: 0.7
-
-    if (!L.Browser.ie and !L.Browser.opera)
-      layer.bringToFront()
 
     # info.update(layer.feature.properties);
 
@@ -181,7 +198,6 @@ window.AFV = do ->
 
 
     # (if d > 10000 then "#8c2d04" else (if d > 5000 then "#cc4c02" else (if d > 2000 then "#ec7014" else (if d > 100 then "#fe9929" else (if d > 50 then "#fec44f" else (if d > 20 then "#fee391" else (if d > 10 then "#fff7bc" else "#ffffe5")))))))
-
 
 
   _initCarbonEmissions = ->
