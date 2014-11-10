@@ -194,10 +194,10 @@ window.us_total_afv_line = [
     values: us_total_afv
     key: 'AF Vehicles'
   }
-  {
-    values: us_toatl_veh
-    key: 'All Vehicles'
-  }
+  # {
+  #   values: us_toatl_veh
+  #   key: 'All Vehicles'
+  # }
 ]
 
 window.us_total_carbon = [

@@ -36,7 +36,7 @@ window.AFV = do ->
   # L.mapbox.accessToken = 'pk.eyJ1Ijoid2Vic2lkZHUiLCJhIjoibmRVS1NTYyJ9.pCvtUhjGjw_8JrW2GDYLug';
 
   _init = ->
-    _initLineChart()
+    _initLineChart(window.us_total_afv_line)
     _initCarbonEmissions()
     _yearsHeatMap()
     map = L.map('map', _options).setView([36.421, -71.411], 4)
@@ -88,8 +88,10 @@ window.AFV = do ->
     if e.target.feature.properties['isActive'] isnt true
       statesLayer.eachLayer (layer) ->
         layer.feature.properties.isActive = false
-
       # map.fitBounds(layer.getBounds())
+
+      _initLineChart _prepartData(e.target)
+
       statesLayer.setStyle _setDisableStyle
       aStateIsActive = true
       AFV.pausePlayer()
@@ -100,6 +102,7 @@ window.AFV = do ->
         layer.setStyle _getStyle(layer.feature)
       aStateIsActive = false
       e.target.feature.properties['isActive'] = false
+      _initLineChart(window.us_total_afv_line)
 
   _highlightFeature = (e) ->
     e.target.setStyle _getHoverStyles(e)
@@ -199,6 +202,22 @@ window.AFV = do ->
 
     # (if d > 10000 then "#8c2d04" else (if d > 5000 then "#cc4c02" else (if d > 2000 then "#ec7014" else (if d > 100 then "#fe9929" else (if d > 50 then "#fec44f" else (if d > 20 then "#fee391" else (if d > 10 then "#fff7bc" else "#ffffe5")))))))
 
+  _prepartData = (layer) ->
+    properties = layer.feature.properties
+    renderedData = []
+    values = []
+    for i in window.years
+      point =
+        x: i
+        y: properties[i]
+
+      values.push(point)
+
+    renderedData.push
+      values: values
+      key: 'AF Vehicles'
+
+    renderedData
 
   _initCarbonEmissions = ->
     nv.addGraph ->
@@ -221,7 +240,7 @@ window.AFV = do ->
           .call(chart);
       chart
 
-  _initLineChart = ->
+  _initLineChart = (data) ->
     nv.addGraph ->
       chart = nv.models.lineChart()
         .useInteractiveGuideline(true)
@@ -239,7 +258,7 @@ window.AFV = do ->
         .tickFormat (d) ->
           parseInt(d/1000) + 'K'
       d3.select('#linegraph svg')
-          .datum(window.us_total_afv_line)
+          .datum(data)
           .call(chart);
       chart
     # $('#linegraph').highcharts
