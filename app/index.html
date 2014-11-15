@@ -30,19 +30,11 @@
     </div>
   </div>
   <div class="controlbar animated fadeInDownBig">
-    <select name="" id="">
-      <option value="">Total Number of vehicles</option>
-      <option value="">Total Number of Alternative Fuel vehicles</option>
-      <option value="">Ratio between AFV &amp; all vehicles</option>
-    </select>
-    &nbsp;&nbsp;&nbsp;
-    <select name="" id="">
-      <option value="">2012 </option>
-      <option value="">2011 </option>
-      <option value="">2010 </option>
-      <option value="">2009 </option>
-      <option value="">2008 </option>
-      <option value="">Average of all years </option>
+    <select name="" id="dataLayer">
+      <option value="carbon" selected='true'>Carbon emissions</option>
+      <option value="all">Total Number of vehicles</option>
+      <option value="afv">Total Number of Alternative Fuel vehicles</option>
+      <option value="ratio_all_afv">Ratio between AFV &amp; all vehicles</option>
     </select>
     <div class="clearfix"></div>
       <div id="legend">
@@ -50,8 +42,6 @@
         <div class="color-key"><span id="data-caret">&#x25c6;</span></div>
         <div id="census-max">max</div>
       </div>
-
-
   </div>
   <div class="sidebar animated fadeInRightBig">
   <!-- Nav tabs -->
@@ -82,18 +72,13 @@
           </div>
       </div>
 
-
     </div>
     <div role="tabpanel" class="tab-pane fade" id="profile">...</div>
     <div role="tabpanel" class="tab-pane fade" id="messages">...</div>
     <div role="tabpanel" class="tab-pane fade" id="settings">...</div>
   </div>
 
-
   </div>
-
-
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -125,6 +110,7 @@
         <script src="scripts/data.js"></script>
         <script src="scripts/main.js"></script>
         <script src="scripts/years.js"></script>
+        <script src="scripts/utils.js"></script>
         <!-- endbuild -->
 </body>
 </html>

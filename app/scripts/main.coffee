@@ -19,10 +19,15 @@ window.AFV = do ->
   DURATION = 700
 
   _playerData = null
+  _playerDataAll = null
+  _playerDataCarbon = null
+
+  _carbonMinMax = []
 
   popup = new L.Popup({ autoPan: false })
   closeTooltip = null
   aStateIsActive = false
+  dataLayer = ''
 
 
   tilesUrl = "https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png"
@@ -50,12 +55,28 @@ window.AFV = do ->
     tiles.addTo(map)
     _renderMasterMap()
 
+    $('#dataLayer').on 'change', (e) ->
+      AFV.pausePlayer()
+      _renderMasterMap(e)
+
   _renderMasterMap = ->
-    d3.json('data/us.states.json', (err, data) ->
-      _playerData = data
-      _initPlayer()
-      AFV.years.init($('#year'))
-    )
+    dataLayer = $('#dataLayer').val()
+    switch dataLayer
+      when 'all'
+        d3.json('data/us.states.json', (err, data) ->
+          _playerDataAll = AFV.utils.stripGeometry(data)
+          _playerData = data
+        )
+      when 'carbon'
+        d3.json('data/us.states.carbon.json', (err, data) ->
+          _playerDataCarbon = AFV.utils.stripGeometry(data)
+          _carbonMinMax = AFV.utils.setMinMax(_playerDataCarbon, 'carbon')
+          console.log _carbonMinMax
+          _playerData = data
+        )
+
+    _initPlayer()
+    AFV.years.init($('#year'))
 
   _initPlayer = ->
     interval = setInterval ->
@@ -163,6 +184,8 @@ window.AFV = do ->
 
     # info.update(layer.feature.properties);
 
+
+
   _getStyle = (feature) ->
     weight: 1
     opacity: 0.8
@@ -170,37 +193,9 @@ window.AFV = do ->
     fillOpacity: 0.9
     fillColor: yearsScale(feature.properties[currentYear])
 
-  yearsScale = d3.scale.linear()
-        .domain([100000, 1000])
-        .range(['#b70101', '#ec8787'])
-
-  # get color depending on population density value
-  getColor = (d) ->
-    low = [ # color of smallest datum
-      11
-      70
-      90
-    ]
-    high = [ # color of largest datum
-      15
-      82
-      45
-    ]
-
-    # delta represents where the value sits between the min and max
-    delta = (d - min) / (max - min)
-    color = []
-    i = 0
-
-    while i < 3
-      # calculate an integer color based on the delta
-      color[i] = (high[i] - low[i]) * delta + low[i]
-      i++
-    clr =  "hsl(#{color[0]}, #{color[1]}%, #{color[2]}%)"
-    return clr
-
-
-    # (if d > 10000 then "#8c2d04" else (if d > 5000 then "#cc4c02" else (if d > 2000 then "#ec7014" else (if d > 100 then "#fe9929" else (if d > 50 then "#fec44f" else (if d > 20 then "#fee391" else (if d > 10 then "#fff7bc" else "#ffffe5")))))))
+  yearsScale = (data) ->
+    console.log _carbonMinMax
+    return d3.scale.linear().domain([1, 200]).range(['#d8ffe3', '#004915'])(data)
 
   _prepartData = (layer) ->
     properties = layer.feature.properties
@@ -220,6 +215,9 @@ window.AFV = do ->
     renderedData
 
   _initCarbonEmissions = ->
+    sidebarWidth = $('.sidebar').width()
+    $('.ng-svg').css('width', sidebarWidth)
+
     nv.addGraph ->
       chart = nv.models.lineChart()
         .useInteractiveGuideline(true)
@@ -227,6 +225,7 @@ window.AFV = do ->
         .showLegend(true)
         .showYAxis(true)
         .showXAxis(true)
+        .width(sidebarWidth)
 
       chart.xAxis
         .axisLabel('Year')
