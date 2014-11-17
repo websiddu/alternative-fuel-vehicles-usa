@@ -23,6 +23,20 @@ AFV.years = do ->
     # Initilize the tooltip
     _initTooltip()
 
+  _generateTootip = (index) ->
+    carbon = JSON.parse(localStorage["carbon_years_avg"])[index]
+    all = JSON.parse(localStorage["all_years_sum"])[index] if localStorage["all_years_sum"]
+    """<b class=afv-tooltip-title>
+        #{carbon.toFixed 2}</b>
+        <br> MMTCO2
+        <br>
+        <br>
+        <b class=afv-tooltip-title>
+        #{all}</b>
+        <br>
+        Alt Fuel Vehicles
+    """
+
   _renderYearsUI = (target) ->
     target.empty()
     yearsCount = years.length
@@ -33,7 +47,8 @@ AFV.years = do ->
     if now is 'carbon'
       _yearsAvgOrTotal = JSON.parse localStorage["#{now}_years_avg"]
     else
-      _yearsAvgOrTotal = JSON.parse localStorage["#{now}_years_sum"]
+      if localStorage["#{now}_years_sum"]
+        _yearsAvgOrTotal = JSON.parse localStorage["#{now}_years_sum"]
 
     i = 0
     playPauseButton = """
@@ -42,7 +57,9 @@ AFV.years = do ->
     target.append(playPauseButton)
 
     while i < yearsCount
-      toolTipContent = "<b class=afv-tooltip-title>#{afvCount[i]}</b> <br> Alt Fuel Vehicles"
+
+      toolTipContent = _generateTootip(i)
+
       yearHtml = """
         <div class="year-box js_tooltip js_year" data-year='#{years[i]}' style='width: #{yearWidth}px;' data-toggle="tooltip" data-placement="top" data-original-title="#{toolTipContent}">
           <div class="year-bar" style='background-color:#{_yearsScale(_yearsAvgOrTotal[i])} '></div>

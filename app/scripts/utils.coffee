@@ -26,7 +26,8 @@ AFV.utils = do ->
     if now is 'carbon'
       _yearsAvgOrTotal = JSON.parse localStorage["#{now}_years_avg"]
     else
-      _yearsAvgOrTotal = JSON.parse localStorage["#{now}_years_sum"]
+      if localStorage["#{now}_years_sum"]
+        _yearsAvgOrTotal = JSON.parse localStorage["#{now}_years_sum"]
 
     return [d3.min(_yearsAvgOrTotal, (d) -> d), d3.max(_yearsAvgOrTotal, (d) -> d)]
 

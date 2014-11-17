@@ -265,7 +265,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -4881,7 +4881,7 @@ button.close {
   color: #ffffff;
   text-align: center;
   text-decoration: none;
-  background-color: #da4453;
+  background-color: #434a54;
   border-radius: 4px;
 }
 .tooltip-arrow {
@@ -4896,52 +4896,52 @@ button.close {
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #da4453;
+  border-top-color: #434a54;
 }
 .tooltip.top-left .tooltip-arrow {
   bottom: 0;
   left: 5px;
   border-width: 5px 5px 0;
-  border-top-color: #da4453;
+  border-top-color: #434a54;
 }
 .tooltip.top-right .tooltip-arrow {
   bottom: 0;
   right: 5px;
   border-width: 5px 5px 0;
-  border-top-color: #da4453;
+  border-top-color: #434a54;
 }
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
-  border-right-color: #da4453;
+  border-right-color: #434a54;
 }
 .tooltip.left .tooltip-arrow {
   top: 50%;
   right: 0;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
-  border-left-color: #da4453;
+  border-left-color: #434a54;
 }
 .tooltip.bottom .tooltip-arrow {
   top: 0;
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #da4453;
+  border-bottom-color: #434a54;
 }
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
   left: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #da4453;
+  border-bottom-color: #434a54;
 }
 .tooltip.bottom-right .tooltip-arrow {
   top: 0;
   right: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #da4453;
+  border-bottom-color: #434a54;
 }
 .popover {
   position: absolute;
@@ -6024,7 +6024,7 @@ button.close {
 }
 .map-legends,
 .map-tooltip {
-  max-width: 300px;
+  max-width: 350px;
 }
 .map-legends .map-legend {
   padding: 10px;
@@ -10061,4 +10061,18 @@ header h1 {
 }
 .playControls:hover em {
   color: #000;
+}
+.tooltip-table {
+  margin-bottom: 0;
+}
+.tooltip-table tr td:first-child {
+  text-align: right;
+}
+.tooltip-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.tooltip-title span {
+  font-weight: 200;
 }

@@ -33,7 +33,7 @@ window.AFV = do ->
   closeTooltip = null
   aStateIsActive = false
   dataLayer = ''
-
+  _firstRunFlag = false
 
   tilesUrl = "https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png"
   attributions =
@@ -58,30 +58,44 @@ window.AFV = do ->
 
     map.addControl(zoom)
     tiles.addTo(map)
-    _renderMasterMap()
+    _firstRun()
+    _renderMasterMap($('#dataLayer').val())
 
     $('#dataLayer').on 'change', (e) ->
+      map.removeLayer(statesLayer) if statesLayer?
       AFV.pausePlayer()
-      _renderMasterMap(e)
+      dataLayer = $('#dataLayer').val()
+      _nowShowing = dataLayer
+      _renderMasterMap(_nowShowing)
 
-  _renderMasterMap = ->
-    dataLayer = $('#dataLayer').val()
-    _nowShowing = dataLayer
-    localStorage['nowShowing'] = _nowShowing
-    switch dataLayer
+  _firstRun = ->
+    for key in ['all', 'carbon']
+      _nowShowing = key
+      _renderMasterMap key
+
+  _renderMasterMap = (now) ->
+    AFV.pausePlayer()
+    localStorage['nowShowing'] = now
+    switch now
       when 'all'
         d3.json('data/us.states.json', (err, data) ->
           _playerDataAll = AFV.utils.stripGeometry(data)
           _minMax[_nowShowing] = AFV.utils.setMinMax(_playerDataAll, 'all')
           _playerData = data
+          _invokeAll()
         )
       when 'carbon'
         d3.json('data/us.states.carbon.json', (err, data) ->
           _playerDataCarbon = AFV.utils.stripGeometry(data)
           _minMax[_nowShowing] = AFV.utils.setMinMax(_playerDataCarbon, 'carbon')
           _playerData = data
+          _invokeAll()
+          _firstRunFlag = true
         )
 
+
+  _invokeAll = ->
+    AFV.pausePlayer()
     _initPlayer()
     AFV.years.init ($ '#year')
     AFV.legend.init ($ '#legend')
@@ -179,12 +193,7 @@ window.AFV = do ->
   _showTooltip = (e) ->
     layer = e.target
     popup.setLatLng e.latlng
-    popup.setContent """
-        <div class='marker-title'>
-          #{layer.feature.properties.name}
-        </div>
-        #{layer.feature.properties.density} people per square mile
-      """
+    popup.setContent AFV.tooltips.getMapTooltip(layer.feature.properties, currentYear)
     popup.openOn map  unless popup._map
     window.clearTimeout closeTooltip
 
