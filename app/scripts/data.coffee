@@ -203,7 +203,7 @@ window.us_total_afv_line = [
 window.us_total_carbon = [
   {
     values: total_carbon_emissions
-    key: "Carbon emissions"
-    color: "red"
+    key: "Carbon emission (MMTCO2)"
+    color: "green"
   }
 ]

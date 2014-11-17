@@ -7,27 +7,21 @@ AFV.sidebar = do ->
   prepareData: (layer, now) ->
     properties = layer.feature.properties
     data = JSON.parse(localStorage["#{now}_data"])[properties.name]
-    console.log "Sddd.."
-    console.log data
 
     renderedData = []
     values = []
     for i,key of window.years
-      console.log i
       point =
         x: key
         y: data[i]
 
       values.push(point)
-
-    console.log values
-
     switch now
       when 'carbon'
         features =
           values: values
-          key: 'Carbon emission'
-          color: 'red'
+          key: 'Carbon emission (MMTCO2)'
+          color: 'green'
       when 'all'
         features =
           values: values
@@ -56,7 +50,7 @@ AFV.sidebar = do ->
         .tickFormat(d3.format('r'))
 
       chart.yAxis
-        .axisLabel('Count (thousnds)')
+        .axisLabel('Carbon emission (MMTCO2)')
 
       d3.select('#linegraph-carbon svg')
           .datum(data)
