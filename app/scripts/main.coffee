@@ -46,8 +46,8 @@ window.AFV = do ->
   # L.mapbox.accessToken = 'pk.eyJ1Ijoid2Vic2lkZHUiLCJhIjoibmRVS1NTYyJ9.pCvtUhjGjw_8JrW2GDYLug';
 
   _init = ->
-    _initLineChart(window.us_total_afv_line)
-    _initCarbonEmissions()
+    AFV.sidebar.totalAFVs(window.us_total_afv_line)
+    AFV.sidebar.initCarbonEmissions(us_total_carbon)
     _yearsHeatMap()
     map = L.map('map', _options).setView([36.421, -71.411], 4)
 
@@ -133,7 +133,10 @@ window.AFV = do ->
         layer.feature.properties.isActive = false
       # map.fitBounds(layer.getBounds())
 
-      _initLineChart _prepartData(e.target)
+
+      AFV.sidebar.initCarbonEmissions(AFV.sidebar.prepareData(e.target, 'carbon'))
+      AFV.sidebar.totalAFVs(AFV.sidebar.prepareData(e.target, 'all'))
+      # _initLineChart _prepartData(e.target)
 
       statesLayer.setStyle _setDisableStyle
       aStateIsActive = true
@@ -145,7 +148,8 @@ window.AFV = do ->
         layer.setStyle _getStyle(layer.feature)
       aStateIsActive = false
       e.target.feature.properties['isActive'] = false
-      _initLineChart(window.us_total_afv_line)
+      AFV.sidebar.totalAFVs(window.us_total_afv_line)
+      AFV.sidebar.initCarbonEmissions(us_total_carbon)
 
   _highlightFeature = (e) ->
     e.target.setStyle _getHoverStyles(e)
@@ -210,94 +214,6 @@ window.AFV = do ->
 
   yearsScale = (data) ->
     return d3.scale.linear().domain(_minMax[_nowShowing]).range(AFV.utils.getColorArray(_nowShowing))(data)
-
-  _prepartData = (layer) ->
-    properties = layer.feature.properties
-    renderedData = []
-    values = []
-    for i in window.years
-      point =
-        x: i
-        y: properties[i]
-
-      values.push(point)
-
-    renderedData.push
-      values: values
-      key: 'AF Vehicles'
-
-    renderedData
-
-  _initCarbonEmissions = ->
-    sidebarWidth = $('.sidebar').width()
-    $('.ng-svg').css('width', sidebarWidth)
-
-    nv.addGraph ->
-      chart = nv.models.lineChart()
-        .useInteractiveGuideline(true)
-        .transitionDuration(350)
-        .showLegend(true)
-        .showYAxis(true)
-        .showXAxis(true)
-        .width(sidebarWidth)
-
-      chart.xAxis
-        .axisLabel('Year')
-        .tickFormat(d3.format('r'))
-
-      chart.yAxis
-        .axisLabel('Count (thousnds)')
-
-      d3.select('#linegraph-carbon svg')
-          .datum(window.us_total_carbon)
-          .call(chart);
-      chart
-
-  _initLineChart = (data) ->
-    nv.addGraph ->
-      chart = nv.models.lineChart()
-        .useInteractiveGuideline(true)
-        .transitionDuration(350)
-        .showLegend(true)
-        .showYAxis(true)
-        .showXAxis(true)
-
-      chart.xAxis
-        .axisLabel('Year')
-        .tickFormat(d3.format('r'))
-
-      chart.yAxis
-        .axisLabel('Count (thousnds)')
-        .tickFormat (d) ->
-          parseInt(d/1000) + 'K'
-      d3.select('#linegraph svg')
-          .datum(data)
-          .call(chart);
-      chart
-    # $('#linegraph').highcharts
-    #   chart:
-    #     type: "line"
-
-    #   title:
-    #     text: "Total AFV's"
-
-    #   xAxis:
-    #     categories: window.years
-
-    #   yAxis:
-    #     title:
-    #       text: false
-
-    #   series: [
-    #     {
-    #       name: "AFV"
-    #       data: window.us_total_afv_line_y
-    #     }
-    #   ]
-
-    return
-
-
 
   _yearsHeatMap =  (years) ->
     years = us_total_afv_line_y

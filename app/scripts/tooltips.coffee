@@ -4,7 +4,6 @@ AFV.tooltips = do ->
     now = localStorage['nowShowing']
     index = window.years.indexOf(currentYear)
     carbon = JSON.parse(localStorage["carbon_data"])[properties.name][index]
-    console.log localStorage["all_data"]
     all = JSON.parse(localStorage["all_data"])[properties.name][index]
 
     """
