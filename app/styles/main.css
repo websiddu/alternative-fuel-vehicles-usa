@@ -9940,16 +9940,27 @@ header h1 {
 #legend {
   display: flex;
   display: -webkit-box;
-  padding-top: 7px;
 }
-.color-key {
-  background: linear-gradient(to right, #f7dad4 0%, #f3bfb2 15%, #eea590 30%, #eb8b6d 45%, #e97149 60%, #e75925 75%, #d14a15 90%);
+.legend-key {
   flex: 1;
   -webkit-box-flex: 1;
   margin: 0 5px;
   text-align: left;
   font-size: 1.0em;
   line-height: 1.0em;
+}
+.floating-legend {
+  background-color: #fff;
+  position: fixed;
+  bottom: 100px;
+  left: 80px;
+  width: 300px;
+  padding: 19px;
+  box-shadow: 0 0 5px #ddd;
+}
+.units {
+  margin-top: 5px;
+  font-size: 11px;
 }
 /*.player-anim {
   position: fixed;

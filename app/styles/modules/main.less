@@ -88,24 +88,38 @@ header h1 {
   box-shadow: 0 0 10px #B0ADAD;
 }
 
- #legend { display: flex; display: -webkit-box; padding-top: 7px }
+ #legend { display: flex; display: -webkit-box;}
 
 
-.color-key {
-  background: linear-gradient(to right,
-    hsl(11, 70%, 90%) 0%,
-    hsl(12, 72%, 82.5%) 15%,
-    hsl(13, 74%, 75%) 30%,
-    hsl(14, 76%, 67.5%) 45%,
-    hsl(15, 78%, 60%) 60%,
-    hsl(16, 80%, 52.5%) 75%,
-    hsl(17, 82%, 45%) 90%);
+.legend-key {
+  // background: linear-gradient(to right,
+  //   hsl(11, 70%, 90%) 0%,
+  //   hsl(12, 72%, 82.5%) 15%,
+  //   hsl(13, 74%, 75%) 30%,
+  //   hsl(14, 76%, 67.5%) 45%,
+  //   hsl(15, 78%, 60%) 60%,
+  //   hsl(16, 80%, 52.5%) 75%,
+  //   hsl(17, 82%, 45%) 90%);
   flex: 1;
   -webkit-box-flex: 1;
   margin: 0 5px;
   text-align: left;
   font-size: 1.0em;
   line-height: 1.0em;
+}
+
+.floating-legend {
+  background-color: #fff;
+  position: fixed;
+  bottom: 100px;
+  left: 80px;
+  width: 300px;
+  padding: 19px;
+  box-shadow: 0 0 5px #ddd;
+}
+.units {
+  margin-top: 5px;
+  font-size: 11px;
 }
 
 /*.player-anim {
