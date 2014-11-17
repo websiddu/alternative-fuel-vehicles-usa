@@ -7,11 +7,13 @@ AFV.years = do ->
   windowWidth = window.innerWidth
   windowHeight = window.innerHeight
   yearsWidth = windowWidth/1.82
+  _yearsAvgOrTotal = null
 
-  yearsScale = d3.scale.linear()
-        .domain([afvCount[afvCount.length - 1], afvCount[0]])
-        .range(['#900019', '#ff859a'])
-        #.range(if (typeMode) then ['#00363b', '#00d7ed'] else ['#3c0d15', '#f13452'])
+  _yearsScale = (data) ->
+    now = localStorage['nowShowing']
+    domain = AFV.utils.getMinMaxForYears(now)
+    return d3.scale.linear().domain(domain)
+      .range(AFV.utils.getColorArray(now))(data)
 
   _init = (target) ->
     # Render the years UI
@@ -22,8 +24,17 @@ AFV.years = do ->
     _initTooltip()
 
   _renderYearsUI = (target) ->
+    target.empty()
     yearsCount = years.length
     yearWidth = yearsWidth/(yearsCount + 1)
+
+    now = localStorage['nowShowing']
+
+    if now is 'carbon'
+      _yearsAvgOrTotal = JSON.parse localStorage["#{now}_years_avg"]
+    else
+      _yearsAvgOrTotal = JSON.parse localStorage["#{now}_years_sum"]
+
     i = 0
     playPauseButton = """
       <div class="playControls js_play_pause_controls" data-play-state="play" style='width: #{yearWidth}px'><em class="icon icon-pause js_play_pause_icon"></em></div>
@@ -34,7 +45,7 @@ AFV.years = do ->
       toolTipContent = "<b class=afv-tooltip-title>#{afvCount[i]}</b> <br> Alt Fuel Vehicles"
       yearHtml = """
         <div class="year-box js_tooltip js_year" data-year='#{years[i]}' style='width: #{yearWidth}px;' data-toggle="tooltip" data-placement="top" data-original-title="#{toolTipContent}">
-          <div class="year-bar" style='background-color:#{yearsScale(afvCount[i])} '></div>
+          <div class="year-bar" style='background-color:#{_yearsScale(_yearsAvgOrTotal[i])} '></div>
           <span class="year-text">#{years[i]}</span>
         </div>
       """

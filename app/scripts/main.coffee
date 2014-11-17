@@ -23,6 +23,11 @@ window.AFV = do ->
   _playerDataCarbon = null
 
   _carbonMinMax = []
+  _playerMinMax = []
+
+  _nowShowing = ''
+
+  _minMax = {}
 
   popup = new L.Popup({ autoPan: false })
   closeTooltip = null
@@ -61,22 +66,25 @@ window.AFV = do ->
 
   _renderMasterMap = ->
     dataLayer = $('#dataLayer').val()
+    _nowShowing = dataLayer
+    localStorage['nowShowing'] = _nowShowing
     switch dataLayer
       when 'all'
         d3.json('data/us.states.json', (err, data) ->
           _playerDataAll = AFV.utils.stripGeometry(data)
+          _minMax[_nowShowing] = AFV.utils.setMinMax(_playerDataAll, 'all')
           _playerData = data
         )
       when 'carbon'
         d3.json('data/us.states.carbon.json', (err, data) ->
           _playerDataCarbon = AFV.utils.stripGeometry(data)
-          _carbonMinMax = AFV.utils.setMinMax(_playerDataCarbon, 'carbon')
-          console.log _carbonMinMax
+          _minMax[_nowShowing] = AFV.utils.setMinMax(_playerDataCarbon, 'carbon')
           _playerData = data
         )
 
     _initPlayer()
-    AFV.years.init($('#year'))
+    AFV.years.init ($ '#year')
+    AFV.legend.init ($ '#legend')
 
   _initPlayer = ->
     interval = setInterval ->
@@ -184,8 +192,6 @@ window.AFV = do ->
 
     # info.update(layer.feature.properties);
 
-
-
   _getStyle = (feature) ->
     weight: 1
     opacity: 0.8
@@ -194,8 +200,7 @@ window.AFV = do ->
     fillColor: yearsScale(feature.properties[currentYear])
 
   yearsScale = (data) ->
-    console.log _carbonMinMax
-    return d3.scale.linear().domain([1, 200]).range(['#d8ffe3', '#004915'])(data)
+    return d3.scale.linear().domain(_minMax[_nowShowing]).range(AFV.utils.getColorArray(_nowShowing))(data)
 
   _prepartData = (layer) ->
     properties = layer.feature.properties
