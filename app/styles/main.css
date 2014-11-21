@@ -7043,11 +7043,23 @@ Interactive Layer
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-pause:before {
+.icon-afv-sedan:before {
   content: "\f101";
 }
-.icon-play:before {
+.icon-afv-suv:before {
   content: "\f102";
+}
+.icon-afv-truck:before {
+  content: "\f103";
+}
+.icon-afv-van:before {
+  content: "\f104";
+}
+.icon-pause:before {
+  content: "\f105";
+}
+.icon-play:before {
+  content: "\f106";
 }
 @charset "UTF-8";
 /*!
@@ -9861,8 +9873,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
   overflow-x: hidden;
+  font-weight: 300;
 }
 #map {
   position: absolute;
