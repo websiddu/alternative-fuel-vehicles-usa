@@ -44,6 +44,7 @@ AFV.sidebar = do ->
         .showYAxis(true)
         .showXAxis(true)
         .width(sidebarWidth)
+        #.forceY([0,200])
 
       chart.xAxis
         .axisLabel('Year')
@@ -72,9 +73,12 @@ AFV.sidebar = do ->
         .tickFormat(d3.format('r'))
 
       chart.yAxis
-        .axisLabel('Count (thousnds)')
-        .tickFormat (d) ->
-          parseInt(d/1000) + 'K'
+        .axisLabel('Number of Vehicles')
+        .tickFormat( (d) ->
+          prefix = d3.formatPrefix(d)
+          prefix.scale(d) + prefix.symbol
+        )
+
       d3.select('#linegraph svg')
           .datum(data)
           .call(chart);
