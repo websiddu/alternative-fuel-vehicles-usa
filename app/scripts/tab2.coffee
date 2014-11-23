@@ -38,7 +38,7 @@ AFV.tab2 = do ->
       nv.addGraph ->
         chart = nv.models
           .stackedAreaChart()
-          .margin(left: 70)
+          .margin(left: 55)
           .useInteractiveGuideline(true)
           .transitionDuration(350)
           .showLegend(false)

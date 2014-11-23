@@ -43,7 +43,7 @@ AFV.sidebar = do ->
         .showLegend(true)
         .showYAxis(true)
         .showXAxis(true)
-        .width(sidebarWidth)
+        #.width(sidebarWidth)
         #.forceY([0,200])
 
       chart.xAxis
