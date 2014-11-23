@@ -1,3 +1,5 @@
+@sidebarWidth: 50%;
+
 body {
   margin: 0;
   padding: 0;
@@ -52,7 +54,7 @@ header h1 {
   top: 40px;
   right: 0;
   bottom: 0;
-  width: 45%;
+  width: @sidebarWidth;
   background-color: #fff;
   box-shadow: 0px 10px 10px #888;
   z-index: @zindex-sidbar;
@@ -64,6 +66,12 @@ header h1 {
 .side-graph, .side-graph svg {
   width: 100%;
   height: 260px;
+  // &.large {
+  //   height: 320px;
+  // }
+  // &.small-g {
+  //   height: 210px;
+  // }
 }
 
 .side-graph {
@@ -144,7 +152,7 @@ header h1 {
   left: 0;
   height: 45px;
   background-color: #fff;
-  right: 45%;
+  right: @sidebarWidth;
 }
 
 .year {

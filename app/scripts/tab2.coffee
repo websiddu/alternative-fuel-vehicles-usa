@@ -3,34 +3,68 @@ AFV.tab2 = do ->
   _vechicalTypeSplit = null
 
   _perpareDataForVehType = (data) ->
+    result = []
+    j = 0
+    for i, val of data
+      if result[j] is undefined
+        result[j] = {}
+
+      result[j].values = _getDataFromFlatArray(val)
+      result[j].key = i
+      j++
+
+    return result
 
 
-  _initVehicleTypeGraph = ->
+  _getDataFromFlatArray = (data) ->
+    i = 0
+    start_year = 2004
+    r = []
+    while i < data.length
+      coord = {
+        x: start_year
+        y: data[i]
+      }
+      r.push coord
+      i++
+      start_year++
+
+    return r
+
+  _initVehicleTypeGraph = (data) ->
     d3.json 'data/veh.type.json', (err, data) ->
       _vechicalTypeSplit = data
 
       nv.addGraph ->
         chart = nv.models
-          .lineChart()
-          .margin(left: 100)
+          .stackedAreaChart()
+          .margin(left: 70)
           .useInteractiveGuideline(true)
           .transitionDuration(350)
-          .showLegend(true)
+          .showLegend(false)
           .showYAxis(true)
           .showXAxis(true)
+          #.height(320)
 
-        #Chart x-axis settings
-        chart.xAxis.axisLabel("Time (ms)").tickFormat d3.format(",r")
-        #Chart y-axis settings
-        chart.yAxis.axisLabel("Voltage (v)").tickFormat d3.format(".02f")
+        chart.xAxis
+          .axisLabel('Year')
+          .tickFormat(d3.format('f'))
 
-        # Done setting the chart up? Time to render it!
-        myData = _perpareDataForVehType(_vechicalTypeSplit) #You need data...
-        #Select the <svg> element you want to render the chart in.
-        #Populate the <svg> element with chart data...
-        d3.select("#chart svg").datum(myData).call chart #Finally, render the chart!
+        chart.yAxis
+          .axisLabel('Count')
+          .orient('left')
+          .showMaxMin(false)
+          .tickFormat( (d) ->
+            prefix = d3.formatPrefix(d)
+            prefix.scale(d) + prefix.symbol
+          )
 
-        #Update the chart when window resizes.
+        myData = _perpareDataForVehType(window.veh_types) #You need data...
+
+        d3.select("#multiline-split svg").datum(myData).call chart #Finally, render the chart!
+
+        #d3.select("#multiline-split .nv-legendWrap").attr("class", "hide")
+
         nv.utils.windowResize ->
           chart.update()
           return
@@ -52,7 +86,6 @@ AFV.tab2 = do ->
         .groupSpacing(0.2)
         .width(sidebarWidth)
         .margin({left: 55})
-        .height(270)
 
       chart.xAxis
         .axisLabel('Year')

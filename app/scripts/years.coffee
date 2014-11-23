@@ -6,7 +6,7 @@ AFV.years = do ->
   afvCount = window.us_total_afv_line_y
   windowWidth = window.innerWidth
   windowHeight = window.innerHeight
-  yearsWidth = windowWidth/1.82
+  yearsWidth = windowWidth * 50/ 100
   _yearsAvgOrTotal = null
 
   _yearsScale = (data) ->
