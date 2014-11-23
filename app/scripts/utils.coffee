@@ -88,9 +88,9 @@ AFV.utils = do ->
     set = []
     switch type
       when 'all'
-        set = ['#ff9090', '#a20101']
+        set = ['#e294e3', '#922093']
       when 'carbon'
-        set = ['#d8ffe3', '#004915']
+        set = ['#f3cbcb', '#a30707']
 
     return set
 
