@@ -1,6 +1,7 @@
 AFV.tab2 = do ->
   graph = ($ '#bar-split')
-  _vechicalTypeSplit = null
+  _vehicleTypeData = null
+  myData = null
 
   _perpareDataForVehType = (data) ->
     result = []
@@ -10,11 +11,11 @@ AFV.tab2 = do ->
         result[j] = {}
 
       result[j].values = _getDataFromFlatArray(val)
+
       result[j].key = i
       j++
 
     return result
-
 
   _getDataFromFlatArray = (data) ->
     i = 0
@@ -30,48 +31,6 @@ AFV.tab2 = do ->
       start_year++
 
     return r
-
-  _initVehicleTypeGraph = (data) ->
-    d3.json 'data/veh.type.json', (err, data) ->
-      _vechicalTypeSplit = data
-
-      nv.addGraph ->
-        chart = nv.models
-          .stackedAreaChart()
-          .margin(left: 55)
-          .useInteractiveGuideline(true)
-          .transitionDuration(350)
-          .showLegend(false)
-          .showYAxis(true)
-          .showXAxis(true)
-          #.height(320)
-
-        chart.xAxis
-          .axisLabel('Year')
-          .tickFormat(d3.format('f'))
-
-        chart.yAxis
-          .axisLabel('Count')
-          .orient('left')
-          .showMaxMin(false)
-          .tickFormat( (d) ->
-            prefix = d3.formatPrefix(d)
-            prefix.scale(d) + prefix.symbol
-          )
-
-        myData = _perpareDataForVehType(window.veh_types) #You need data...
-
-        d3.select("#multiline-split svg").datum(myData).call chart #Finally, render the chart!
-
-        #d3.select("#multiline-split .nv-legendWrap").attr("class", "hide")
-
-        nv.utils.windowResize ->
-          chart.update()
-          return
-
-        chart
-
-
 
   _initGraph = ->
     sidebarWidth = $('.sidebar').width()
@@ -93,7 +52,7 @@ AFV.tab2 = do ->
         .showMaxMin(false)
 
       chart.yAxis
-        .axisLabel('Count')
+        .axisLabel("Number of AFV's")
         .orient('left')
         .showMaxMin(false)
         .tickFormat( (d) ->
@@ -109,9 +68,68 @@ AFV.tab2 = do ->
 
 
 
+  _loadInitalVehicleTypeGraph = ->
+    myData = _perpareDataForVehType(window.veh_types)
+    AFV.tab2.initVehicleTypeGraph(myData)
+    return
+
+  _getVehicleTypeData = ->
+    d3.json 'data/veh.type.json', (err, data) ->
+      _vehicleTypeData = data
+      #myData = _perpareDataForVehType(window.veh_types)
+      #AFV.tab2.initVehicleTypeGraph(myData)
+      return
+    return
+
+  loadByStateVehicleTypeGraph: (target) ->
+    currentState = target.feature.properties.name
+    return if(_vehicleTypeData is undefined)
+
+    console.log _vehicleTypeData[currentState]
+
+    stateData = _perpareDataForVehType _vehicleTypeData[currentState], true
+    AFV.tab2.initVehicleTypeGraph(stateData)
+
+  initVehicleTypeGraph: (data) ->
+    nv.addGraph ->
+      chart = nv.models
+        .stackedAreaChart()
+        .margin(left: 55)
+        .useInteractiveGuideline(true)
+        .transitionDuration(350)
+        .showLegend(false)
+        .showYAxis(true)
+        .showXAxis(true)
+        #.height(320)
+
+      chart.xAxis
+        .axisLabel('Year')
+        .tickFormat(d3.format('f'))
+
+      chart.yAxis
+        .axisLabel("Number of AFV's")
+        .orient('left')
+        .showMaxMin(false)
+        .tickFormat( (d) ->
+          prefix = d3.formatPrefix(d)
+          prefix.scale(d) + prefix.symbol
+        )
+
+      d3.select("#multiline-split svg").datum(data).call chart #Finally, render the chart!
+
+      #d3.select("#multiline-split .nv-legendWrap").attr("class", "hide")
+
+      nv.utils.windowResize ->
+        chart.update()
+        return
+
+      chart
 
   init: ->
     _initGraph()
-    _initVehicleTypeGraph()
+    _getVehicleTypeData()
+    _loadInitalVehicleTypeGraph()
+
+
 
 AFV.tab2.init()
