@@ -138,6 +138,7 @@ window.AFV = do ->
       AFV.sidebar.totalAFVs(AFV.sidebar.prepareData(e.target, 'all'))
       AFV.tab2.loadByStateVehicleTypeGraph(e.target)
       AFV.tab3.loadByStateFuelTypeGraph(e.target)
+      AFV.fc.loadByStateFuelConsumptionGraph(e.target)
       # _initLineChart _prepartData(e.target)
 
       statesLayer.setStyle _setDisableStyle

@@ -112,6 +112,18 @@
     <div role="tabpanel" class="tab-pane fade" id="tab-three">
 
   <br>
+
+      <div class="side-graph large">
+          <div class="side-graph-title">
+            Number of AFVs based on Fuel consumption (2004 - 2011)
+          </div>
+          <div id="fuel-consumption">
+            <svg class="ng-svg large"></svg>
+          </div>
+      </div>
+
+
+
       <div class="side-graph large">
           <div class="side-graph-title">
             Number of AFVs based on Fuel type (2004 - 2011)
@@ -120,6 +132,7 @@
             <svg class="ng-svg large"></svg>
           </div>
       </div>
+
 
 
     </div>
@@ -136,6 +149,8 @@
     <script src="bower_components/d3/d3.js"></script>
     <script src="bower_components/topojson/topojson.js"></script>
     <script src="bower_components/leaflet/dist/leaflet.js"></script>
+    <script src="bower_components/heap/lib/heap.js"></script>
+    <script src="bower_components/d3plus/d3plus.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -166,6 +181,7 @@
         <script src="scripts/sidebar.js"></script>
         <script src="scripts/tab2.js"></script>
         <script src="scripts/tab3.js"></script>
+        <script src="scripts/fuelConsumption.js"></script>
         <!-- endbuild -->
 </body>
 </html>
