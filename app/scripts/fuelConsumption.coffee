@@ -54,13 +54,14 @@ AFV.fc = do ->
   initFuelTypeGraph: (data) ->
     nv.addGraph ->
       chart = nv.models
-        .lineChart()
+        .stackedAreaChart()
         .margin(left: 55)
         .useInteractiveGuideline(true)
         .transitionDuration(550)
         .showLegend(true)
         .showYAxis(true)
         .showXAxis(true)
+        .showControls(false)
         # .controlLabels({
         #   stacked: "Total number"
         #   expanded: "Percent of total"

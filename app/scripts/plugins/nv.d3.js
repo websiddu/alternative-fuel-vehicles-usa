@@ -4963,7 +4963,7 @@ nv.models.indentedTree = function() {
                 nodeTextLength = nv.utils.calcApproxTextWidth(legendText);
               }
 
-              seriesWidths.push(nodeTextLength + 28); // 28 is ~ the width of the circle plus some padding
+              seriesWidths.push(nodeTextLength + 20); // 28 is ~ the width of the circle plus some padding
             });
 
         var seriesPerRow = 0;
@@ -5010,7 +5010,7 @@ nv.models.indentedTree = function() {
            g.attr('transform', 'translate(0' + ',' + margin.top + ')');
         }
 
-        height = margin.top + margin.bottom + (Math.ceil(seriesWidths.length / seriesPerRow) * 20);
+        height = margin.top + margin.bottom + (Math.ceil(seriesWidths.length / seriesPerRow) * 28);
 
       } else {
 
