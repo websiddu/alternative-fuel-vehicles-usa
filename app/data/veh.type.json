@@ -21,9 +21,9 @@
       22
     ],
     "Vans (Light Duty)": [
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       60,
       43,
       44,
@@ -61,24 +61,24 @@
       1177
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       27,
@@ -95,20 +95,20 @@
       2,
       2,
       2,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
       2,
       2,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       30,
@@ -203,30 +203,30 @@
       2864
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       16,
       17,
       66,
@@ -263,10 +263,10 @@
       2448
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       631,
       784,
       975,
@@ -300,7 +300,7 @@
       2,
       2,
       8,
-      null,
+      0,
       17,
       108
     ],
@@ -345,32 +345,32 @@
       650
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       7,
       62
     ],
@@ -381,18 +381,18 @@
       8,
       6,
       1,
-      null,
-      null
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
       9,
       10,
       10,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       180,
@@ -405,9 +405,9 @@
       388
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       18,
       23,
       30,
@@ -487,10 +487,10 @@
       5246
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
@@ -502,7 +502,7 @@
       70,
       2,
       3,
-      null,
+      0,
       104,
       172
     ],
@@ -619,22 +619,22 @@
       7580
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       188,
       526
     ],
@@ -701,21 +701,21 @@
       268
     ],
     "Vans (Medium Duty)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       17,
       60
     ],
     "Vans (Light Duty)": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       20,
       24,
       44
@@ -751,19 +751,19 @@
       338
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       34,
       32,
       35,
@@ -777,8 +777,8 @@
       151,
       201,
       188,
-      null,
-      null
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       1,
@@ -791,12 +791,12 @@
       655
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       1149,
       949
     ],
@@ -873,21 +873,21 @@
       3651
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       71,
       115,
       160
@@ -906,11 +906,11 @@
       7,
       8,
       2,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       801,
@@ -1005,28 +1005,28 @@
       33784
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
+      0,
+      0,
       99,
       85,
       1007,
@@ -1050,7 +1050,7 @@
       5,
       115,
       119,
-      null,
+      0,
       12,
       27
     ],
@@ -1147,32 +1147,32 @@
       6553
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
+      0,
+      0,
       50,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       22,
       366
     ],
@@ -1190,11 +1190,11 @@
       39,
       61,
       78,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       1394,
@@ -1207,7 +1207,7 @@
       3232
     ],
     "Automobiles (Fullsize)": [
-      null,
+      0,
       6,
       845,
       850,
@@ -1239,18 +1239,18 @@
       1282
     ],
     "Vans (Medium Duty)": [
-      null,
-      null,
+      0,
+      0,
       2,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       19,
       62
     ],
     "Vans (Light Duty)": [
       176,
-      null,
+      0,
       31,
       63,
       121,
@@ -1289,54 +1289,54 @@
       2420
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       29,
       31
     ],
     "Buses": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       27,
-      null
+      0
     ],
     "Automobiles (Midsize)": [
       54,
@@ -1381,8 +1381,8 @@
       3989
     ],
     "Vans (Medium Duty)": [
-      null,
-      null,
+      0,
+      0,
       14,
       25,
       35,
@@ -1431,24 +1431,24 @@
       5597
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       491,
@@ -1475,10 +1475,10 @@
       25,
       33,
       3,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       1533,
@@ -1573,32 +1573,32 @@
       1121
     ],
     "Other Vehicles": [
-      null,
-      null,
+      0,
+      0,
       1,
       1,
-      null,
+      0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       9,
       138
     ],
@@ -1610,7 +1610,7 @@
       21,
       16,
       5,
-      null
+      0
     ],
     "Automobiles (Subcompact)": [
       34,
@@ -1618,7 +1618,7 @@
       59,
       67,
       73,
-      null,
+      0,
       9,
       62
     ],
@@ -1715,32 +1715,32 @@
       4816
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       95,
       69
     ],
@@ -1775,8 +1775,8 @@
       8766
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
+      0,
+      0,
       15,
       39,
       87,
@@ -1857,24 +1857,24 @@
       3730
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       223,
@@ -1903,7 +1903,7 @@
       3,
       76,
       20,
-      null,
+      0,
       16
     ],
     "Automobiles (Midsize)": [
@@ -1999,31 +1999,31 @@
       4924
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       270,
       361,
       504
@@ -2041,12 +2041,12 @@
     "Automobiles (Subcompact)": [
       10,
       2,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       607,
@@ -2059,8 +2059,8 @@
       1729
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
+      0,
+      0,
       13,
       119,
       139,
@@ -2141,28 +2141,28 @@
       5655
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
+      0,
+      0,
       148,
       205,
       192,
@@ -2230,7 +2230,7 @@
       2,
       2,
       3,
-      null
+      0
     ],
     "Vans (Medium Duty)": [
       2,
@@ -2240,7 +2240,7 @@
       2,
       12,
       12,
-      null
+      0
     ],
     "Vans (Light Duty)": [
       12,
@@ -2250,7 +2250,7 @@
       12,
       12,
       12,
-      null
+      0
     ],
     "Trucks": [
       3,
@@ -2260,7 +2260,7 @@
       0,
       885,
       83,
-      null
+      0
     ],
     "SUVs": [
       20,
@@ -2270,7 +2270,7 @@
       73,
       86,
       121,
-      null
+      0
     ],
     "Pickups": [
       1,
@@ -2280,7 +2280,7 @@
       9,
       9,
       112,
-      null
+      0
     ],
     "Other Vehicles": [
       0,
@@ -2290,7 +2290,7 @@
       1,
       1,
       1,
-      null
+      0
     ],
     "Motorcycles": [
       44,
@@ -2300,7 +2300,7 @@
       36,
       36,
       35,
-      null
+      0
     ],
     "Low Speed Vehicles": [
       20,
@@ -2310,7 +2310,7 @@
       41,
       40,
       39,
-      null
+      0
     ],
     "Buses": [
       302,
@@ -2320,7 +2320,7 @@
       181,
       337,
       297,
-      null
+      0
     ],
     "Automobiles (Subcompact)": [
       57,
@@ -2330,7 +2330,7 @@
       2,
       46,
       44,
-      null
+      0
     ],
     "Automobiles (Midsize)": [
       3,
@@ -2340,7 +2340,7 @@
       3,
       1096,
       1056,
-      null
+      0
     ],
     "Automobiles (Fullsize)": [
       0,
@@ -2350,7 +2350,7 @@
       23,
       23,
       23,
-      null
+      0
     ],
     "Automobiles (Compact)": [
       40,
@@ -2360,7 +2360,7 @@
       179,
       410,
       1481,
-      null
+      0
     ]
   },
   "North Dakota": {
@@ -2378,16 +2378,16 @@
       26,
       19,
       8,
-      null,
-      null,
+      0,
+      0,
       18,
       19,
       39
     ],
     "Vans (Light Duty)": [
       144,
-      null,
-      null,
+      0,
+      0,
       91,
       58,
       52,
@@ -2425,54 +2425,54 @@
       1525
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Buses": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       21,
@@ -2485,10 +2485,10 @@
       414
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       217,
       271,
       463,
@@ -2567,27 +2567,27 @@
       10803
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
+      0,
       140,
       217,
       398,
@@ -2709,24 +2709,24 @@
       5548
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       9185,
@@ -2750,12 +2750,12 @@
     ],
     "Automobiles (Subcompact)": [
       0,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       170
     ],
     "Automobiles (Midsize)": [
@@ -2851,32 +2851,32 @@
       6681
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       18,
       88
     ],
@@ -2896,9 +2896,9 @@
       25,
       3,
       22,
-      null,
-      null,
-      null
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       1098,
@@ -2993,24 +2993,24 @@
       4258
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       765,
@@ -3018,7 +3018,7 @@
       462,
       481,
       449,
-      null,
+      0,
       42,
       264
     ],
@@ -3035,12 +3035,12 @@
     "Automobiles (Subcompact)": [
       28,
       4,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       2641,
@@ -3085,8 +3085,8 @@
       387
     ],
     "Vans (Medium Duty)": [
-      null,
-      null,
+      0,
+      0,
       1,
       1,
       4,
@@ -3097,7 +3097,7 @@
     "Vans (Light Duty)": [
       149,
       35,
-      null,
+      0,
       10,
       14,
       28,
@@ -3135,24 +3135,24 @@
       396
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       81,
@@ -3195,8 +3195,8 @@
       160
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
+      0,
+      0,
       2,
       7,
       560,
@@ -3277,32 +3277,32 @@
       3503
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       46,
       138
     ],
@@ -3321,9 +3321,9 @@
       29,
       13,
       9,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       62
     ],
     "Automobiles (Midsize)": [
@@ -3419,53 +3419,53 @@
       2634
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Buses": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
       7,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       19
     ],
     "Automobiles (Midsize)": [
@@ -3479,11 +3479,11 @@
       1150
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       4,
-      null,
+      0,
       6,
       20,
       17
@@ -3512,18 +3512,18 @@
     ],
     "Vans (Medium Duty)": [
       4,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       8,
       29
     ],
     "Vans (Light Duty)": [
       241,
       60,
-      null,
+      0,
       10,
       14,
       24,
@@ -3561,32 +3561,32 @@
       1657
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       128,
       31
     ],
@@ -3597,18 +3597,18 @@
       38,
       2,
       2,
-      null,
+      0,
       1
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       163,
@@ -3621,10 +3621,10 @@
       685
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       18,
       21,
       40,
@@ -3703,32 +3703,32 @@
       7034
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       71,
       233
     ],
@@ -3738,19 +3738,19 @@
       230,
       246,
       288,
-      null,
+      0,
       6,
       6
     ],
     "Automobiles (Subcompact)": [
       1,
       174,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       1171,
@@ -3845,32 +3845,32 @@
       3272
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       49,
       172
     ],
@@ -3882,13 +3882,13 @@
       803,
       1098,
       1330,
-      null
+      0
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
@@ -3905,10 +3905,10 @@
       889
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       32,
       1497,
       1516,
@@ -3987,32 +3987,32 @@
       4528
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       1,
-      null,
-      null,
-      null
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
+      0,
+      0,
       16,
       17,
-      null,
-      null,
+      0,
+      0,
       50,
       95
     ],
@@ -4049,7 +4049,7 @@
     "Automobiles (Fullsize)": [
       3,
       2,
-      null,
+      0,
       81,
       78,
       68,
@@ -4129,24 +4129,24 @@
       6986
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       3362,
@@ -4172,10 +4172,10 @@
       7,
       4,
       2,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       8
     ],
     "Automobiles (Midsize)": [
@@ -4271,24 +4271,24 @@
       1795
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       3068,
@@ -4315,10 +4315,10 @@
       71,
       125,
       92,
-      null,
+      0,
       20,
       27,
-      null
+      0
     ],
     "Automobiles (Midsize)": [
       279,
@@ -4413,32 +4413,32 @@
       6144
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       1246,
       886
     ],
@@ -4474,7 +4474,7 @@
     ],
     "Automobiles (Fullsize)": [
       3,
-      null,
+      0,
       43,
       25,
       77,
@@ -4516,8 +4516,8 @@
     ],
     "Vans (Light Duty)": [
       48,
-      null,
-      null,
+      0,
+      0,
       71,
       77,
       170,
@@ -4555,33 +4555,33 @@
       623
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       17
     ],
     "Buses": [
@@ -4595,13 +4595,13 @@
       131
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       2
     ],
     "Automobiles (Midsize)": [
@@ -4615,14 +4615,14 @@
       321
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       5,
-      null
+      0
     ],
     "Automobiles (Compact)": [
       103,
@@ -4697,29 +4697,29 @@
       4966
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       226,
       385,
       431,
@@ -4727,24 +4727,24 @@
       614
     ],
     "Buses": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
       5,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       283,
@@ -4757,9 +4757,9 @@
       4585
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       27,
       55,
       132,
@@ -4839,54 +4839,54 @@
       4404
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       63,
       117
     ],
     "Buses": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       1442,
@@ -4981,54 +4981,54 @@
       3027
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       55,
       96
     ],
     "Buses": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
       29,
       8,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       257,
@@ -5041,11 +5041,11 @@
       1492
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       9,
       34,
       37
@@ -5123,31 +5123,31 @@
       2997
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       17,
-      null,
+      0,
       216,
       153,
       88
@@ -5156,21 +5156,21 @@
       44,
       37,
       4,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       682,
@@ -5265,54 +5265,54 @@
       3548
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Buses": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       252,
@@ -5407,29 +5407,29 @@
       7648
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       137,
       176,
       198,
@@ -5448,13 +5448,13 @@
     ],
     "Automobiles (Subcompact)": [
       0,
-      null,
+      0,
       2,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       2704,
@@ -5549,32 +5549,32 @@
       3012
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       14,
       50
     ],
@@ -5589,14 +5589,14 @@
       84
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       19,
-      null
+      0
     ],
     "Automobiles (Midsize)": [
       265,
@@ -5641,10 +5641,10 @@
       786
     ],
     "Vans (Medium Duty)": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       7,
       74,
       199,
@@ -5691,32 +5691,32 @@
       2609
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       242,
       363
     ],
@@ -5725,19 +5725,19 @@
       9,
       9,
       15,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       20
     ],
     "Automobiles (Midsize)": [
@@ -5751,13 +5751,13 @@
       699
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       13,
       9,
       12,
-      null,
+      0,
       11
     ],
     "Automobiles (Compact)": [
@@ -5833,24 +5833,24 @@
       7045
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       1675,
@@ -5878,9 +5878,9 @@
       51,
       17,
       67,
-      null,
-      null,
-      null
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       514,
@@ -5975,24 +5975,24 @@
       13470
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       900,
@@ -6011,8 +6011,8 @@
       176,
       71,
       289,
-      null,
-      null
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
       53,
@@ -6117,32 +6117,32 @@
       1071
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       138,
       311
     ],
@@ -6163,7 +6163,7 @@
       57,
       90,
       41,
-      null,
+      0,
       11
     ],
     "Automobiles (Midsize)": [
@@ -6213,7 +6213,7 @@
       33,
       2,
       2,
-      null,
+      0,
       1,
       11,
       456
@@ -6259,54 +6259,54 @@
       348
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Buses": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
       1,
       2,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       844,
@@ -6319,13 +6319,13 @@
       2472
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       2
     ],
     "Automobiles (Compact)": [
@@ -6401,32 +6401,32 @@
       979
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       13,
       110
     ],
@@ -6442,12 +6442,12 @@
     ],
     "Automobiles (Subcompact)": [
       6,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       2
     ],
     "Automobiles (Midsize)": [
@@ -6464,7 +6464,7 @@
       7,
       11,
       2,
-      null,
+      0,
       32,
       24,
       31,
@@ -6543,24 +6543,24 @@
       5776
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       5,
@@ -6586,8 +6586,8 @@
       37,
       35,
       2,
-      null,
-      null,
+      0,
+      0,
       18,
       11,
       2
@@ -6685,10 +6685,10 @@
       36791
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
@@ -6778,10 +6778,10 @@
     ],
     "Vans (Medium Duty)": [
       7,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       1,
       64,
       170
@@ -6827,32 +6827,32 @@
       2141
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       22,
       44
     ],
@@ -6867,14 +6867,14 @@
       82
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       66,
@@ -6969,24 +6969,24 @@
       12636
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       1402,
@@ -7061,7 +7061,7 @@
       900
     ],
     "Vans (Medium Duty)": [
-      null,
+      0,
       19,
       5,
       5,
@@ -7071,8 +7071,8 @@
       121
     ],
     "Vans (Light Duty)": [
-      null,
-      null,
+      0,
+      0,
       31,
       50,
       166,
@@ -7111,54 +7111,54 @@
       599
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       21,
       56
     ],
     "Buses": [
-      null,
+      0,
       1,
       1,
       1,
       1,
       1,
-      null,
-      null
+      0,
+      0
     ],
     "Automobiles (Subcompact)": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       18,
-      null,
-      null
+      0,
+      0
     ],
     "Automobiles (Midsize)": [
       30,
@@ -7171,13 +7171,13 @@
       157
     ],
     "Automobiles (Fullsize)": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       11
     ],
     "Automobiles (Compact)": [
@@ -7204,8 +7204,8 @@
     ],
     "Vans (Medium Duty)": [
       5,
-      null,
-      null,
+      0,
+      0,
       2,
       3,
       27,
@@ -7253,24 +7253,24 @@
       5582
     ],
     "Other Vehicles": [
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
       0
     ],
     "Motorcycles": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "Low Speed Vehicles": [
       800,
@@ -7296,9 +7296,9 @@
       7,
       2,
       147,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
       19,
       20
     ],

@@ -13765,7 +13765,8 @@ nv.models.stackedAreaChart = function() {
     , noData = 'No Data Available.'
     , dispatch = d3.dispatch('tooltipShow', 'tooltipHide', 'stateChange', 'changeState')
     , controlWidth = 250
-    , cData = ['Stacked','Stream','Expanded']
+    , cData = ['Stacked', 'Expanded']
+    //, cData = ['Stacked','Stream','Expanded']
     , controlLabels = {}
     , transitionDuration = 250
     ;
@@ -13931,7 +13932,7 @@ nv.models.stackedAreaChart = function() {
           }
         ];
 
-        controlWidth = (cData.length/3) * 260;
+        controlWidth = (cData.length/2) * 270;
 
         controlsData = controlsData.filter(function(d) {
           return cData.indexOf(d.metaKey) !== -1;

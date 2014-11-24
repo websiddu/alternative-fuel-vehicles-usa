@@ -137,6 +137,7 @@ window.AFV = do ->
       AFV.sidebar.initCarbonEmissions(AFV.sidebar.prepareData(e.target, 'carbon'))
       AFV.sidebar.totalAFVs(AFV.sidebar.prepareData(e.target, 'all'))
       AFV.tab2.loadByStateVehicleTypeGraph(e.target)
+      AFV.tab3.loadByStateFuelTypeGraph(e.target)
       # _initLineChart _prepartData(e.target)
 
       statesLayer.setStyle _setDisableStyle

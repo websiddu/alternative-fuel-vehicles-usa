@@ -1,6 +1,6 @@
-AFV.tab2 = do ->
+AFV.tab3 = do ->
   graph = ($ '#bar-split')
-  _vehicleTypeData = null
+  _fuelTypeData = null
   myData = null
 
   _perpareDataForVehType = (data) ->
@@ -32,65 +32,27 @@ AFV.tab2 = do ->
 
     return r
 
-  _initGraph = ->
-    sidebarWidth = $('.sidebar').width()
-    $('.ng-svg').css('width', sidebarWidth)
-
-    nv.addGraph ->
-      chart = nv.models.multiBarChart()
-        .transitionDuration(350)
-        .reduceXTicks(true)
-        .rotateLabels(0)
-        .showControls(true)
-        .groupSpacing(0.2)
-        .width(sidebarWidth)
-        .margin({left: 55})
-
-      chart.xAxis
-        .axisLabel('Year')
-        .tickFormat(d3.format('f'))
-        .showMaxMin(false)
-
-      chart.yAxis
-        .axisLabel("Number of AFV's")
-        .orient('left')
-        .showMaxMin(false)
-        .tickFormat( (d) ->
-          prefix = d3.formatPrefix(d)
-          prefix.scale(d) + prefix.symbol
-        )
-
-
-      d3.select('#bar-split svg')
-          .datum(window.us_total_aft_split)
-          .call(chart);
-      chart
-
-
-
   _loadInitalVehicleTypeGraph = ->
-    myData = _perpareDataForVehType(window.veh_types)
-    AFV.tab2.initVehicleTypeGraph(myData)
+    myData = _perpareDataForVehType(window.fuel_type)
+    AFV.tab3.initFuelTypeGraph(myData)
     return
 
   _getVehicleTypeData = ->
-    d3.json 'data/veh.type.json', (err, data) ->
-      _vehicleTypeData = data
+    d3.json 'data/fuel.type.json', (err, data) ->
+      _fuelTypeData = data
       #myData = _perpareDataForVehType(window.veh_types)
-      #AFV.tab2.initVehicleTypeGraph(myData)
+      #AFV.tab2.initFuelTypeGraph(myData)
       return
     return
 
-  loadByStateVehicleTypeGraph: (target) ->
+  loadByStateFuelTypeGraph: (target) ->
     currentState = target.feature.properties.name
-    return if(_vehicleTypeData is undefined)
+    return if(_fuelTypeData is undefined)
 
-    console.log _vehicleTypeData[currentState]
+    stateData = _perpareDataForVehType _fuelTypeData[currentState], true
+    AFV.tab3.initFuelTypeGraph(stateData)
 
-    stateData = _perpareDataForVehType _vehicleTypeData[currentState], true
-    AFV.tab2.initVehicleTypeGraph(stateData)
-
-  initVehicleTypeGraph: (data) ->
+  initFuelTypeGraph: (data) ->
     nv.addGraph ->
       chart = nv.models
         .stackedAreaChart()
@@ -119,7 +81,7 @@ AFV.tab2 = do ->
           prefix.scale(d) + prefix.symbol
         )
 
-      d3.select("#multiline-split svg").datum(data).call chart #Finally, render the chart!
+      d3.select("#fuel-split svg").datum(data).call chart #Finally, render the chart!
 
       #d3.select("#multiline-split .nv-legendWrap").attr("class", "hide")
 
@@ -130,10 +92,7 @@ AFV.tab2 = do ->
       chart
 
   init: ->
-    _initGraph()
     _getVehicleTypeData()
     _loadInitalVehicleTypeGraph()
 
-
-
-AFV.tab2.init()
+AFV.tab3.init()
