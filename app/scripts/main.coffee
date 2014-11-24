@@ -88,9 +88,7 @@ window.AFV = do ->
         )
       when 'total'
         d3.json 'data/us.states.total.json', (err, data) ->
-          console.log data
           _playerDataTotal = AFV.utils.stripGeometry(data)
-          console.log _playerDataTotal
           _minMax[_nowShowing] = AFV.utils.setMinMax(_playerDataTotal, 'total')
           _playerData = data
           _invokeAll()

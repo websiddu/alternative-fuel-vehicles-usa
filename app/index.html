@@ -42,7 +42,7 @@
   </div>
 
   <div class="controlbar animated fadeInDownBig">
-    <select name="" id="dataLayer">
+    <select name="" id="dataLayer" class="js_tour_mapcontrols">
       <option value="carbon" selected='true'>Carbon emissions</option>
       <option value="all">Total Number of Alternative Fuel vehicles</option>
       <option value="total">Total Number of  vehicles</option>
@@ -53,10 +53,10 @@
   <div class="sidebar animated fadeInRightBig">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#tab-one" role="tab" data-toggle="tab">Overview</a></li>
-    <li role="presentation"><a href="#tab-two" role="tab" data-toggle="tab">AF Vehicles</a></li>
-    <li role="presentation"><a href="#tab-three" role="tab" data-toggle="tab">Alternative Fuels Types</a></li>
-    <li role="presentation"><a href="#tab-four" role="tab" data-toggle="tab">AFV Manufacturers</a></li>
+    <li role="presentation" class="active js_tour_overview"><a href="#tab-one" role="tab" data-toggle="tab">Overview</a></li>
+    <li role="presentation" class="js_tour_afv"><a href="#tab-two" role="tab" data-toggle="tab">AF Vehicles</a></li>
+    <li role="presentation" class="js_tour_fuel"><a href="#tab-three" role="tab" data-toggle="tab">Alternative Fuels Types</a></li>
+    <li role="presentation" class="js_tour_manf"><a href="#tab-four" role="tab" data-toggle="tab">AFV Manufacturers</a></li>
   </ul>
 
   <div class="tab-content">
@@ -151,6 +151,8 @@
     <script src="bower_components/leaflet/dist/leaflet.js"></script>
     <script src="bower_components/heap/lib/heap.js"></script>
     <script src="bower_components/d3plus/d3plus.js"></script>
+    <script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.js"></script>
+    <script src="bower_components/bootstrap-tour/build/js/bootstrap-tour-standalone.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -182,6 +184,7 @@
         <script src="scripts/tab2.js"></script>
         <script src="scripts/tab3.js"></script>
         <script src="scripts/fuelConsumption.js"></script>
+        <script src="scripts/tour.js"></script>
         <!-- endbuild -->
 </body>
 </html>
