@@ -8215,7 +8215,7 @@ nv.models.multiBarChart = function() {
       if (showXAxis) {
           xAxis
             .scale(x)
-            .ticks( availableWidth / 100 )
+            .ticks( availableWidth / 50 )
             .tickSize(-availableHeight, 0);
 
           g.select('.nv-x.nv-axis')
@@ -8252,7 +8252,7 @@ nv.models.multiBarChart = function() {
           if (reduceXTicks)
             xTicks
               .filter(function(d,i) {
-                  return i % Math.ceil(data[0].values.length / (availableWidth / 100)) !== 0;
+                  return i % Math.ceil(data[0].values.length / (availableWidth / 50)) !== 0;
                 })
               .selectAll('text, line')
               .style('opacity', 0);
