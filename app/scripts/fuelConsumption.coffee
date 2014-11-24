@@ -56,6 +56,8 @@ AFV.fc = do ->
       chart = nv.models
         .stackedAreaChart()
         .margin(left: 55)
+        # .x( (d) ->  d.y)
+        # .y( (d) ->  d.x)
         .useInteractiveGuideline(true)
         .transitionDuration(550)
         .showLegend(true)

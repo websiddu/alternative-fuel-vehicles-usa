@@ -5,6 +5,7 @@ AFV.tooltips = do ->
     index = window.years.indexOf(currentYear)
     carbon = JSON.parse(localStorage["carbon_data"])[properties.name][index]
     all = JSON.parse(localStorage["all_data"])[properties.name][index]
+    total = JSON.parse(localStorage["total_data"])[properties.name][index]
 
     """
       <div class='tooltip-title'>
@@ -31,12 +32,21 @@ AFV.tooltips = do ->
         </tr>
         <tr>
           <td>
-            AFV's
+            AFVs
           </td>
           <td>
-            <b>#{all}</b> AFV's in #{currentYear}
+            <b>#{all}</b> AFVs in #{currentYear}
           </td>
         </tr>
+        <tr>
+          <td>
+            Total Vehicles
+          </td>
+          <td>
+            <b>#{total}</b> Vehicles in #{currentYear}
+          </td>
+        </tr>
+
       </table>
 
     """

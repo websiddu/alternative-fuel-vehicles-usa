@@ -9,7 +9,9 @@ AFV.legend = do ->
       when 'carbon'
         unit = 'Million Metric Tons CO2 (MMTCO2)'
       when 'all'
-        unit = 'Number of cars'
+        unit = 'Number of Alternative Fuel vehicles'
+      when 'total'
+        unit = 'Total Number of vehicles'
 
   generateGradient: ->
     now = localStorage['nowShowing']

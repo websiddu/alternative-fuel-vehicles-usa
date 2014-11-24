@@ -73,7 +73,7 @@ AFV.tab3 = do ->
         .tickFormat(d3.format('f'))
 
       chart.yAxis
-        .axisLabel("Number of AFV's")
+        .axisLabel("Number of AFVs")
         .orient('left')
         .showMaxMin(false)
         .tickFormat( (d) ->

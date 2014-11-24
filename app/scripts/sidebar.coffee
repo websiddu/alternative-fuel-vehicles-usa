@@ -73,7 +73,7 @@ AFV.sidebar = do ->
         .tickFormat(d3.format('r'))
 
       chart.yAxis
-        .axisLabel('Number of Vehicles')
+        .axisLabel('Number of AFVs')
         .tickFormat( (d) ->
           prefix = d3.formatPrefix(d)
           prefix.scale(d) + prefix.symbol

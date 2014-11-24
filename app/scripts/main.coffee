@@ -25,6 +25,8 @@ window.AFV = do ->
   _carbonMinMax = []
   _playerMinMax = []
 
+  _playerDataTotal  = []
+
   _nowShowing = ''
 
   _minMax = {}
@@ -69,7 +71,7 @@ window.AFV = do ->
       _renderMasterMap(_nowShowing)
 
   _firstRun = ->
-    for key in ['all', 'carbon']
+    for key in ['all', 'total', 'carbon']
       _nowShowing = key
       _renderMasterMap key
 
@@ -84,6 +86,14 @@ window.AFV = do ->
           _playerData = data
           _invokeAll()
         )
+      when 'total'
+        d3.json 'data/us.states.total.json', (err, data) ->
+          console.log data
+          _playerDataTotal = AFV.utils.stripGeometry(data)
+          console.log _playerDataTotal
+          _minMax[_nowShowing] = AFV.utils.setMinMax(_playerDataTotal, 'total')
+          _playerData = data
+          _invokeAll()
       when 'carbon'
         d3.json('data/us.states.carbon.json', (err, data) ->
           _playerDataCarbon = AFV.utils.stripGeometry(data)
@@ -96,16 +106,18 @@ window.AFV = do ->
 
   _invokeAll = ->
     AFV.pausePlayer()
-    _initPlayer()
+    #_initPlayer()
+    ## Activate last
+    $('[data-year=2011]').trigger('click').addClass('active')
     AFV.years.init ($ '#year')
     AFV.legend.init ($ '#legend')
 
   _initPlayer = ->
     interval = setInterval ->
       if currentYear > 2011
-        currentYear = 1994
         AFV.pausePlayer()
         AFV.years.reachedEnd()
+        currentYear = 1994
       else
         _renderCMap()
         AFV.years.setActiveYear(currentYear)

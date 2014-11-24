@@ -91,6 +91,9 @@ AFV.utils = do ->
         set = ['#e294e3', '#922093']
       when 'carbon'
         set = ['#f3cbcb', '#a30707']
+      when 'total'
+        set = ['#afdeff', '#1d6fa8']
+
 
     return set
 
