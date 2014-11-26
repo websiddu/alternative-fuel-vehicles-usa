@@ -34,7 +34,7 @@ AFV.years = do ->
         <b class=afv-tooltip-title>
         #{all}</b>
         <br>
-        Alt Fuel Vehicles
+        AFVs
     """
 
   _renderYearsUI = (target) ->

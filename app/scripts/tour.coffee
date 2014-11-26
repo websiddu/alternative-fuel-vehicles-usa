@@ -6,10 +6,28 @@ AFV.tour = do ->
         <h3 class="popover-title"></h3>
         <div class="popover-content"></div>
         <div class="popover-navigation">
-            <a class="pull-right" href='' data-role="end">No thanks</a>
-              <div class="text-center">
-                <button  class="btn btn-default" data-role="next">Start a tour</button>
+
+              <div class="pull-right">
+                <a class="tour-link" href='' data-role="end">No thanks</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                <button  class="btn btn-default tour-button" data-role="next">Start a tour &rarr;</button>
               </div>
+          </div>
+        </div>
+      </div>
+      """
+
+    e = """
+      <div class="popover" role="tooltip">
+        <div class="arrow"></div>
+        <h3 class="popover-title"></h3>
+        <div class="popover-content"></div>
+        <div class="popover-navigation">
+          <a class="btn btn-sm btn-default tour-end" href='' data-role="end">End tour</a>
+          <div class="btn-group">
+            <button class="btn btn-sm btn-success" data-role="prev">&laquo; Prev</button>
+            <button class="btn btn-sm btn-success" data-role="end">Got it!</button>
+            <button class="btn btn-sm btn-success" data-role="pause-resume" data-pause-text="Pause" data-resume-text="Resume">Pause</button>
           </div>
         </div>
       </div>
@@ -28,7 +46,7 @@ AFV.tour = do ->
         <h3 class="popover-title"></h3>
         <div class="popover-content"></div>
         <div class="popover-navigation">
-          <button class="btn btn-sm btn-default" data-role="end">End tour</button>
+          <a class="btn btn-sm btn-default tour-end" href='' data-role="end">End tour</a>
           <div class="btn-group">
             <button class="btn btn-sm btn-success" data-role="prev">&laquo; Prev</button>
             <button class="btn btn-sm btn-success" data-role="next">Next &raquo;</button>
@@ -41,83 +59,85 @@ AFV.tour = do ->
       steps: [
         {
           template: t1
-          title: "Welcome, environment enthusiast!",
+          title: "Welcome!",
           content: """
-            <p>While "Environmental conservation" has not been a consistent hot-button topic for political leaders for very long, climate change debating and advocacy have been increasing steadily over the last few decades. Developing countries, population spikes, the progression and supply of motor vehicles, and many more factors have made considerations to the planet’s environmental stability a necessity. We plan to utilize data from the Department of Energy to identify the trends and correlations of alternative fuel vehicles (AFVs) usage in the United States.
+          <div class="row">
+            <div class="col-lg-8">
+              <p>Alternative fuels have been moving into the spotlight of discussion for ways to reduce carbon emissions from vehicles. We created this visualization to support exploration of data regarding alternative fuel vehicles (AFVs).
+              </p>
+
+               <p>The following tour will help to orient you and give you some ideas of how to look at the information.
+              </p>
+
+            </div>
+            <div class="col-lg-4">
+              <img src="images/afvlogo.svg" alt="" class="img-responsive">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+
+              <p> <small>You may close this tour at any time, or reopen it by pressing the ‘Tour’ button in the top right of the screen.</small></p>
+
+            </div>
+          </div>
+
+          <h5 style="margin-bottom: 2px;">Data form</h5>
+          <p><small>http://www.afdc.energy.gov/</small></p>
+
+          <h5>Technologies used</h5>
+          <p>
+            <img src="images/credits.svg" alt="" height="25px">
           </p>
-          <ul class="list-inline afv-list">
-            <li> <em class="icon icon-afv-sedan"></em></li>
-            <li> <em class="icon icon-afv-suv"></em></li>
-            <li> <em class="icon icon-afv-truck"></em></li>
-            <li> <em class="icon icon-afv-van"></em></li>
-          </ul>
 
           """
           backdrop: true
         },
         {
           element: ".js_tour_mapcontrols",
-          title: "Change the map layer settings",
+          title: "Change the map layer setting",
+          placement: 'bottom'
           content: """
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quam, qui.</p>
+            <p> Use the dropdown to view different data on the U.S. map.</p>
           """
         },
         {
-          element: "[data-year=2000]"
-          title: 'Click on any year'
+          element: "[data-year=2000] .year-bar"
+          placement: 'top'
+          title: 'View data by year'
           content: """
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium inventore fuga reprehenderit, provident est, tenetur exercitationem ullam perspiciatis, dicta aliquam vero aspernatur quia labore dolores deserunt placeat enim accusantium neque.</p>
+          <p>Click any year to view that data by state.</p>
 
           """
         }
 
         {
           element: ".js_play_pause_icon"
-          title: 'Play and pause'
+          title: 'View slideshow'
           content: """
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium inventore fuga reprehenderit, provident est, tenetur exercitationem ullam perspiciatis, dicta aliquam vero aspernatur quia labore dolores deserunt placeat enim accusantium neque.</p>
+          <p>Press Play to view the yearly progression as a slideshow.</p>
 
           """
         }
         {
           element: ".js_tour_overview"
           placement: 'bottom'
-          title: 'See the overview here'
+          title: 'View overview tab'
           content: """
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium inventore fuga reprehenderit, provident est, tenetur exercitationem ullam perspiciatis, dicta aliquam vero aspernatur quia labore dolores deserunt placeat enim accusantium neque.</p>
+          <p>This tab shows the total number of AFVs and carbon emissions by year. Select a state on the left to see data for just that state. Click the state again to deselect it.</p>
 
           """
         }
         {
           element: ".js_tour_afv"
           title: 'All about the different vehicle types'
+          template: e
           placement: 'bottom'
           content: """
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium inventore fuga reprehenderit, provident est, tenetur exercitationem ullam perspiciatis, dicta aliquam vero aspernatur quia labore dolores deserunt placeat enim accusantium neque.</p>
+          <p>Use these tabs to view more in-depth information about AFVs, fuel types, and AFV manufacturers.</p>
 
           """
         }
-        {
-          element: ".js_tour_fuel"
-          title: 'All about the different fuel types'
-          placement: 'bottom'
-          content: """
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium inventore fuga reprehenderit, provident est, tenetur exercitationem ullam perspiciatis, dicta aliquam vero aspernatur quia labore dolores deserunt placeat enim accusantium neque.</p>
-
-          """
-        }
-
-        {
-          element: ".js_tour_manf"
-          placement: 'bottom'
-          title: 'All about the different fuel types'
-          content: """
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium inventore fuga reprehenderit, provident est, tenetur exercitationem ullam perspiciatis, dicta aliquam vero aspernatur quia labore dolores deserunt placeat enim accusantium neque.</p>
-
-          """
-        }
-
       ]
     );
 
