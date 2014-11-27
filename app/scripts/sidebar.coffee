@@ -3,7 +3,6 @@ AFV.sidebar = do ->
 
   renderTotalAFVGraph: ->
 
-
   prepareData: (layer, now) ->
     properties = layer.feature.properties
     data = JSON.parse(localStorage["#{now}_data"])[properties.name]

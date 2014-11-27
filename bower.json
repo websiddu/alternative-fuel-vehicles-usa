@@ -8,6 +8,7 @@
     "topojson": "~1.6.18",
     "leaflet": "~0.7.3",
     "d3plus": "~1.6.5",
-    "bootstrap-tour": "~0.10.1"
+    "bootstrap-tour": "~0.10.1",
+    "chartjs": "~0.2.0"
   }
 }

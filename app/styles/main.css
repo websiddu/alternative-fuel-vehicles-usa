@@ -10257,3 +10257,10 @@ header h1 {
 .tooltip-title span {
   font-weight: 200;
 }
+.currentState {
+  color: #333;
+  margin-left: 5px;
+}
+.currentState:before {
+  content: '\2015  ';
+}

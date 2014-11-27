@@ -151,6 +151,9 @@ window.AFV = do ->
       AFV.fc.loadByStateFuelConsumptionGraph(e.target)
       # _initLineChart _prepartData(e.target)
 
+      console.log e.target.feature.properties.name
+      $('.currentState').text(e.target.feature.properties.name)
+
       statesLayer.setStyle _setDisableStyle
       aStateIsActive = true
       AFV.pausePlayer()

@@ -64,7 +64,7 @@
       <br>
       <div class="side-graph">
         <div class="side-graph-title">
-          Number of AFV Over the years
+          Number of AFV Over the years <span class="currentState">USA</span>
         </div>
         <div id="linegraph">
           <svg class="ng-svg"></svg>
@@ -72,7 +72,7 @@
       </div>
       <div class="side-graph">
           <div class="side-graph-title">
-            CO2 Emissions from Fossil Fuel Combustion - Million Metric Tons CO2 (MMTCO2)*
+            CO2 Emissions from Fossil Fuel Combustion - Million Metric Tons CO2 (MMTCO2)* <span class="currentState">USA</span>
           </div>
           <div id="linegraph-carbon">
             <svg class="ng-svg"></svg>
@@ -92,7 +92,7 @@
 
       <div class="side-graph large">
           <div class="side-graph-title">
-            Number of AFVs based on vehicle types (2004 - 2011)
+            Number of AFVs based on vehicle types (2004 - 2011) <span class="currentState">USA</span>
           </div>
           <div id="multiline-split">
             <svg class="ng-svg large"></svg>
@@ -101,7 +101,7 @@
 
       <div class="side-graph small-g">
           <div class="side-graph-title">
-            Number of AFVs based on vehicle weight class (1994 - 2011)
+            Number of AFVs based on vehicle weight class (1994 - 2011) <span class="currentState">USA</span>
           </div>
           <div id="bar-split">
             <svg class="ng-svg small-g"></svg>
@@ -115,18 +115,32 @@
 
       <div class="side-graph large">
           <div class="side-graph-title">
-            Number of AFVs based on Fuel consumption (2004 - 2011)
+            Number of AFVs based on Fuel consumption (2004 - 2011) <span class="currentState">USA</span>
           </div>
           <div id="fuel-consumption">
             <svg class="ng-svg large"></svg>
           </div>
       </div>
 
-
-
-      <div class="side-graph large">
+  <div class="side-graph-no-height">
+  <div class="row">
+    <div class="col-lg-12">
           <div class="side-graph-title">
-            Number of AFVs based on Fuel type (2004 - 2011)
+            Number of AFVs based on Fuel type (2004 - 2011) <span class="currentState">USA</span>
+          </div>
+          <div>
+            <canvas id="fuel-radial" height="300px" width="300px"> </canvas>
+            <canvas id="fuel-bar" height="300px" width="300px"> </canvas>
+          </div>
+    </div>
+
+  </div>
+  </div>
+
+
+      <div class="side-graph">
+          <div class="side-graph-title">
+            Number of AFVs based on Fuel type (2004 - 2011) <span class="currentState">USA</span>
           </div>
           <div id="fuel-split">
             <svg class="ng-svg large"></svg>
@@ -153,6 +167,7 @@
     <script src="bower_components/d3plus/d3plus.js"></script>
     <script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.js"></script>
     <script src="bower_components/bootstrap-tour/build/js/bootstrap-tour-standalone.js"></script>
+    <script src="bower_components/chartjs/Chart.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -185,6 +200,7 @@
         <script src="scripts/tab3.js"></script>
         <script src="scripts/fuelConsumption.js"></script>
         <script src="scripts/tour.js"></script>
+        <script src="scripts/sprial.js"></script>
         <!-- endbuild -->
 </body>
 </html>
