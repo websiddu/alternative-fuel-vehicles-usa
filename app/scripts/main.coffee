@@ -149,9 +149,9 @@ window.AFV = do ->
         layer.feature.properties.isActive = false
       # map.fitBounds(layer.getBounds())
 
-      $("#stateSelector").select2('val', '')
+      $("#stateSelector").select2('val', '[]')
       #AFV.sidebar.initCarbonEmissions(AFV.sidebar.prepareData(e.target, 'carbon'))
-      AFV.sidebar.totalAFVs(AFV.sidebar.prepareData(e.target, 'all'))
+      AFV.sidebar.totalAFVs(AFV.sidebar.prepareData(e.target))
       AFV.tab2.loadByStateVehicleTypeGraph(e.target)
       AFV.tab3.loadByStateFuelTypeGraph(e.target)
       AFV.fc.loadByStateFuelConsumptionGraph(e.target)
@@ -264,7 +264,7 @@ window.AFV = do ->
   _renderCompareCharts = (e) ->
     if e.val.length isnt 0
       _setCurrentStateComparision(e.val)
-      AFV.sidebar.totalAFVs(AFV.sidebar.prepareDataSelect(e.val, 'all'))
+      AFV.sidebar.totalAFVs(AFV.sidebar.prepareDataSelect(e.val))
     else
       _setCurrentStateComparision('USA')
       AFV.sidebar.totalAFVs(window.tab1_data)

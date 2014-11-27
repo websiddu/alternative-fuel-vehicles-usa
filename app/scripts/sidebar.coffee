@@ -44,12 +44,15 @@ AFV.sidebar = do ->
 
 
 
-  prepareData: (layer, index) ->
-
+  prepareData: (layer, index = 0) ->
+    console.log layer
     if typeof layer is 'string'
       state = layer
     else
       state = layer.feature.properties.name
+
+
+    console.log state
 
     dataAll = JSON.parse(localStorage["all_data"])[state]
     dataCarbon = JSON.parse(localStorage["carbon_data"])[state]
