@@ -1,13 +1,9 @@
 AFV.sprial = do ->
 
-
-
   options = {
     pointLabelFontFamily : "'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif",
     legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
   }
-
-
 
   getFlatData: (data) ->
     newArr = []
@@ -15,7 +11,6 @@ AFV.sprial = do ->
       newArr.push(val)
 
     return newArr
-
 
   initSpiderWeb: ->
     $("#fuel-radial").highcharts

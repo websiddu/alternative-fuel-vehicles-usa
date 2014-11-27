@@ -70,6 +70,12 @@ window.AFV = do ->
       _nowShowing = dataLayer
       _renderMasterMap(_nowShowing)
 
+    $('.js_restart_tour').on 'click', _reinitTour
+
+  _reinitTour = (e) ->
+    e.preventDefault()
+    AFV.tour.restart()
+
   _firstRun = ->
     for key in ['all', 'total', 'carbon']
       _nowShowing = key
@@ -245,6 +251,8 @@ window.AFV = do ->
     _initPlayer()
 
   init: ->
+    $('[data-toggle="tooltip"]').tooltip
+      container: 'body'
     _init()
 
 

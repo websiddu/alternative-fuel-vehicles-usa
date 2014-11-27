@@ -5709,6 +5709,9 @@ button.close {
 .leaflet-left {
   left: 0;
 }
+.leaflet-popup {
+  z-index: 200000;
+}
 /* zoom and fade animations */
 .leaflet-fade-anim .leaflet-tile,
 .leaflet-fade-anim .leaflet-popup {
@@ -7212,23 +7215,26 @@ Interactive Layer
 .icon-afv-van:before {
   content: "\f106";
 }
-.icon-leaf-energy:before {
+.icon-help:before {
   content: "\f107";
 }
-.icon-leaf:before {
+.icon-leaf-energy:before {
   content: "\f108";
 }
-.icon-pause:before {
+.icon-leaf:before {
   content: "\f109";
 }
-.icon-play:before {
+.icon-pause:before {
   content: "\f10a";
 }
-.icon-solr:before {
+.icon-play:before {
   content: "\f10b";
 }
-.icon-tree:before {
+.icon-solr:before {
   content: "\f10c";
+}
+.icon-tree:before {
+  content: "\f10d";
 }
 @charset "UTF-8";
 /*!
@@ -10067,6 +10073,7 @@ header {
   right: 0;
   border-bottom: solid 2px #8CC051;
   box-shadow: 0 0 5px #888;
+  padding-right: 40px;
 }
 header a:hover {
   text-decoration: none;
@@ -10079,6 +10086,21 @@ header h1 {
   padding: 0 0 0 20px;
   color: #777;
   text-transform: uppercase;
+}
+.nav-links {
+  font-size: 20px;
+  height: 38px;
+  margin: 0;
+}
+.nav-links a {
+  display: inline-block;
+  margin-top: 3px;
+}
+.nav-links a:hover {
+  opacity: 0.6;
+}
+.nav-links a:focus {
+  text-decoration: none;
 }
 /* Sidebar */
 .sidebar {

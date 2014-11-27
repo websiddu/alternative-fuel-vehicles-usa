@@ -32,6 +32,7 @@ header {
   right: 0;
   border-bottom: solid 2px #8CC051;
   box-shadow: 0 0 5px #888;
+  padding-right: 40px;
 }
 
 header a:hover {
@@ -46,6 +47,22 @@ header h1 {
   padding: 0 0 0 20px;
   color: #777;
   text-transform: uppercase;
+}
+
+.nav-links {
+  font-size: 20px;
+  height: 38px;
+  margin: 0;
+  a {
+    display: inline-block;
+    margin-top: 3px;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:focus {
+      text-decoration: none;
+    }
+  }
 }
 
 /* Sidebar */
@@ -79,7 +96,6 @@ header h1 {
 
 .side-graph {
   margin-bottom: 40px;
-
 }
 
 .side-graph-title {

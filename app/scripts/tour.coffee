@@ -1,4 +1,5 @@
 AFV.tour = do ->
+  tour = null
   _init = ->
     t1 = """
       <div class="popover" role="tooltip">
@@ -82,7 +83,7 @@ AFV.tour = do ->
             </div>
           </div>
 
-          <h5 style="margin-bottom: 2px;">Data form</h5>
+          <h5 style="margin-bottom: 2px;">Data from</h5>
           <p><small>http://www.afdc.energy.gov/</small></p>
 
           <h5>Technologies used</h5>
@@ -141,12 +142,13 @@ AFV.tour = do ->
       ]
     );
 
-    console.log tour
-
     tour.init()
 
     tour.start()
     return
+
+  restart: ->
+    tour.restart()
 
   init: ->
     _init()
