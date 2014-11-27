@@ -222,3 +222,27 @@ window.fuel_type_sum =  {"Liquefied Petroleum Gas":1257845,"Liquefied Natural Ga
 window.fuel_consumption = {"Liquefied Petroleum Gas":[211883,188171,173130,152360,147784,129631,126354,122949],"Liquefied Natural Gas":[20888,22409,23474,24594,25554,25652,26072,25434],"Ethanol, 85 percent":[31581,38074,44041,54091,62464,71213,90323,137041],"Electricity":[5269,5219,5104,5037,5050,4956,4847,7464],"Compressed Natural Gas":[158903,166878,172011,178565,189358,199513,210007,220155],"Other Fuels":[0,2,2,2,2,2,0,0],"Hydrogen":[8,25,41,66,117,140,152,76]}
 
 window.fuel_consumption_sum = {"Liquefied Petroleum Gas":1252262,"Liquefied Natural Gas":194077,"Ethanol, 85 percent":528828,"Electricity":42946,"Compressed Natural Gas":1495390,"Hydrogen":625}
+
+
+window.tab1_data = [
+  {
+    key: "Total AFVs"
+    originalStream: 'AFVs'
+    seriesIndex: 0
+    type: 'line'
+    color: '#5D9CEC'
+    values: us_total_afv
+    yAxis: 1
+  }
+  {
+    key: "Carbon Emissions"
+    originalStream: 'Carbon'
+    seriesIndex: 0
+    type: 'line'
+    values: total_carbon_emissions
+    color: '#E9573F'
+    yAxis: 2
+  }
+]
+
+

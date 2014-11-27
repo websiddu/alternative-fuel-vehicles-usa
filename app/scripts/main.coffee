@@ -48,8 +48,8 @@ window.AFV = do ->
   # L.mapbox.accessToken = 'pk.eyJ1Ijoid2Vic2lkZHUiLCJhIjoibmRVS1NTYyJ9.pCvtUhjGjw_8JrW2GDYLug';
 
   _init = ->
-    AFV.sidebar.totalAFVs(window.us_total_afv_line)
-    AFV.sidebar.initCarbonEmissions(us_total_carbon)
+    AFV.sidebar.totalAFVs(tab1_data)
+    #AFV.sidebar.initCarbonEmissions(us_total_carbon)
     _yearsHeatMap()
     map = L.map('map', _options).setView([36.421, -71.411], 4)
 
@@ -149,15 +149,14 @@ window.AFV = do ->
         layer.feature.properties.isActive = false
       # map.fitBounds(layer.getBounds())
 
-
-      AFV.sidebar.initCarbonEmissions(AFV.sidebar.prepareData(e.target, 'carbon'))
+      $("#stateSelector").select2('val', '')
+      #AFV.sidebar.initCarbonEmissions(AFV.sidebar.prepareData(e.target, 'carbon'))
       AFV.sidebar.totalAFVs(AFV.sidebar.prepareData(e.target, 'all'))
       AFV.tab2.loadByStateVehicleTypeGraph(e.target)
       AFV.tab3.loadByStateFuelTypeGraph(e.target)
       AFV.fc.loadByStateFuelConsumptionGraph(e.target)
       # _initLineChart _prepartData(e.target)
 
-      console.log e.target.feature.properties.name
       $('.currentState').text(e.target.feature.properties.name)
 
       statesLayer.setStyle _setDisableStyle
@@ -169,9 +168,10 @@ window.AFV = do ->
       statesLayer.eachLayer (layer) ->
         layer.setStyle _getStyle(layer.feature)
       aStateIsActive = false
+      $('.currentState').text('USA')
       e.target.feature.properties['isActive'] = false
-      AFV.sidebar.totalAFVs(window.us_total_afv_line)
-      AFV.sidebar.initCarbonEmissions(us_total_carbon)
+      AFV.sidebar.totalAFVs(window.tab1_data)
+      # AFV.sidebar.initCarbonEmissions(us_total_carbon)
 
   _highlightFeature = (e) ->
     e.target.setStyle _getHoverStyles(e)
@@ -240,6 +240,36 @@ window.AFV = do ->
   _yearsHeatMap =  (years) ->
     years = us_total_afv_line_y
 
+
+  _prepopulateState = ->
+    opts = $("#source").html()
+    opts2 = "<option></option>" + opts
+    $("select.populate").each ->
+      e = $(this)
+      e.html (if e.hasClass("placeholder") then opts2 else opts)
+      return
+
+    $("#stateSelector").select2
+      placeholder: "Select multiple states"
+      maximumSelectionSize: 4
+
+    $("#stateSelector").on 'change', _renderCompareCharts
+
+  _setCurrentStateComparision = (data) ->
+    if(typeof data is 'string')
+      $('.js_currentState').text(data)
+    else
+      $('.js_currentState').text(data.join(', '))
+
+  _renderCompareCharts = (e) ->
+    if e.val.length isnt 0
+      _setCurrentStateComparision(e.val)
+      AFV.sidebar.totalAFVs(AFV.sidebar.prepareDataSelect(e.val, 'all'))
+    else
+      _setCurrentStateComparision('USA')
+      AFV.sidebar.totalAFVs(window.tab1_data)
+
+
   loadCurrentYearMap: (year) ->
     currentYear = year
     _renderCMap()
@@ -251,6 +281,8 @@ window.AFV = do ->
     _initPlayer()
 
   init: ->
+    _prepopulateState()
+
     $('[data-toggle="tooltip"]').tooltip
       container: 'body'
     _init()

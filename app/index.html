@@ -76,22 +76,32 @@
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="tab-one">
       <br>
-      <div class="side-graph">
+      <div class="side-graph h520">
         <div class="side-graph-title">
-          Number of AFV Over the years <span class="currentState">USA</span>
+          Number of AFVs and Carbon emissions Over the years <span class="currentState js_currentState">USA</span>
         </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-8">
+            <label for=""> Select multiples states to compare</label>
+            <select id="stateSelector" multiple="multiple" style="width: 100%" class="populate placeholder"></select>
+            <small class="help-text text-muted"> For design purposes we limit the number of comparision to 4 states</small>
+          </div>
+          <div class="col-lg-2"></div>
+        </div>
+
         <div id="linegraph">
-          <svg class="ng-svg"></svg>
+          <svg class="ng-svg h520"></svg>
         </div>
       </div>
-      <div class="side-graph">
+<!--       <div class="side-graph">
           <div class="side-graph-title">
             CO2 Emissions from Fossil Fuel Combustion - Million Metric Tons CO2 (MMTCO2)* <span class="currentState">USA</span>
           </div>
           <div id="linegraph-carbon">
             <svg class="ng-svg"></svg>
           </div>
-      </div>
+      </div> -->
 
     </div>
     <div role="tabpanel" class="tab-pane fade" id="tab-two">
@@ -104,21 +114,21 @@
 
       <br>
 
-      <div class="side-graph large">
+      <div class="side-graph">
           <div class="side-graph-title">
             Number of AFVs based on vehicle types (2004 - 2011) <span class="currentState">USA</span>
           </div>
           <div id="multiline-split">
-            <svg class="ng-svg large"></svg>
+            <svg class="ng-svg"></svg>
           </div>
       </div>
 
-      <div class="side-graph small-g">
+      <div class="side-graph">
           <div class="side-graph-title">
             Number of AFVs based on vehicle weight class (1994 - 2011) <span class="currentState">USA</span>
           </div>
           <div id="bar-split">
-            <svg class="ng-svg small-g"></svg>
+            <svg class="ng-svg"></svg>
           </div>
       </div>
 
@@ -170,6 +180,64 @@
     </div>
   </div>
 
+<select class="hide" id="source">
+               <optgroup label="Alaskan/Hawaiian Time Zone">
+                   <option value="Alaska">Alaska</option>
+                   <option value="Hawaii">Hawaii</option>
+               </optgroup>
+               <optgroup label="Pacific Time Zone">
+                   <option value="California">California</option>
+                   <option value="Nevada">Nevada</option>
+                   <option value="Oregon">Oregon</option>
+                   <option value="Washington">Washington</option>
+               </optgroup>
+               <optgroup label="Mountain Time Zone">
+                   <option value="Arizona">Arizona</option>
+                   <option value="Colorado">Colorado</option>
+                   <option value="Idaho">Idaho</option>
+                   <option value="Montana">Montana</option><option value="Nebraska">Nebraska</option>
+                   <option value="New">New Mexico</option>
+                   <option value="North Dakota">North Dakota</option>
+                   <option value="Utah">Utah</option>
+                   <option value="Wyoming">Wyoming</option>
+               </optgroup>
+               <optgroup label="Central Time Zone">
+                   <option value="Alabama">Alabama</option>
+                   <option value="Arkansas">Arkansas</option>
+                   <option value="Illinois">Illinois</option>
+                   <option value="Iowa">Iowa</option>
+                   <option value="Kansas">Kansas</option>
+                   <option value="Kentucky">Kentucky</option>
+                   <option value="Louisiana">Louisiana</option>
+                   <option value="Minnesota">Minnesota</option>
+                   <option value="Mississippi">Mississippi</option>
+                   <option value="Missouri">Missouri</option>
+                   <option value="Oklahoma">Oklahoma</option>
+                   <option value="South Dakota">South Dakota</option>
+                   <option value="Texas">Texas</option>
+                   <option value="Tennessee">Tennessee</option>
+                   <option value="Wisconsin">Wisconsin</option>
+               </optgroup>
+               <optgroup label="Eastern Time Zone">
+                   <option value="Connecticut">Connecticut</option>
+                   <option value="Delaware">Delaware</option>
+                   <option value="Florida">Florida</option>
+                   <option value="Georgia">Georgia</option>
+                   <option value="Indiana">Indiana</option>
+                   <option value="Maine">Maine</option>
+                   <option value="Maryland">Maryland</option>
+                   <option value="Massachusetts">Massachusetts</option>
+                   <option value="Michigan">Michigan</option>
+                   <option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option>
+                   <option value="New York">New York</option>
+                   <option value="North Carolina">North Carolina</option>
+                   <option value="Ohio">Ohio</option>
+                   <option value="Pennsylvania">Pennsylvania</option><option value="Rhode">Rhode Island</option><option value="South Carolina">South Carolina</option>
+                   <option value="Vermont">Vermont</option><option value="Virginia">Virginia</option>
+                   <option value="West">West Virginia</option>
+               </optgroup>
+              </select>
+
   </div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -182,6 +250,7 @@
     <script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.js"></script>
     <script src="bower_components/bootstrap-tour/build/js/bootstrap-tour-standalone.js"></script>
     <script src="bower_components/chartjs/Chart.min.js"></script>
+    <script src="bower_components/select2/select2.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
