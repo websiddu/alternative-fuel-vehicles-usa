@@ -4991,6 +4991,57 @@ nv.models.indentedTree = function() {
           height = ypos + 20
 
       }
+else if (legendPosition == 'right') {
+
+
+        var ypos = 5,
+            newxpos = 5,
+            maxwidth = 0,
+            length = 20,
+            maxlength = 0,
+            xpos;
+          series
+            .attr('transform', function(d, i) {
+
+
+              var legendText = d3.select(this).select('text');
+              var length;
+              try {
+                length = legendText.getComputedTextLength();
+                // If the legendText is display:none'd (length == 0), simulate an error so we approximate, instead
+                if(length <= 0) throw Error();
+              }
+              catch(e) {
+                length = nv.utils.calcApproxTextWidth(legendText) + 28;
+              }
+
+              xpos = newxpos;
+
+              if (width < margin.left + margin.right + xpos + length) {
+                newxpos = xpos = 5;
+                //ypos += 20;
+              }
+
+              // newxpos += length;
+              ypos += 20;
+
+              // if (newxpos > maxwidth) maxwidth = newxpos;
+
+            if(maxlength < width)
+              maxlength = length
+
+              return 'translate(' + 0 + ',' + ypos + ')';
+
+            });
+
+          //position legend as far right as possible within the total width
+          //g.attr('transform', 'translate(' + (0) + ',' + 0 + ')');
+          g.attr('transform', 'translate(' + 35 + ',' + (-20) + ')');
+
+          width = maxlength + 25
+
+}
+
     else {
       if(customLegend) {
         var ypos = 5,
@@ -14045,6 +14096,27 @@ nv.models.stackedAreaChart = function() {
           g.select('.nv-legendWrap')
             .attr('transform', 'translate(' + 0 + ',' + (availableHeight + margin.top + 10) +')');
         }
+        else if (legendPosition == 'right') {
+
+          // if ( margin.right != legend.width()) {
+          //   margin.right = legend.width() + 40;
+          //   availableWidth = (width || parseInt(container.style('width')) || 400)
+          //                      - margin.right - margin.left;
+          // }
+
+          margin.right = legend.width();
+          availableWidth = (width || parseInt(container.style('width')) || 400)
+                          - margin.right - margin.left;
+
+
+          console.log(legend.width())
+
+          g.select('.nv-legendWrap')
+            .attr('transform', 'translate(' + availableWidth + ',' + (-margin.top) +')');
+
+
+        }
+
         else {
           if ( margin.top != legend.height()) {
             margin.top = legend.height();

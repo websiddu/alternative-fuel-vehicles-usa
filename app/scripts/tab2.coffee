@@ -100,7 +100,7 @@ AFV.tab2 = do ->
         .showLegend(true)
         .showYAxis(true)
         .showXAxis(true)
-        .legendPosition('bottom')
+        .legendPosition('right')
         .controlLabels({
           stacked: "Total number"
           expanded: "Percent of total"
