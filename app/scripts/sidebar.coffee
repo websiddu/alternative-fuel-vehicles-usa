@@ -4,32 +4,6 @@ AFV.sidebar = do ->
   carbon_colors = ["#b30000","#ef6548","#fc8d59", "#fdbb84"]
   afv_colors = ['#08306b', '#2171b5', '#4292c6', '#6baed6']
 
-
-  renderTotalAFVGraph: ->
-
-
-
-  # window.tab1_data = [
-  #   {
-  #     key: "Total AFVs"
-  #     originalStream: 'AFVs'
-  #     seriesIndex: 0
-  #     type: 'line'
-  #     color: '#5D9CEC'
-  #     values: us_total_afv
-  #     yAxis: 1
-  #   }
-  #   {
-  #     key: "Carbon Emissions"
-  #     originalStream: 'Carbon'
-  #     seriesIndex: 0
-  #     type: 'line'
-  #     values: total_carbon_emissions
-  #     color: '#E9573F'
-  #     yAxis: 2
-  #   }
-  # ]
-
   prepareDataSelect: (states) ->
     result = []
     i = 0
@@ -45,14 +19,10 @@ AFV.sidebar = do ->
 
 
   prepareData: (layer, index = 0) ->
-    console.log layer
     if typeof layer is 'string'
       state = layer
     else
       state = layer.feature.properties.name
-
-
-    console.log state
 
     dataAll = JSON.parse(localStorage["all_data"])[state]
     dataCarbon = JSON.parse(localStorage["carbon_data"])[state]
@@ -71,17 +41,6 @@ AFV.sidebar = do ->
 
       values.push(point)
       values1.push(point2)
-
-    # switch now
-    #   when 'carbon'
-    #     features =
-    #       values: values
-    #       key: 'Carbon emission (MMTCO2)'
-    #       color: 'green'
-    #   when 'all'
-    #     features =
-    #       values: values
-    #       key: "AFV's"
 
     features = [
       {
@@ -121,6 +80,7 @@ AFV.sidebar = do ->
         .showLegend(true)
         .showYAxis(true)
         .showXAxis(true)
+
         #.width(sidebarWidth)
         #.forceY([0,200])
 
@@ -144,6 +104,7 @@ AFV.sidebar = do ->
         #.transitionDuration(350)
         .showLegend(true)
         .customLegend(true)
+
         #.showYAxis(true)
         #.showXAxis(true)
 
@@ -151,8 +112,10 @@ AFV.sidebar = do ->
         .axisLabel('Year')
         .tickFormat(d3.format('r'))
 
+
       chart.yAxis1
         .axisLabel('Number of AFVs')
+
         .tickFormat( (d) ->
           prefix = d3.formatPrefix(d)
           prefix.scale(d) + prefix.symbol
@@ -160,6 +123,7 @@ AFV.sidebar = do ->
 
       chart.yAxis2
         .axisLabel('Carbon emission (MMTCO2)')
+
         # .tickFormat( (d) ->
         #   prefix = d3.formatPrefix(d)
         #   prefix.scale(d) + prefix.symbol

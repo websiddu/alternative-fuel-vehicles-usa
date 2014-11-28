@@ -10730,8 +10730,16 @@ header h1 {
 .side-graph svg.h320 {
   height: 300px;
 }
+.side-graph.h370,
+.side-graph svg.h370 {
+  height: 370px;
+}
 .side-graph.h520,
 .side-graph svg.h520 {
+  height: 420px;
+}
+.side-graph.h420,
+.side-graph svg.h420 {
   height: 420px;
 }
 .side-graph.h220,

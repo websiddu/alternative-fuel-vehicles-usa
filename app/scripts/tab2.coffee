@@ -97,9 +97,10 @@ AFV.tab2 = do ->
         .margin(left: 55)
         .useInteractiveGuideline(true)
         .transitionDuration(350)
-        .showLegend(false)
+        .showLegend(true)
         .showYAxis(true)
         .showXAxis(true)
+        .legendPosition('bottom')
         .controlLabels({
           stacked: "Total number"
           expanded: "Percent of total"

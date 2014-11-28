@@ -4857,6 +4857,7 @@ nv.models.indentedTree = function() {
     , color = nv.utils.defaultColor()
     , align = true
     , customLegend = false
+    , legendPosition = 'top'
     , rightAlign = true
     , updateState = true   //If true, legend will update data.disabled and trigger a 'stateChange' dispatch.
     , radioButtonMode = false   //If true, clicking legend items will cause it to behave like a radio button. (only one can be selected at a time)
@@ -4949,6 +4950,48 @@ nv.models.indentedTree = function() {
       //TODO: implement fixed-width and max-width options (max-width is especially useful with the align option)
 
       // NEW ALIGNING CODE, TODO: clean up
+      if(legendPosition == 'bottom') {
+
+        var ypos = 5,
+            newxpos = 5,
+            maxwidth = 0,
+            xpos;
+          series
+            .attr('transform', function(d, i) {
+
+
+              var legendText = d3.select(this).select('text');
+              var length;
+              try {
+                length = legendText.getComputedTextLength();
+                // If the legendText is display:none'd (length == 0), simulate an error so we approximate, instead
+                if(length <= 0) throw Error();
+              }
+              catch(e) {
+                length = nv.utils.calcApproxTextWidth(legendText) + 28;
+              }
+
+              xpos = newxpos;
+
+              if (width < margin.left + margin.right + xpos + length) {
+                newxpos = xpos = 5;
+                ypos += 20;
+              }
+
+              newxpos += length;
+
+              if (newxpos > maxwidth) maxwidth = newxpos;
+
+              return 'translate(' + xpos + ',' + ypos + ')';
+            });
+
+          //position legend as far right as possible within the total width
+          g.attr('transform', 'translate(' + (0) + ',' + 0 + ')');
+          console.log(ypos)
+          height = ypos + 20
+
+      }
+    else {
       if(customLegend) {
         var ypos = 5,
             newxpos = 5,
@@ -5071,9 +5114,12 @@ nv.models.indentedTree = function() {
             newxpos = 5,
             maxwidth = 0,
             xpos;
-        series
+          series
             .attr('transform', function(d, i) {
-              var length = d3.select(this).select('text').node().getComputedTextLength() + 28;
+              var length = d3.select(this)
+                .select('text')
+                .node()
+                .getComputedTextLength() + 28;
               xpos = newxpos;
 
               if (width < margin.left + margin.right + xpos + length) {
@@ -5084,25 +5130,19 @@ nv.models.indentedTree = function() {
               newxpos += length;
               if (newxpos > maxwidth) maxwidth = newxpos;
 
-               if(d.yAxis == 2) {
-                return 'translate(' + (availableWidth - length + 30) + ',' + ypos + ')';
-              }
-
               return 'translate(' + xpos + ',' + ypos + ')';
             });
 
-        //position legend as far right as possible within the total width
-         // if(d.yAxis == 2) {
-         //        return 'translate(' + xPositions[i % seriesPerRow] + ',' + (5 + Math.floor(i / seriesPerRow) * 20) + ')';
-         //      }
-        //g.attr('transform', 'translate(' + (width - margin.right - maxwidth) + ',' + margin.top + ')');
-        g.attr('transform', 'translate(' + (0) + ',' + (-margin.top + 1) + ')');
+          //position legend as far right as possible within the total width
+          g.attr('transform', 'translate(' + (width - margin.right - maxwidth) + ',' + margin.top + ')');
 
-        height = margin.top + margin.bottom + ypos + 15;
+          height = margin.top + margin.bottom + ypos + 15;
 
       }
 
     }
+
+  }
 
     });
 
@@ -5162,9 +5202,15 @@ nv.models.indentedTree = function() {
     return chart;
   };
 
-   chart.customLegend = function(_) {
+  chart.customLegend = function(_) {
     if (!arguments.length) return customLegend;
     customLegend = _;
+    return chart;
+  };
+
+  chart.legendPosition = function(_) {
+    if (!arguments.length) return legendPosition;
+    legendPosition = _;
     return chart;
   };
 
@@ -9597,9 +9643,7 @@ nv.models.multiChart = function() {
 
       if (showLegend) {
         legend.width(availableWidth);
-        //legend.align(false);
         if(customLegend) {
-          console.log("THis is a cusotm legend...")
           legend.customLegend(true)
         }
         g.select('.legendWrap')
@@ -13842,6 +13886,7 @@ nv.models.stackedAreaChart = function() {
     , showLegend = true
     , showXAxis = true
     , showYAxis = true
+    , legendPosition = 'top'
     , rightAlignYAxis = false
     , useInteractiveGuideline = false
     , tooltips = true
@@ -13972,22 +14017,44 @@ nv.models.stackedAreaChart = function() {
       // Legend
 
       if (showLegend) {
+
+
         var legendWidth = (showControls) ? availableWidth - controlWidth : availableWidth;
+
+        if(legendPosition == 'bottom') {
+          legendWidth = availableWidth
+        }
+
         legend
-          .width(legendWidth);
+          .width(legendWidth)
+          .legendPosition(legendPosition);
 
         g.select('.nv-legendWrap')
             .datum(data)
             .call(legend);
 
-        if ( margin.top != legend.height()) {
-          margin.top = legend.height();
-          availableHeight = (height || parseInt(container.style('height')) || 400)
-                             - margin.top - margin.bottom;
-        }
 
-        g.select('.nv-legendWrap')
-            .attr('transform', 'translate(' + (availableWidth-legendWidth) + ',' + (-margin.top) +')');
+      if(legendPosition == 'bottom') {
+
+          if ( margin.bottom != legend.height()) {
+            margin.bottom = legend.height() + 40;
+            availableHeight = (height || parseInt(container.style('height')) || 400)
+                               - margin.top - margin.bottom;
+          }
+
+          g.select('.nv-legendWrap')
+            .attr('transform', 'translate(' + 0 + ',' + (availableHeight + margin.top + 10) +')');
+        }
+        else {
+          if ( margin.top != legend.height()) {
+            margin.top = legend.height();
+            availableHeight = (height || parseInt(container.style('height')) || 400)
+                               - margin.top - margin.bottom;
+          }
+
+          g.select('.nv-legendWrap')
+              .attr('transform', 'translate(' + (availableWidth-legendWidth) + ',' + (-margin.top) +')');
+        }
       }
 
       //------------------------------------------------------------
@@ -14039,11 +14106,18 @@ nv.models.stackedAreaChart = function() {
             .call(controls);
 
 
+        if(legendPosition == 'bottom'){
+          margin.top = controls.height();
+          availableHeight = (height || parseInt(container.style('height')) || 400)
+                             - margin.top - margin.bottom;
+        }
+        else {
         if ( margin.top != Math.max(controls.height(), legend.height()) ) {
           margin.top = Math.max(controls.height(), legend.height());
           availableHeight = (height || parseInt(container.style('height')) || 400)
                              - margin.top - margin.bottom;
         }
+      }
 
 
         g.select('.nv-controlsWrap')
@@ -14349,6 +14423,12 @@ nv.models.stackedAreaChart = function() {
   chart.showControls = function(_) {
     if (!arguments.length) return showControls;
     showControls = _;
+    return chart;
+  };
+
+  chart.legendPosition = function(_) {
+    if (!arguments.length) return legendPosition;
+    legendPosition = _;
     return chart;
   };
 
