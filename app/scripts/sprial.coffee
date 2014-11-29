@@ -102,5 +102,5 @@ AFV.sprial = do ->
 
 
 # AFV.sprial.initSpiderWeb()
-AFV.sprial.init()
+# AFV.sprial.init()
 

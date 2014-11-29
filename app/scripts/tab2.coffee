@@ -84,9 +84,6 @@ AFV.tab2 = do ->
   loadByStateVehicleTypeGraph: (target) ->
     currentState = target.feature.properties.name
     return if(_vehicleTypeData is undefined)
-
-    console.log _vehicleTypeData[currentState]
-
     stateData = _perpareDataForVehType _vehicleTypeData[currentState], true
     AFV.tab2.initVehicleTypeGraph(stateData)
 

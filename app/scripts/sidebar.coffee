@@ -105,17 +105,12 @@ AFV.sidebar = do ->
         .showLegend(true)
         .customLegend(true)
 
-        #.showYAxis(true)
-        #.showXAxis(true)
-
       chart.xAxis
         .axisLabel('Year')
         .tickFormat(d3.format('r'))
 
-
       chart.yAxis1
         .axisLabel('Number of AFVs')
-
         .tickFormat( (d) ->
           prefix = d3.formatPrefix(d)
           prefix.scale(d) + prefix.symbol
