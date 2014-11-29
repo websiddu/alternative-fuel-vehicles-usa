@@ -4851,7 +4851,7 @@ nv.models.indentedTree = function() {
   //------------------------------------------------------------
 
   var margin = {top: 5, right: 0, bottom: 5, left: 0}
-    , width = '100%'
+    , width = 200
     , height = 25
     , getKey = function(d) { return d.key }
     , color = nv.utils.defaultColor()
@@ -8307,10 +8307,13 @@ nv.models.multiBarChart = function() {
 
       if (showLegend) {
 
-        var legendWidth = (showControls) ? availableWidth - controlWidth : availableWidth;
+        var legendWidth = null;
 
         if(legendPosition == 'bottom') {
           legendWidth = availableWidth
+        }
+        else {
+          legendWidth = availableWidth - controlWidth();
         }
 
         legend
