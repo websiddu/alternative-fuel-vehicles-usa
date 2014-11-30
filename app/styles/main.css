@@ -10919,7 +10919,7 @@ header h1 {
   background-color: #fff;
   box-shadow: 0 0 10px #ccc;
   padding: 10px;
-  width: 250px;
+  width: 270px;
 }
 .si-tooltip .si-header {
   background: #f8f8f8;
@@ -10967,7 +10967,7 @@ header h1 {
 }
 .si-tooltip .si-tooltip-second-half {
   float: left;
-  width: 50%;
+  margin-left: 20px;
 }
 .si-tooltip .si-fueltype {
   font-weight: 500;
@@ -10998,4 +10998,16 @@ header h1 {
   border-top: solid 12px #ccc;
   display: block;
   margin-left: -12px;
+}
+.progress.flat-progress {
+  border-radius: 0;
+  color: #333;
+  margin: 0;
+}
+.progress.flat-progress .progress-bar {
+  border-radius: 0;
+  color: #333;
+}
+.progress.flat-progress span {
+  margin-left: 15px;
 }

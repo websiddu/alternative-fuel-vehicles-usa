@@ -11934,7 +11934,7 @@ nv.models.scatterChart = function() {
     , showXAxis    = true
     , showYAxis    = true
     , rightAlignYAxis = false
-    , showControls = !!d3.fisheye
+    , showControls = false
     , fisheye      = 0
     , pauseFisheye = false
     , tooltips     = true
@@ -11990,12 +11990,12 @@ nv.models.scatterChart = function() {
         xVal = xAxis.tickFormat()(scatter.x()(e.point, e.pointIndex)),
         yVal = yAxis.tickFormat()(scatter.y()(e.point, e.pointIndex));
 
-      if( tooltipX != null )
-          nv.tooltip.show([leftX, topX], tooltipX(e.series.key, xVal, yVal, e, chart), 'n', 1, offsetElement, 'x-nvtooltip');
-      if( tooltipY != null )
-          nv.tooltip.show([leftY, topY], tooltipY(e.series.key, xVal, yVal, e, chart), 'e', 1, offsetElement, 'y-nvtooltip');
+      // if( tooltipX != null )
+      //     nv.tooltip.show([leftX, topX], tooltipX(e.series.key, xVal, yVal, e, chart), 's', 1, offsetElement, 'x-nvtooltip');
+      // if( tooltipY != null )
+      //     nv.tooltip.show([leftY, topY], tooltipY(e.series.key, xVal, yVal, e, chart), 'e', 1, offsetElement, 'y-nvtooltip');
       if( tooltip != null )
-          nv.tooltip.show([left, top], tooltip(e.series.key, xVal, yVal, e, chart), e.value < 0 ? 'n' : 's', null, offsetElement);
+          nv.tooltip.show([left, top], tooltip(e.series.key, xVal, yVal, e, chart), e.value < 0 ? 'n' : 'w', null, offsetElement);
   };
 
   var controlsData = [
@@ -12091,7 +12091,9 @@ nv.models.scatterChart = function() {
 
       if (showLegend) {
         var legendWidth = (showControls) ? availableWidth / 2 : availableWidth;
-        legend.width(legendWidth);
+        legend
+          .width(legendWidth);
+          //.align(false);
 
         wrap.select('.nv-legendWrap')
             .datum(data)
@@ -12104,7 +12106,7 @@ nv.models.scatterChart = function() {
         }
 
         wrap.select('.nv-legendWrap')
-            .attr('transform', 'translate(' + (availableWidth - legendWidth) + ',' + (-margin.top) +')');
+            .attr('transform', 'translate(' + (0) + ',' + (-margin.top) +')');
       }
 
       //------------------------------------------------------------
@@ -12177,7 +12179,7 @@ nv.models.scatterChart = function() {
       if (showXAxis) {
         xAxis
             .scale(x)
-            .ticks( xAxis.ticks() && xAxis.ticks().length ? xAxis.ticks() : availableWidth / 100 )
+            .ticks( xAxis.ticks() && xAxis.ticks().length ? xAxis.ticks() : availableWidth / 60 )
             .tickSize( -availableHeight , 0);
 
         g.select('.nv-x.nv-axis')

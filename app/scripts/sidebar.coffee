@@ -127,7 +127,12 @@ AFV.sidebar = do ->
 
       d3.select('#linegraph svg')
         .datum(data)
+        .transition().duration(500)
         .call(chart)
+
+      nv.utils.windowResize chart.update
+
+
       chart
 
     return

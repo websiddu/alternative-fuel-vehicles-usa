@@ -95,7 +95,22 @@
         <div id="linegraph">
           <svg class="ng-svg h520"></svg>
         </div>
+
       </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="side-graph-title">
+            </div>
+            <div id="bullet">
+              <svg class="ng-svg"></svg>
+            </div>
+          </div>
+        </div>
+
+
+
+
 <!--       <div class="side-graph">
           <div class="side-graph-title">
             CO2 Emissions from Fossil Fuel Combustion - Million Metric Tons CO2 (MMTCO2)* <span class="currentState">USA</span>
@@ -141,7 +156,7 @@
 
       <div class="side-graph large">
           <div class="side-graph-title">
-            Number of AFVs based on Fuel consumption (2004 - 2011) <span class="currentState">USA</span>
+            Alternative Fuel consumption over the years (2004 - 2011) <span class="currentState">USA</span>
           </div>
           <div id="fuel-consumption">
             <svg class="ng-svg large"></svg>
@@ -179,18 +194,27 @@
     <div role="tabpanel" class="tab-pane fade" id="tab-four">
 
   <br>
-      <div class="side-graph">
+      <div class="side-graph h320">
           <div class="side-graph-title">
             Number of models offered by Fuel type
           </div>
           <div id="models-split">
-            <svg class="ng-svg large"></svg>
+            <svg class="ng-svg h320"></svg>
           </div>
-          <p><small class="text-muted text-center">Notes: *EVs do not include neighborhood electric vehicles (NEVs), low speed electric vehicles, or two-wheeled electric vehicles.
+          <div class="row">
+            <div class="col-lg-1">
+
+            </div>
+            <div class="col-lg-10">
+                        <p><small class="text-muted text-center">Notes: *EVs do not include neighborhood electric vehicles (NEVs), low speed electric vehicles, or two-wheeled electric vehicles.
 Conversion models were counted for natural gas and propane vehicles for the first time in 2012.</small></p>
           <small class="help-text text-muted">
 Since 2003, vehicles capable of using E85 have represented the largest share of models offered. This is largely because the technology required for E85 vehicles is comparatively inexpensive and compatible with gasoline vehicles.
           </small>
+
+            </div>
+          </div>
+
       </div>
 
 
@@ -198,10 +222,12 @@ Since 2003, vehicles capable of using E85 have represented the largest share of 
 
 <div role="tabpanel" class="tab-pane fade" id="tab-five">
 <br>
- <div class="side-graph h520">
-          <div class="side-graph-title">
+
+
+ <div class="side-graph">
+<!--           <div class="side-graph-title">
             Number of models
-          </div>
+          </div> -->
           <div class="row">
             <div class="col-lg-1">
             </div>
@@ -240,12 +266,33 @@ Since 2003, vehicles capable of using E85 have represented the largest share of 
             </div>
           </div>
           <br>
+          <div class="row">
+            <div class="col-lg-12">
+              <div id="models">
+                <svg class="ng-svg" style="height: 340px;"></svg>
+              </div>
+            </div>
 
-          <div id="models">
-            <svg class="ng-svg  h520"></svg>
           </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <strong>Reduce your greenhouse gas emission by choosing a car with better gas milage.</strong>
+            <div id="greenhouse">
+                <svg class="ng-svg" style="height: 120px;"></svg>
+            </div>
+          </div>
+          </div>
+        </div>
+
+
       </div>
+
+
+
 </div>
+
+
 
 </div>
 
@@ -356,6 +403,7 @@ Since 2003, vehicles capable of using E85 have represented the largest share of 
         <script src="scripts/tab3.js"></script>
         <script src="scripts/tab4.js"></script>
         <script src="scripts/tab5.js"></script>
+        <script src="scripts/tab5a.js"></script>
         <script src="scripts/fuelConsumption.js"></script>
         <script src="scripts/tour.js"></script>
         <script src="scripts/sprial.js"></script>

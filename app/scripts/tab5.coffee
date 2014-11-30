@@ -7,7 +7,7 @@ AFV.tab5 = do ->
       chart = nv.models
         .scatterChart()
         #.showDistX(true)
-        .margin({left: 100})
+        #.margin({left: 100})
         #.showDistY(true)
         .y( (d) -> d['y'] )
         .x( (d) -> d['x'])
@@ -28,19 +28,19 @@ AFV.tab5 = do ->
               <small class="si-year"> (#{car.year}) </small>
 
             </div>
-            <div class="si-fueltype"> #{car.fueltype} </div>
+            <div class="si-fueltype"> #{car.actualFuel} </div>
             <div class="si-toolitp-body">
 
               <div class="clearfix"></div>
               <div class="si-tooltip-first-half">
                 <small>Milage</small> <br>
                 <span class="si-mpg">
-                  #{car.x.toFixed(2)}  <small>mpg</small>
+                  #{car.x.toFixed(2)}  <small>miles/gallon</small>
                 </span>
                 <br>
                 <small>Carbon emissions</small> <br>
                 <span class="si-carbon">
-                  #{car.y.toFixed(2)}  <small>co2 per ton</small>
+                  #{car.y.toFixed(2)}  <small>grams/mile</small>
                 </span>
               </div>
               <div class="si-tooltip-second-half">
@@ -54,13 +54,13 @@ AFV.tab5 = do ->
         """
 
       chart.yAxis
-        .axisLabel("Carbon emissions")
+        .axisLabel("Carbon emissions(Grams per mile)")
         .orient('left')
         .showMaxMin(false)
         .tickFormat d3.format("f")
 
       chart.xAxis
-        .axisLabel("Miles per gallon")
+        .axisLabel("Number of Miles per gallon")
         .orient('bottom')
         .showMaxMin(false)
         .tickFormat d3.format(".02f")

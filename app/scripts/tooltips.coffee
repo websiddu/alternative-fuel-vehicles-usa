@@ -6,6 +6,7 @@ AFV.tooltips = do ->
     carbon = JSON.parse(localStorage["carbon_data"])[properties.name][index]
     all = JSON.parse(localStorage["all_data"])[properties.name][index]
     total = JSON.parse(localStorage["total_data"])[properties.name][index]
+    percent = all * 100/total
 
     """
       <div class='tooltip-title'>
@@ -44,6 +45,18 @@ AFV.tooltips = do ->
           </td>
           <td>
             <b>#{total}</b> Vehicles in #{currentYear}
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: left;">
+        Percentage of AFVs
+        <div class="progress flat-progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: #{percent}%;">
+            <span>#{percent.toFixed(2)}% </span>
+          </div>
+        </div>
+
+
           </td>
         </tr>
 
