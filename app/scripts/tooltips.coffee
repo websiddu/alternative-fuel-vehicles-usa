@@ -26,6 +26,7 @@ AFV.tooltips = do ->
         <tr>
           <td>
             CO2 Emission
+
           </td>
           <td>
             <b>#{carbon.toFixed(2) or carbon}</b> MMTCO2 in #{currentYear}
@@ -34,16 +35,12 @@ AFV.tooltips = do ->
         <tr>
           <td>
             AFVs
-          </td>
-          <td>
-            <b>#{all}</b> AFVs in #{currentYear}
-          </td>
-        </tr>
-        <tr>
-          <td>
+            <br>
             Total Vehicles
           </td>
           <td>
+            <b>#{all}</b> AFVs in #{currentYear}
+            <br>
             <b>#{total}</b> Vehicles in #{currentYear}
           </td>
         </tr>
