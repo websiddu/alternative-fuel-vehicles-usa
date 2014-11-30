@@ -7819,26 +7819,47 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 .icon-afv-van:before {
   content: "\f106";
 }
-.icon-help:before {
+.icon-data:before {
   content: "\f107";
 }
-.icon-leaf-energy:before {
+.icon-document:before {
   content: "\f108";
 }
-.icon-leaf:before {
+.icon-facebook:before {
   content: "\f109";
 }
-.icon-pause:before {
+.icon-github:before {
   content: "\f10a";
 }
-.icon-play:before {
+.icon-help:before {
   content: "\f10b";
 }
-.icon-solr:before {
+.icon-info:before {
   content: "\f10c";
 }
-.icon-tree:before {
+.icon-leaf-energy:before {
   content: "\f10d";
+}
+.icon-leaf:before {
+  content: "\f10e";
+}
+.icon-pause:before {
+  content: "\f10f";
+}
+.icon-play:before {
+  content: "\f110";
+}
+.icon-solr:before {
+  content: "\f111";
+}
+.icon-tree:before {
+  content: "\f112";
+}
+.icon-twitter:before {
+  content: "\f113";
+}
+.icon-users:before {
+  content: "\f114";
 }
 @charset "UTF-8";
 /*!
