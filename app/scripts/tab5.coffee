@@ -98,7 +98,7 @@ AFV.tab5 = do ->
         }
         query.callback(data);
 
-    $('#s_make').select2('data', makeData.slice(0, 3))
+    $('#s_make').select2('data', makeData.slice(0, 2))
 
     $("#s_years").on 'change', _renderCompareCharts
     $("#s_make").on 'change', _renderCompareCharts
