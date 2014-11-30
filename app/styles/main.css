@@ -10911,6 +10911,9 @@ header h1 {
 .currentState:before {
   content: '\2015  ';
 }
+.nvtooltip {
+  z-index: 99999999;
+}
 .si-tooltip {
   margin: -1px;
   background-color: #fff;

@@ -7,7 +7,7 @@ AFV.tab5 = do ->
       chart = nv.models
         .scatterChart()
         #.showDistX(true)
-        .margin({left: 70})
+        #.margin({left: 70})
         #.showDistY(true)
         .y( (d) -> d['y'] )
         .x( (d) -> d['x'])
@@ -71,7 +71,7 @@ AFV.tab5 = do ->
       #We want to show shapes other than circles.
       #chart.scatter.onlyCircles false
 
-      d3.select("#models svg").datum(data).call chart
+      d3.select("#models svg").datum(data).transition().duration(500).call chart
       nv.utils.windowResize chart.update
       chart
 
@@ -100,7 +100,6 @@ AFV.tab5 = do ->
     _fullDataCopy = JSON.parse(localStorage['vehFullData'])
     filtered = []
     for key, val of _fullDataCopy
-      console.log val
       valCopy = val.values
       filtered = valCopy.filter (ele) ->
         if(_.contains(makes, ele.make) and _.contains(years, ele.year+"") )
