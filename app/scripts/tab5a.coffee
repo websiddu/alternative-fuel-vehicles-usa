@@ -6,34 +6,42 @@ AFV.tab5a = do ->
         {
           "x" : 50
           "y" : 3.6
+          "color": "#e9573f"
         } ,
         {
           "x" : 45
           "y" : 4.0
+          "color": "#e9573f"
         } ,
         {
           "x" : 40
           "y" : 4.5
+          "color": "#e9573f"
         } ,
         {
           "x" : 35
           "y" : 5.1
+          "color": "#e9573f"
         } ,
         {
           "x" : 30
           "y" : 6.0
+          "color": "#e9573f"
         } ,
         {
           "x" : 25
           "y" : 7.2
+          "color": "#e9573f"
         }
         {
           "x" : 20
           "y" : 9.0
+          "color": "#e9573f"
         }
         {
           "x" : 15
           "y" : 12.0
+          "color": "#e9573f"
         }
       ]
     }
@@ -41,15 +49,17 @@ AFV.tab5a = do ->
 
   _initSmallGraph = ->
     nv.addGraph ->
-      chart = nv.models.multiBarChart()
+      chart = nv.models.discreteBarChart()
         .transitionDuration(350)
-        .reduceXTicks(true)
-        .rotateLabels(0)
-        .height(150)
-        .width(300)
-        .showControls(false)
-        .showLegend(false)
-        .groupSpacing(0.2)
+        #.reduceXTicks(true)
+        #.rotateLabels(0)
+        .height(250)
+        .tooltips(false)
+        .width(400)
+        .showValues(true)
+        #.showControls(false)
+        #.showLegend(false)
+        #.groupSpacing(0.2)
         .margin({left: 55})
 
       chart.xAxis
@@ -61,6 +71,7 @@ AFV.tab5a = do ->
         .axisLabel("Annual tons of GHG")
         .orient('left')
         .showMaxMin(false)
+
         # .tickFormat( (d) ->
         #   prefix = d3.formatPrefix(d)
         #   prefix.scale(d) + prefix.symbol
