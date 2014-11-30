@@ -235,7 +235,8 @@ window.AFV = do ->
     fillColor: yearsScale(feature.properties[currentYear])
 
   yearsScale = (data) ->
-    return d3.scale.linear().domain(_minMax[_nowShowing]).range(AFV.utils.getColorArray(_nowShowing))(data)
+    return d3.scale.linear()
+      .domain(_minMax[_nowShowing]).range(AFV.utils.getColorArray(_nowShowing)).interpolate(d3.interpolateLab)(data)
 
   _yearsHeatMap =  (years) ->
     years = us_total_afv_line_y

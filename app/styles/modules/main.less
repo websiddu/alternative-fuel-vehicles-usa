@@ -300,3 +300,95 @@ header h1 {
     content: '\2015  '
   }
 }
+
+.si-tooltip {
+  margin: -1px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #ccc;
+  padding: 10px 10px;
+  max-width: 300px;
+  width: 250px;
+  .si-header {
+    background: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    margin: -10px -10px 0 -10px;
+    padding: 5px 10px;
+  }
+  .si-make {
+    font-size: 14px;
+    color: #888;
+    font-weight: 500;
+  }
+  .si-model {
+    font-size: 16px;
+    color: #333;
+  }
+  .si-year {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 13px;
+  }
+
+  .si-toolitp-body {
+    padding: 10px 0;
+    overflow: hidden;
+  }
+
+  span.si-mpg {
+    margin-bottom: 15px;
+  }
+
+  .si-mpg, .si-carbon {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0;
+    small {
+      font-size: 13px;
+      color: #888;
+      font-weight: 300;
+    }
+  }
+
+  .si-money {
+
+  }
+
+  .si-tooltip-first-half {
+    float: left;
+    width: 50%;
+  }
+
+
+  .si-tooltip-second-half {
+    float: left;
+    width: 50%;
+  }
+
+  .si-arrow {
+    &:after {
+      content: '';
+      bottom: -20px;
+      left: 50%;
+      margin-left: 20px;
+      position: absolute;
+      border: solid 10px transparent;
+      border-top: solid 10px #fff;
+      display: block;
+      margin-left: -10px;
+    }
+    &:before {
+      content: '';
+      bottom: -24px;
+      left: 50%;
+      position: absolute;
+      border: solid 12px transparent;
+      border-top: solid 12px #ccc;
+      display: block;
+      margin-left: -12px;
+    }
+
+  }
+
+}

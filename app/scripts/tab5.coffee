@@ -1,89 +1,137 @@
 AFV.tab5 = do ->
+  _fullData = null
+
+  _renderChart = (data) ->
+    nv.addGraph ->
+      #showDist, when true, will display those little distribution lines on the axis.
+      chart = nv.models
+        .scatterChart()
+        #.showDistX(true)
+        .margin({left: 70})
+        #.showDistY(true)
+        .y( (d) -> d['y'] )
+        .x( (d) -> d['x'])
+        .size( (d) -> d['money'])
+        .transitionDuration(350)
+        #.color(d3.scale.category10().range())
+
+      #Configure how the tooltip looks.
+      chart.tooltipContent (key, xVal, yVal, e, chart) ->
+        car = e.point
+        """
+          <div class="si-tooltip">
+            <div class="si-arrow"></div>
+            <div class="si-header">
+              <span class="si-make">#{car.make} &mdash; </span>
+              <br>
+              <span class="si-model"> #{car.model} </span>
+              <small class="si-year"> (#{car.year}) </small>
+            </div>
+            <div class="si-toolitp-body">
+              <div class="si-tooltip-first-half">
+                <small>Milage</small> <br>
+                <span class="si-mpg">
+                  #{car.x.toFixed(2)}  <small>mpg</small>
+                </span>
+                <br>
+                <small>Carbon emissions</small> <br>
+                <span class="si-carbon">
+                  #{car.y.toFixed(2)}  <small>co2 per ton</small>
+                </span>
+              </div>
+              <div class="si-tooltip-second-half">
+                  <small>Save/Spend</small> <br>
+                  <span class="si-mpg">
+                  #{car.money.toFixed(2)} <small>$</small>
+                  </span>
+              </div>
+            </div>
+          </div>
+        """
+
+      chart.yAxis
+        .axisLabel("Carbon emissions")
+        .orient('left')
+        .showMaxMin(false)
+        .tickFormat d3.format("f")
+
+      chart.xAxis
+        .axisLabel("Miles per gallon")
+        .orient('bottom')
+        .showMaxMin(false)
+        .tickFormat d3.format(".02f")
+
+      #Axis settings
+      # chart.xAxis
+      #   .tickFormat d3.format(".02f")
+
+      # chart.yAxis
+      #   .tickFormat d3.format(".02f")
+
+      #We want to show shapes other than circles.
+      #chart.scatter.onlyCircles false
+
+      d3.select("#models svg").datum(data).call chart
+      nv.utils.windowResize chart.update
+      chart
 
   _initChart = ->
-
-    d3.json 'data/afv.models.json', (err, data) ->
-      i = 0
-      d1 = []
-      while i < data.length
-        if data[i]['Fuel Type'] is 'Gasoline or E85'
-          d1.push(data[i])
-        i++
-
-      # visualization = d3plus.viz()
-      #   .container("#models svg")  # container DIV to hold the visualization
-      #   .data(d1)  # data to use with the visualization
-      #   .type("chart")      # visualization type
-      #   .id("Id")         # key for which our data is unique on
-      #   .x("x")         # key for x-axis
-      #   .y("y")        # key for y-axis
-      #   .draw()             # finally, draw the visualization!
-
-      nv.addGraph ->
-        #showDist, when true, will display those little distribution lines on the axis.
-        chart = nv.models
-          .scatterChart()
-          #.showDistX(true)
-          .margin({left: 70, bottom: 30})
-          #.showDistY(true)
-          # .y( (d) -> d['y'] )
-          # .x( (d) -> d['x'])
-          # .size( (d) -> 20)
-          .transitionDuration(350)
-          #.color(d3.scale.category10().range())
-
-        #Configure how the tooltip looks.
-        # chart.tooltipContent (d) ->
-        #   console.log d
-        #   "<h3>" + d + "</h3>"
-
-        #Axis settings
-        # chart.xAxis
-        #   .tickFormat d3.format(".02f")
-
-        # chart.yAxis
-        #   .tickFormat d3.format(".02f")
-
-        #We want to show shapes other than circles.
-        #chart.scatter.onlyCircles false
-        myData = randomData(4, 40)
-
-        d3.select("#models svg").datum(data).call chart
-        nv.utils.windowResize chart.update
-        chart
+    d3.json 'data/afv.models.json', (err, dat) ->
+      _fullData = dat
+      localStorage['vehFullData'] = JSON.stringify(dat)
 
 
-  randomData = (groups, points) -> ## groups,# points per group
-    data = []
-    shapes = [
-      "circle"
-      "cross"
-      "triangle-up"
-      "triangle-down"
-      "diamond"
-      "square"
-    ]
-    random = d3.random.normal()
-    i = 0
-    while i < groups
-      data.push
-        key: "Group " + i
-        values: []
+  _initSelect2 = ->
+    $("#s_years").select2()
 
-      j = 0
-      while j < points
-        data[i].values.push
-          x: random()
-          y: random()
-          size: Math.random()
-          shape: shapes[j % 6]
+    $('#s_make').select2
+      multiple: true
+      query: (query) ->
+        data = {
+          results: makeData
+        }
+        query.callback(data);
 
-        j++
-      i++
-    data
+    $("#s_years").on 'change', _renderCompareCharts
+    $("#s_make").on 'change', _renderCompareCharts
 
+  _prepareData = (years, makes) ->
+    filteredData = JSON.parse(localStorage['vehFullData'])
+    _fullDataCopy = JSON.parse(localStorage['vehFullData'])
+    filtered = []
+    for key, val of _fullDataCopy
+      console.log val
+      valCopy = val.values
+      filtered = valCopy.filter (ele) ->
+        if(_.contains(makes, ele.make) and _.contains(years, ele.year+"") )
+          return true
+        else
+          return false
+
+      if(filtered.length is 0)
+        _fullDataCopy.splice _fullDataCopy.indexOf(_fullDataCopy[key]), 1
+      else
+        if(_fullDataCopy[key] is undefined)
+          _fullDataCopy[key] = {}
+
+        _fullDataCopy[key].values = filtered
+
+    return _fullDataCopy
+
+
+  _renderCompareCharts = (e) ->
+    years = $("#s_years").select2('val')
+    makes = $("#s_make").select2('val')
+    data = null
+    if years.length isnt 0 and makes.length isnt 0
+      _fullData = _fullData
+      data = _prepareData(years, makes)
+      _renderChart(data)
+    else
+      console.log "Fuck you!!"
 
   init: ->
+    _initSelect2()
     _initChart()
 
 

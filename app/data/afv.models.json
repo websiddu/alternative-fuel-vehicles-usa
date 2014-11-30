@@ -3,784 +3,1222 @@
     "key": "Gasoline or E85",
     "values": [
       {
-        "x": 521,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 463,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 499,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 436,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 435,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 413,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 386,
-        "y": 19,
-        "shape": "triangle"
-      },
-      {
-        "x": 626,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 608,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 475,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 450,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 604,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 613,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 494,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 523,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 474,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 475,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 447,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 444,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 324,
-        "y": 24,
-        "shape": "triangle"
-      },
-      {
-        "x": 432,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 458,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 443,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 376,
-        "y": 21,
-        "shape": "triangle"
-      },
-      {
-        "x": 359,
-        "y": 22,
-        "shape": "triangle"
-      },
-      {
-        "x": 720,
-        "y": 11,
-        "shape": "triangle"
-      },
-      {
-        "x": 710,
-        "y": 11,
-        "shape": "triangle"
-      },
-      {
-        "x": 721,
-        "y": 11,
-        "shape": "triangle"
-      },
-      {
-        "x": 747,
-        "y": 10,
-        "shape": "triangle"
-      },
-      {
-        "x": 403,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 385,
-        "y": 19,
-        "shape": "triangle"
-      },
-      {
-        "x": 322,
-        "y": 23,
-        "shape": "triangle"
-      },
-      {
-        "x": 379,
-        "y": 20,
-        "shape": "triangle"
-      },
-      {
-        "x": 456,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 470,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 344,
-        "y": 22,
-        "shape": "triangle"
-      },
-      {
-        "x": 386,
-        "y": 20,
-        "shape": "triangle"
-      },
-      {
-        "x": 559,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 425,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 408,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 399,
-        "y": 19,
-        "shape": "triangle"
-      },
-      {
-        "x": 422,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 393,
-        "y": 19,
-        "shape": "triangle"
-      },
-      {
-        "x": 683.6153846,
-        "y": 11,
-        "shape": "triangle"
-      },
-      {
-        "x": 498,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 503,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 481,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 490,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 478,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 564,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 507,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 519,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 518,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 464,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 634,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 636,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 605,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 692,
-        "y": 11,
-        "shape": "triangle"
-      },
-      {
-        "x": 671,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 611,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 650,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 647,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 609,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 557,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 602,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 421,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 397,
-        "y": 19,
-        "shape": "triangle"
-      },
-      {
-        "x": 344,
-        "y": 20,
-        "shape": "triangle"
-      },
-      {
-        "x": 474,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 449,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 449,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 273,
-        "y": 28,
-        "shape": "triangle"
-      },
-      {
-        "x": 300,
-        "y": 26,
-        "shape": "triangle"
-      },
-      {
-        "x": 292,
-        "y": 26,
-        "shape": "triangle"
-      },
-      {
-        "x": 476,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 482,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 462,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 455,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 615,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 581,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 571,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 408,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 437,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 621,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 622,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 717,
-        "y": 11,
-        "shape": "triangle"
-      },
-      {
-        "x": 601,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 477,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 392,
-        "y": 19,
-        "shape": "triangle"
-      },
-      {
-        "x": 286.6774194,
-        "y": 28,
-        "shape": "triangle"
-      },
-      {
-        "x": 610,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 556,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 596,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 639,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 506,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 561,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 551,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 471,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 520,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 406,
-        "y": 19,
-        "shape": "triangle"
-      },
-      {
-        "x": 426,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 287,
-        "y": 27,
-        "shape": "triangle"
-      },
-      {
-        "x": 452,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 453,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 479,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 473,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 379,
-        "y": 19,
-        "shape": "triangle"
-      },
-      {
-        "x": 407,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 373,
-        "y": 20,
-        "shape": "triangle"
-      },
-      {
-        "x": 431,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 361,
-        "y": 21,
-        "shape": "triangle"
-      },
-      {
-        "x": 675,
-        "y": 11,
-        "shape": "triangle"
-      },
-      {
-        "x": 723,
-        "y": 11,
-        "shape": "triangle"
-      },
-      {
-        "x": 623,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 570,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 625,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 525,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 526,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 618,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 567,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 501,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 568,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 269.3030303,
-        "y": 28,
-        "shape": "triangle"
-      },
-      {
-        "x": 296.2333333,
-        "y": 26,
-        "shape": "triangle"
-      },
-      {
-        "x": 444.35,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 634.7857143,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 592.4666667,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 423.1904762,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 355.48,
-        "y": 21,
-        "shape": "triangle"
-      },
-      {
-        "x": 592.4666667,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 555.4375,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 493.7222222,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 522.7647059,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 467.7368421,
-        "y": 17,
-        "shape": "triangle"
-      },
-      {
-        "x": 634.7857143,
-        "y": 13,
-        "shape": "triangle"
-      },
-      {
-        "x": 740.5833333,
-        "y": 10,
-        "shape": "triangle"
-      },
-      {
-        "x": 683.6153846,
-        "y": 12,
-        "shape": "triangle"
-      },
-      {
-        "x": 807.9090909,
-        "y": 10,
-        "shape": "triangle"
-      },
-      {
-        "x": 423.1904762,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 386.3913043,
-        "y": 19,
-        "shape": "triangle"
-      },
-      {
-        "x": 403.9545455,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 355.48,
-        "y": 20,
-        "shape": "triangle"
-      },
-      {
-        "x": 467.7368421,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 386.3913043,
-        "y": 20,
-        "shape": "triangle"
-      },
-      {
-        "x": 444.35,
-        "y": 18,
-        "shape": "triangle"
-      },
-      {
-        "x": 341.8076923,
-        "y": 22,
-        "shape": "triangle"
-      },
-      {
-        "x": 423.1904762,
-        "y": 19,
-        "shape": "triangle"
-      },
-      {
-        "x": 493.7222222,
-        "y": 15,
-        "shape": "triangle"
-      },
-      {
-        "x": 403.9545455,
-        "y": 19,
-        "shape": "triangle"
-      },
-      {
-        "x": 444.35,
-        "y": 16,
-        "shape": "triangle"
-      },
-      {
-        "x": 370.2916667,
-        "y": 20,
-        "shape": "triangle"
-      },
-      {
-        "x": 355.48,
-        "y": 22,
-        "shape": "triangle"
-      },
-      {
-        "x": 740.5833333,
-        "y": 11,
-        "shape": "triangle"
-      },
-      {
-        "x": 592.4666667,
-        "y": 14,
-        "shape": "triangle"
-      },
-      {
-        "x": 370.2916667,
-        "y": 22,
-        "shape": "triangle"
-      },
-      {
-        "x": 370.2916667,
-        "y": 21,
-        "shape": "triangle"
+        "y": 492.2045576625969,
+        "x": 11.007516107405536,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ford",
+        "model": "F150 Pickup 4WD FFV",
+        "money": -3750,
+        "id": 35925
+      },
+      {
+        "y": 442.0835317131132,
+        "x": 13.0049134710012,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ford",
+        "model": "F150 Pickup 4WD FFV",
+        "money": -2500,
+        "id": 35924
+      },
+      {
+        "y": 470.1513372301124,
+        "x": 11.005119743470567,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ford",
+        "model": "F150 Pickup 2WD FFV",
+        "money": -3000,
+        "id": 35921
+      },
+      {
+        "y": 419.1401011371054,
+        "x": 13.000245392038487,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ford",
+        "model": "F150 Pickup 2WD FFV",
+        "money": -1750,
+        "id": 35920
+      },
+      {
+        "y": 407.79016681946814,
+        "x": 13.00639813024085,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Dodge",
+        "model": "Durango RWD",
+        "money": -1750,
+        "id": 35879
+      },
+      {
+        "y": 392.304453301942,
+        "x": 14.002719009194989,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Dodge",
+        "model": "Charger AWD",
+        "money": -1250,
+        "id": 35876
+      },
+      {
+        "y": 368.4471212676726,
+        "x": 14.001723355145659,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Dodge",
+        "model": "Charger",
+        "money": -500,
+        "id": 35875
+      },
+      {
+        "y": 392.1612574988976,
+        "x": 14.006585289568175,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chrysler",
+        "model": "300 AWD",
+        "money": -1250,
+        "id": 35873
+      },
+      {
+        "y": 368.24596480070613,
+        "x": 14.005453003055882,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chrysler",
+        "model": "300",
+        "money": -500,
+        "id": 35871
+      },
+      {
+        "y": 593.2662145514041,
+        "x": 9.004318679107818,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Nissan",
+        "model": "Armada 4WD",
+        "money": -6500,
+        "id": 35764
+      },
+      {
+        "y": 589.7138814227656,
+        "x": 9.007616050604264,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Nissan",
+        "model": "Armada 2WD",
+        "money": -5500,
+        "id": 35758
+      },
+      {
+        "y": 476.4914871882647,
+        "x": 11.000881450115703,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ram",
+        "model": "1500 4WD",
+        "money": -2500,
+        "id": 35745
+      },
+      {
+        "y": 449.62362577952445,
+        "x": 12.002766034377274,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ram",
+        "model": "1500 2WD",
+        "money": -1750,
+        "id": 35742
+      },
+      {
+        "y": 594.4138591187075,
+        "x": 9.003376617245376,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Toyota",
+        "model": "Tundra 4WD FFV",
+        "money": -5500,
+        "id": 35682
+      },
+      {
+        "y": 588.0636871876195,
+        "x": 9.00699489099905,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Toyota",
+        "model": "Sequoia 4WD FFV",
+        "money": -6500,
+        "id": 35650
+      },
+      {
+        "y": 477.60466671036556,
+        "x": 11.009568963099737,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Sierra K15 Cab Chassis 4WD",
+        "money": -3000,
+        "id": 35593
+      },
+      {
+        "y": 482.4912032959983,
+        "x": 11.008854409027844,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Sierra K15 Cab Chassis 4WD",
+        "money": -3750,
+        "id": 35591
+      },
+      {
+        "y": 477.7274712694343,
+        "x": 11.00174042942468,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Silverado K15 Cab Chassis 4WD",
+        "money": -3000,
+        "id": 35590
+      },
+      {
+        "y": 482.46769956080243,
+        "x": 11.002784355608746,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Silverado K15 Cab Chassis 4WD",
+        "money": -3750,
+        "id": 35588
+      },
+      {
+        "y": 473.82925255876034,
+        "x": 11.007598893651739,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Sierra C15 Cab Chassis 2WD",
+        "money": -3000,
+        "id": 35585
+      },
+      {
+        "y": 461.65906137158163,
+        "x": 11.001717103465927,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Sierra C15 Cab Chassis 2WD",
+        "money": -3750,
+        "id": 35583
+      },
+      {
+        "y": 473.7885864272248,
+        "x": 11.006645784832072,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Silverado C15 Cab Chassis 2WD",
+        "money": -3000,
+        "id": 35582
+      },
+      {
+        "y": 461.83512517926283,
+        "x": 11.002147440500558,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Silverado C15 Cab Chassis 2WD",
+        "money": -3750,
+        "id": 35580
+      },
+      {
+        "y": 478.12093151244335,
+        "x": 12.00738907598192,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Sierra K15 4WD",
+        "money": -2500,
+        "id": 35576
+      },
+      {
+        "y": 478.07877879566513,
+        "x": 12.004947573211975,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Silverado K15 4WD",
+        "money": -2500,
+        "id": 35574
+      },
+      {
+        "y": 455.6065561231226,
+        "x": 12.006649056011812,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Sierra C15 2WD",
+        "money": -1750,
+        "id": 35572
+      },
+      {
+        "y": 456.9184877492953,
+        "x": 12.007083715051413,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Silverado C15 2WD",
+        "money": -1750,
+        "id": 35570
+      },
+      {
+        "y": 434.095805027755,
+        "x": 12.006536637097597,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Dodge",
+        "model": "Grand Caravan",
+        "money": -1750,
+        "id": 35509
+      },
+      {
+        "y": 434.28290398139507,
+        "x": 12.00576477720635,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chrysler",
+        "model": "Town and Country",
+        "money": -1750,
+        "id": 35508
+      },
+      {
+        "y": 301.0440238183364,
+        "x": 18.005675658478868,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Dodge",
+        "model": "Dart",
+        "money": 1000,
+        "id": 35490
+      },
+      {
+        "y": 427.8654676361475,
+        "x": 13.007683373913169,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ram",
+        "model": "C/V Tradesman",
+        "money": -1250,
+        "id": 35465
+      },
+      {
+        "y": 415.8587629091926,
+        "x": 13.001418241129722,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Jeep",
+        "model": "Grand Cherokee 4WD",
+        "money": -2500,
+        "id": 35408
+      },
+      {
+        "y": 415.62833968224004,
+        "x": 13.00448146722978,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Dodge",
+        "model": "Durango AWD",
+        "money": -2500,
+        "id": 35407
+      },
+      {
+        "y": 405.95291152689606,
+        "x": 14.006745407301933,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Jeep",
+        "model": "Grand Cherokee 2WD",
+        "money": -1750,
+        "id": 35404
+      },
+      {
+        "y": 364.9529135345947,
+        "x": 15.007376698369626,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Jeep",
+        "model": "Cherokee 4WD",
+        "money": 0,
+        "id": 35402
+      },
+      {
+        "y": 342.4471944877878,
+        "x": 15.006963235440198,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Jeep",
+        "model": "Cherokee FWD",
+        "money": 250,
+        "id": 35391
+      },
+      {
+        "y": 700.9723667928483,
+        "x": 8.002441444143187,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Savana 3500 2WD (Passenger)",
+        "money": -9000,
+        "id": 35383
+      },
+      {
+        "y": 693.4527706888039,
+        "x": 8.003294347843621,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Savana 2500 2WD (Passenger)",
+        "money": -7750,
+        "id": 35382
+      },
+      {
+        "y": 701.6543959861156,
+        "x": 8.007315967036412,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Express 3500 2WD Passenger",
+        "money": -9000,
+        "id": 35377
+      },
+      {
+        "y": 693.3920714454725,
+        "x": 8.003040491661523,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Express 2500 2WD Passenger",
+        "money": -7750,
+        "id": 35376
+      },
+      {
+        "y": 719.9534142548218,
+        "x": 7.005567289297469,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Savana 2500 2WD Conversion (cargo)",
+        "money": -9000,
+        "id": 35374
+      },
+      {
+        "y": 719.1540880477987,
+        "x": 7.007185031217523,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Express 2500 2WD Conversion Cargo",
+        "money": -9000,
+        "id": 35372
+      },
+      {
+        "y": 374.0217050772626,
+        "x": 14.006878660500515,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chrysler",
+        "model": "200 AWD",
+        "money": -750,
+        "id": 35361
+      },
+      {
+        "y": 362.10649821627885,
+        "x": 14.001034676188137,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chrysler",
+        "model": "200",
+        "money": -500,
+        "id": 35360
+      },
+      {
+        "y": 300.4554268948268,
+        "x": 17.008055443114134,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chrysler",
+        "model": "200",
+        "money": 1250,
+        "id": 35359
+      },
+      {
+        "y": 375.4981951536611,
+        "x": 14.003722656348254,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Equinox AWD",
+        "money": -500,
+        "id": 35312
+      },
+      {
+        "y": 434.32561355433427,
+        "x": 12.009259937792086,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Dodge",
+        "model": "Journey FWD",
+        "money": -2500,
+        "id": 35310
+      },
+      {
+        "y": 450.65234080236405,
+        "x": 12.002040187311358,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ford",
+        "model": "Explorer AWD FFV",
+        "money": -2500,
+        "id": 35068
+      },
+      {
+        "y": 429.05680228141136,
+        "x": 13.008392721244599,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ford",
+        "model": "Explorer 2WD FFV",
+        "money": -1750,
+        "id": 35061
+      },
+      {
+        "y": 355.8853722740896,
+        "x": 15.004304039108101,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Terrain FWD",
+        "money": 750,
+        "id": 35045
+      },
+      {
+        "y": 355.7524538130965,
+        "x": 15.00481824474642,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Captiva FWD",
+        "money": -500,
+        "id": 35042
+      },
+      {
+        "y": 355.35177066084,
+        "x": 15.008606207552367,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Equinox FWD",
+        "money": 750,
+        "id": 35041
+      },
+      {
+        "y": 544.0421848718543,
+        "x": 10.009090895010159,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ford",
+        "model": "Transit T150 Wagon FFV",
+        "money": -4500,
+        "id": 35036
+      },
+      {
+        "y": 428.7792435558513,
+        "x": 13.00229971260298,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ford",
+        "model": "Taurus AWD FFV",
+        "money": -1250,
+        "id": 35031
+      },
+      {
+        "y": 379.37155218981206,
+        "x": 13.00424932501046,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Impala Limited",
+        "money": -750,
+        "id": 35026
+      },
+      {
+        "y": 384.79024861590005,
+        "x": 14.001269725102466,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Impala",
+        "money": -750,
+        "id": 35024
+      },
+      {
+        "y": 439.3136290963739,
+        "x": 13.007020459112246,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Buick",
+        "model": "LaCrosse AWD",
+        "money": -1750,
+        "id": 35004
+      },
+      {
+        "y": 384.4940774932038,
+        "x": 14.002332674919161,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Buick",
+        "model": "LaCrosse",
+        "money": -1250,
+        "id": 35000
+      },
+      {
+        "y": 393.9872174942866,
+        "x": 13.004287938412745,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Ford",
+        "model": "Taurus FWD FFV",
+        "money": -500,
+        "id": 34932
+      },
+      {
+        "y": 482.49471156229265,
+        "x": 11.009761682434473,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Yukon K1500 4WD",
+        "money": -3000,
+        "id": 34694
+      },
+      {
+        "y": 511.6150712275412,
+        "x": 11.00382848595269,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Yukon K1500 XL 4WD",
+        "money": -3000,
+        "id": 34693
+      },
+      {
+        "y": 511.86196602438577,
+        "x": 11.005873425747268,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Suburban K1500 4WD",
+        "money": -3000,
+        "id": 34690
+      },
+      {
+        "y": 482.72805850114673,
+        "x": 11.009650604184717,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Tahoe K1500 4WD",
+        "money": -3000,
+        "id": 34689
+      },
+      {
+        "y": 461.696372681763,
+        "x": 12.009532454703002,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Yukon C1500 XL 2WD",
+        "money": -3000,
+        "id": 34686
+      },
+      {
+        "y": 461.5990564066451,
+        "x": 12.006114129999187,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Yukon C1500 2WD",
+        "money": -3000,
+        "id": 34685
+      },
+      {
+        "y": 461.359976420179,
+        "x": 12.009039819012395,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Suburban C1500 2WD",
+        "money": -3000,
+        "id": 34682
+      },
+      {
+        "y": 461.4618634991348,
+        "x": 12.006924173156731,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Tahoe C1500 2WD",
+        "money": -3000,
+        "id": 34681
+      },
+      {
+        "y": 470.5975599384401,
+        "x": 12.002139505466912,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Sierra K15 4WD",
+        "money": -3000,
+        "id": 34677
+      },
+      {
+        "y": 470.5558482147753,
+        "x": 12.000549539881758,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Silverado K15 4WD",
+        "money": -3000,
+        "id": 34676
+      },
+      {
+        "y": 458.1996870948933,
+        "x": 12.007042610077187,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "GMC",
+        "model": "Sierra C15 2WD",
+        "money": -2500,
+        "id": 34675
+      },
+      {
+        "y": 458.8917591609061,
+        "x": 12.002199513590895,
+        "fueltype": "E85",
+        "actualFuel": "Gasoline or E85",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Silverado C15 2WD",
+        "money": -2500,
+        "id": 34674
+      }
+    ]
+  },
+  {
+    "key": "Premium Gas or Electricity",
+    "values": [
+      {
+        "y": 0.3878308800049126,
+        "x": 48.00593873847742,
+        "fueltype": "Electricity",
+        "actualFuel": "Premium Gas or Electricity",
+        "year": 2015,
+        "make": "Porsche",
+        "model": "Cayenne S e-Hybrid",
+        "money": -250,
+        "id": 35896
+      },
+      {
+        "y": 0.795799334300682,
+        "x": 85.00724988042843,
+        "fueltype": "Electricity",
+        "actualFuel": "Premium Gas or Electricity",
+        "year": 2015,
+        "make": "Cadillac",
+        "model": "ELR",
+        "money": 4000,
+        "id": 35317
+      },
+      {
+        "y": 0.9488207243848592,
+        "x": 101.00629834852647,
+        "fueltype": "Electricity",
+        "actualFuel": "Premium Gas or Electricity",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Volt",
+        "money": 4750,
+        "id": 35246
+      },
+      {
+        "y": 0.9231445209588856,
+        "x": 68.00817888249644,
+        "fueltype": "Electricity",
+        "actualFuel": "Premium Gas or Electricity",
+        "year": 2015,
+        "make": "Porsche",
+        "model": "918 Spyder",
+        "money": 0,
+        "id": 34856
+      }
+    ]
+  },
+  {
+    "key": "CNG",
+    "values": [
+      {
+        "y": 218.93247764534317,
+        "x": 0.0009120597154833376,
+        "fueltype": "Natural Gas",
+        "actualFuel": "CNG",
+        "year": 2015,
+        "make": "Honda",
+        "model": "Civic Natural Gas",
+        "money": 3750,
+        "id": 35886
+      }
+    ]
+  },
+  {
+    "key": "Premium or E85",
+    "values": [
+      {
+        "y": 361.1177686175797,
+        "x": 15.001145377659704,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Mercedes-Benz",
+        "model": "E350 4matic",
+        "money": -1750,
+        "id": 35865
+      },
+      {
+        "y": 367.88468052935787,
+        "x": 14.006812506304122,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Mercedes-Benz",
+        "model": "E350",
+        "money": -1750,
+        "id": 35864
+      },
+      {
+        "y": 561.3469000067562,
+        "x": 10.009018720029854,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Land Rover",
+        "model": "Range Rover Sport FFV",
+        "money": -6250,
+        "id": 35762
+      },
+      {
+        "y": 573.9805206186138,
+        "x": 9.001933951508255,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Land Rover",
+        "model": "Range Rover L FFV",
+        "money": -6250,
+        "id": 35761
+      },
+      {
+        "y": 573.0869126692414,
+        "x": 9.00955774032278,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Land Rover",
+        "model": "Range Rover FFV",
+        "money": -6250,
+        "id": 35760
+      },
+      {
+        "y": 325.85516943316907,
+        "x": 17.006163387589623,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Mercedes-Benz",
+        "model": "GLA250 4matic",
+        "money": 0,
+        "id": 35755
+      },
+      {
+        "y": 431.7007733064238,
+        "x": 13.001875665441622,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Mercedes-Benz",
+        "model": "ML350 4matic",
+        "money": -4000,
+        "id": 35316
+      },
+      {
+        "y": 452.99788461253047,
+        "x": 11.004190965255257,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Jaguar",
+        "model": "XJL FFV",
+        "money": -3250,
+        "id": 35232
+      },
+      {
+        "y": 442.1753415390849,
+        "x": 12.000817526145838,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Jaguar",
+        "model": "XJ FFV",
+        "money": -2750,
+        "id": 35231
+      },
+      {
+        "y": 471.7082688899245,
+        "x": 11.001895584324375,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Jaguar",
+        "model": "XJL FFV",
+        "money": -4500,
+        "id": 35230
+      },
+      {
+        "y": 471.7473901670892,
+        "x": 11.008451435847673,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Jaguar",
+        "model": "XJ FFV",
+        "money": -4500,
+        "id": 35229
+      },
+      {
+        "y": 392.0278709193226,
+        "x": 14.001371045880951,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Audi",
+        "model": "Q5",
+        "money": -1750,
+        "id": 35114
+      },
+      {
+        "y": 358.2400969606824,
+        "x": 15.000527297987137,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Audi",
+        "model": "allroad quattro",
+        "money": -1250,
+        "id": 35110
+      },
+      {
+        "y": 347.4033528554719,
+        "x": 15.004444201618899,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Audi",
+        "model": "A4 quattro",
+        "money": -750,
+        "id": 35090
+      },
+      {
+        "y": 355.85717710852623,
+        "x": 15.00053832802223,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Audi",
+        "model": "A5 Cabriolet quattro",
+        "money": -1250,
+        "id": 35084
+      },
+      {
+        "y": 347.6507330129389,
+        "x": 15.007370176129044,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Audi",
+        "model": "A5 quattro",
+        "money": -750,
+        "id": 35083
+      },
+      {
+        "y": 487.51799737336114,
+        "x": 11.002983600823208,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Jaguar",
+        "model": "XF FFV",
+        "money": -4500,
+        "id": 34948
+      },
+      {
+        "y": 589.5043404807802,
+        "x": 9.008055381078739,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Bentley",
+        "model": "Flying Spur",
+        "money": -7250,
+        "id": 34927
+      },
+      {
+        "y": 576.5306143441703,
+        "x": 9.000452458534856,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Bentley",
+        "model": "Continental GT",
+        "money": -7250,
+        "id": 34923
+      },
+      {
+        "y": 589.8606779770926,
+        "x": 9.00072014331352,
+        "fueltype": "E85",
+        "actualFuel": "Premium or E85",
+        "year": 2015,
+        "make": "Bentley",
+        "model": "Continental GT Convertible",
+        "money": -7250,
+        "id": 34922
+      }
+    ]
+  },
+  {
+    "key": "Electricity",
+    "values": [
+      {
+        "y": 0.6163818626664579,
+        "x": 0.0027947704889811575,
+        "fueltype": "Electricity",
+        "actualFuel": "Electricity",
+        "year": 2015,
+        "make": "smart",
+        "model": "fortwo electric drive coupe",
+        "money": 6250,
+        "id": 35859
+      },
+      {
+        "y": 0.8307266745250672,
+        "x": 0.008060988478828222,
+        "fueltype": "Electricity",
+        "actualFuel": "Electricity",
+        "year": 2015,
+        "make": "smart",
+        "model": "fortwo electric drive convertible",
+        "money": 6250,
+        "id": 35858
+      },
+      {
+        "y": 0.938102361978963,
+        "x": 0.000363786721136421,
+        "fueltype": "Electricity",
+        "actualFuel": "Electricity",
+        "year": 2015,
+        "make": "Volkswagen",
+        "model": "e-Golf",
+        "money": 6250,
+        "id": 35849
+      },
+      {
+        "y": 0.5819748940411955,
+        "x": 0.005367609588429332,
+        "fueltype": "Electricity",
+        "actualFuel": "Electricity",
+        "year": 2015,
+        "make": "Kia",
+        "model": "Soul Electric",
+        "money": 6000,
+        "id": 35601
+      },
+      {
+        "y": 0.4250984520185739,
+        "x": 0.009893642356619239,
+        "fueltype": "Electricity",
+        "actualFuel": "Electricity",
+        "year": 2015,
+        "make": "Fiat",
+        "model": "500e",
+        "money": 6250,
+        "id": 35206
+      },
+      {
+        "y": 0.49946929630823433,
+        "x": 0.00017020287225022912,
+        "fueltype": "Electricity",
+        "actualFuel": "Electricity",
+        "year": 2015,
+        "make": "Chevrolet",
+        "model": "Spark EV",
+        "money": 6500,
+        "id": 35120
+      },
+      {
+        "y": 0.009748445358127356,
+        "x": 0.00909705455414951,
+        "fueltype": "Electricity",
+        "actualFuel": "Electricity",
+        "year": 2015,
+        "make": "Nissan",
+        "model": "Leaf",
+        "money": 6250,
+        "id": 34918
+      }
+    ]
+  },
+  {
+    "key": "Regular Gas and Electricity",
+    "values": [
+      {
+        "y": 0.9776311505120248,
+        "x": 95.0025437827222,
+        "fueltype": "Electricity",
+        "actualFuel": "Regular Gas and Electricity",
+        "year": 2015,
+        "make": "Ford",
+        "model": "C-MAX Energi Plug-in Hybrid",
+        "money": 4250,
+        "id": 35765
+      },
+      {
+        "y": 0.34892843407578766,
+        "x": 90.0001469667186,
+        "fueltype": "Electricity",
+        "actualFuel": "Regular Gas and Electricity",
+        "year": 2015,
+        "make": "Toyota",
+        "model": "Prius Plug-in Hybrid",
+        "money": 5000,
+        "id": 35598
+      },
+      {
+        "y": 0.18596823839470744,
+        "x": 95.00300778707722,
+        "fueltype": "Electricity",
+        "actualFuel": "Regular Gas and Electricity",
+        "year": 2015,
+        "make": "Ford",
+        "model": "Fusion Energi Plug-in Hybrid",
+        "money": 4250,
+        "id": 35277
+      }
+    ]
+  },
+  {
+    "key": "Premium and Electricity",
+    "values": [
+      {
+        "y": 0.9295997687149793,
+        "x": 16.0060087848478,
+        "fueltype": "Electricity",
+        "actualFuel": "Premium and Electricity",
+        "year": 2015,
+        "make": "McLaren Automotive",
+        "model": "P1",
+        "money": -5000,
+        "id": 35652
+      },
+      {
+        "y": 0.5162670777644962,
+        "x": 42.00984417389613,
+        "fueltype": "Electricity",
+        "actualFuel": "Premium and Electricity",
+        "year": 2015,
+        "make": "Porsche",
+        "model": "Panamera S E-Hybrid",
+        "money": 750,
+        "id": 35278
       }
     ]
   }
