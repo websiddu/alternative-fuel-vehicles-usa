@@ -10918,13 +10918,11 @@ header h1 {
   margin: -1px;
   background-color: #fff;
   box-shadow: 0 0 10px #ccc;
-  padding: 10px 10px;
-  max-width: 300px;
+  padding: 10px;
   width: 250px;
 }
 .si-tooltip .si-header {
   background: #f8f8f8;
-  border-bottom: 1px solid #ddd;
   margin: -10px -10px 0 -10px;
   padding: 5px 10px;
 }
@@ -10944,8 +10942,8 @@ header h1 {
   font-size: 13px;
 }
 .si-tooltip .si-toolitp-body {
-  padding: 10px 0;
   overflow: hidden;
+  position: relative;
 }
 .si-tooltip span.si-mpg {
   margin-bottom: 15px;
@@ -10970,6 +10968,15 @@ header h1 {
 .si-tooltip .si-tooltip-second-half {
   float: left;
   width: 50%;
+}
+.si-tooltip .si-fueltype {
+  font-weight: 500;
+  color: #444;
+  background: #ccd1d9;
+  padding: 4px 10px;
+  color: #fff;
+  display: block;
+  margin: 0 -10px 5px;
 }
 .si-tooltip .si-arrow:after {
   content: '';

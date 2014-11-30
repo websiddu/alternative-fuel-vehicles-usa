@@ -745,6 +745,8 @@ window.nv.tooltip.* also has various helper methods.
             body = document.getElementsByTagName('body')[0];
         }
 
+        //body = document.getElementsByTagName('body')[0];
+
         container.style.left = 0;
         container.style.top = 0;
         container.style.opacity = 0;

@@ -7,7 +7,7 @@ AFV.tab5 = do ->
       chart = nv.models
         .scatterChart()
         #.showDistX(true)
-        #.margin({left: 70})
+        .margin({left: 100})
         #.showDistY(true)
         .y( (d) -> d['y'] )
         .x( (d) -> d['x'])
@@ -20,14 +20,18 @@ AFV.tab5 = do ->
         car = e.point
         """
           <div class="si-tooltip">
-            <div class="si-arrow"></div>
+
             <div class="si-header">
               <span class="si-make">#{car.make} &mdash; </span>
               <br>
               <span class="si-model"> #{car.model} </span>
               <small class="si-year"> (#{car.year}) </small>
+
             </div>
+            <div class="si-fueltype"> #{car.fueltype} </div>
             <div class="si-toolitp-body">
+
+              <div class="clearfix"></div>
               <div class="si-tooltip-first-half">
                 <small>Milage</small> <br>
                 <span class="si-mpg">
@@ -82,15 +86,19 @@ AFV.tab5 = do ->
 
 
   _initSelect2 = ->
-    $("#s_years").select2()
+    $("#s_years").select2
+      maximumSelectionSize: 3
 
     $('#s_make').select2
       multiple: true
+      maximumSelectionSize: 4
       query: (query) ->
         data = {
           results: makeData
         }
         query.callback(data);
+
+    $('#s_make').select2('data', makeData.slice(0, 3))
 
     $("#s_years").on 'change', _renderCompareCharts
     $("#s_make").on 'change', _renderCompareCharts
@@ -127,11 +135,13 @@ AFV.tab5 = do ->
       data = _prepareData(years, makes)
       _renderChart(data)
     else
-      console.log "Fuck you!!"
+      console.log "Noting happening...!!"
+
 
   init: ->
     _initSelect2()
     _initChart()
+    _renderCompareCharts()
 
 
 
