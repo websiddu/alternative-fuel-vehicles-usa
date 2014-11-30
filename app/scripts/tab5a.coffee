@@ -6,42 +6,42 @@ AFV.tab5a = do ->
         {
           "x" : 50
           "y" : 3.6
-          "color": "#e9573f"
+          "color": "#bc5679"
         } ,
         {
           "x" : 45
           "y" : 4.0
-          "color": "#e9573f"
+          "color": "#bc5679"
         } ,
         {
           "x" : 40
           "y" : 4.5
-          "color": "#e9573f"
+          "color": "#bc5679"
         } ,
         {
           "x" : 35
           "y" : 5.1
-          "color": "#e9573f"
+          "color": "#bc5679"
         } ,
         {
           "x" : 30
           "y" : 6.0
-          "color": "#e9573f"
+          "color": "#bc5679"
         } ,
         {
           "x" : 25
           "y" : 7.2
-          "color": "#e9573f"
+          "color": "#bc5679"
         }
         {
           "x" : 20
           "y" : 9.0
-          "color": "#e9573f"
+          "color": "#bc5679"
         }
         {
           "x" : 15
           "y" : 12.0
-          "color": "#e9573f"
+          "color": "#bc5679"
         }
       ]
     }
@@ -53,7 +53,7 @@ AFV.tab5a = do ->
         .transitionDuration(350)
         #.reduceXTicks(true)
         #.rotateLabels(0)
-        .height(250)
+        .height(150)
         .tooltips(false)
         .width(400)
         .showValues(true)
@@ -68,7 +68,7 @@ AFV.tab5a = do ->
         .showMaxMin(false)
 
       chart.yAxis
-        .axisLabel("Annual tons of GHG")
+        .axisLabel("Annual tons of GHG*")
         .orient('left')
         .showMaxMin(false)
 

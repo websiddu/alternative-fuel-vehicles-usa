@@ -73,7 +73,7 @@
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in active" id="tab-one">
               <br>
-              <div class="side-graph h520">
+              <div class="h520">
                 <div class="side-graph-title">
                   Number of AFVs and Carbon emissions Over the years <span class="currentState js_currentState">USA</span>
                 </div>
@@ -102,7 +102,7 @@
           </div>
           <div role="tabpanel" class="tab-pane fade" id="tab-two">
             <br>
-            <div class="side-graph" style="height: 300px;">
+            <div class="" style="height: 330px;">
               <div class="side-graph-title">
                 Number of AFVs based on vehicle types (2004 - 2011) <span class="currentState">USA</span>
               </div>
@@ -110,12 +110,12 @@
                 <svg class="ng-svg"  style="height: 300px;"></svg>
               </div>
             </div>
-            <div class="side-graph">
+            <div class="">
               <div class="side-graph-title">
                 Number of AFVs based on vehicle weight class (1994 - 2011) <span class="currentState">USA</span>
               </div>
               <div id="bar-split">
-                <svg class="ng-svg"></svg>
+                <svg class="ng-svg" style="height: 250px;"></svg>
               </div>
             </div>
           </div>
@@ -129,6 +129,20 @@
                 <svg class="ng-svg large"></svg>
               </div>
             </div>
+
+            <div class="side-graph large">
+              <div class="side-graph-title">
+                Avg Retail Fuel Prices in the U.S (Gasoline vs AF)
+              </div>
+              <div id="fuel-cost">
+                <svg class="ng-svg large"></svg>
+              </div>
+              <p><small> Source: <a href="http://www.afdc.energy.gov/uploads/publication/alternative_fuel_price_report_july_2014.pdf" target="_blank">Clean Cities Alternative Fuel Price Reports</a></small></p>
+            </div>
+
+          <div class="clearfix"></div>
+          <br>
+          <br>
             <div class="side-graph">
               <div class="side-graph-title">
                 Number of AFVs based on Fuel type (2004 - 2011) <span class="currentState">USA</span>
@@ -159,7 +173,7 @@
           </div>
           <div role="tabpanel" class="tab-pane fade" id="tab-five">
             <br>
-            <div class="side-graph">
+            <div class="">
               <div class="row">
                 <div class="col-lg-1">
                 </div>
@@ -193,12 +207,18 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <strong>Reduce your greenhouse gas emission by choosing a car with better gas milage.</strong>
-                  <div id="greenhouse">
-                    <svg class="ng-svg" style="height: 120px;"></svg>
-                  </div>
+              <br>
+            </div>
+            <div class="row">
+              <div class="col-lg-7">
+                <strong>
+                  Reduce your greenhouse gas emission by choosing a car with better gas milage.
+                </strong>
+                <small>
+                  *GHG &mdash; Green house gas <a href="http://epa.gov/climatechange/index.html" target="_blank"> More info </a>
+                </small>
+                <div id="greenhouse">
+                  <svg class="ng-svg" style="height: 150px;"></svg>
                 </div>
               </div>
             </div>
@@ -303,6 +323,7 @@
     <script src="scripts/legend.js"></script>
     <script src="scripts/tooltips.js"></script>
     <script src="scripts/sidebar.js"></script>
+    <script src="scripts/fuelcost.js"></script>
     <script src="scripts/tab2.js"></script>
     <script src="scripts/tab3.js"></script>
     <script src="scripts/tab4.js"></script>

@@ -3972,10 +3972,9 @@ a.thumbnail.active {
   color: #333333;
 }
 .alert {
-  padding: 15px;
+  padding: 7.5px;
   margin-bottom: 20px;
   border: 1px solid transparent;
-  border-radius: 4px;
 }
 .alert h4 {
   margin-top: 0;
@@ -10744,6 +10743,21 @@ header h1 {
 }
 .side-graph.h220,
 .side-graph svg.h220 {
+  height: 210px;
+}
+.h320 {
+  height: 300px;
+}
+.h370 {
+  height: 370px;
+}
+.h520 {
+  height: 420px;
+}
+.h420 {
+  height: 420px;
+}
+.h220 {
   height: 210px;
 }
 .side-graph {
