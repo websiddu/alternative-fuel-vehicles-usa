@@ -110,9 +110,11 @@ window.AFV = do ->
 
   _invokeAll = ->
     AFV.pausePlayer()
-    #_initPlayer()
+    # _initPlayer()
     ## Activate last
-    $('[data-year=2011]').trigger('click').addClass('active')
+    setTimeout ->
+      $('.js_year:last').addClass('active').click()
+    , 100
     AFV.years.init ($ '#year')
     AFV.legend.init ($ '#legend')
 

@@ -52,7 +52,7 @@ AFV.tab2 = do ->
         .showMaxMin(false)
 
       chart.yAxis
-        .axisLabel("Number of AFV's")
+        .axisLabel("Number of AFVs")
         .orient('left')
         .showMaxMin(false)
         .tickFormat( (d) ->

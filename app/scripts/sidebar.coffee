@@ -118,7 +118,7 @@ AFV.sidebar = do ->
 
       chart.yAxis2
         .axisLabel('Carbon emission (MMTCO2)')
-
+        .tickFormat(d3.format('.2f'))
         # .tickFormat( (d) ->
         #   prefix = d3.formatPrefix(d)
         #   prefix.scale(d) + prefix.symbol
