@@ -1,5 +1,4 @@
 AFV.tab3 = do ->
-  graph = ($ '#bar-split')
   _fuelTypeData = null
   myData = null
 
@@ -40,6 +39,7 @@ AFV.tab3 = do ->
   _getVehicleTypeData = ->
     d3.json 'data/fuel.type.json', (err, data) ->
       _fuelTypeData = data
+      _loadInitalVehicleTypeGraph()
       #myData = _perpareDataForVehType(window.veh_types)
       #AFV.tab2.initFuelTypeGraph(myData)
       return
@@ -85,6 +85,9 @@ AFV.tab3 = do ->
 
       #d3.select("#multiline-split .nv-legendWrap").attr("class", "hide")
 
+      $('.sidebar').on 'scrollend', ->
+        chart.update()
+
       nv.utils.windowResize ->
         chart.update()
         return
@@ -93,6 +96,8 @@ AFV.tab3 = do ->
 
   init: ->
     _getVehicleTypeData()
-    _loadInitalVehicleTypeGraph()
+    # setTimeout ->
+    #   _loadInitalVehicleTypeGraph()
+    # , 1000
 
 AFV.tab3.init()
