@@ -11,7 +11,7 @@ AFV.tour = do ->
               <div class="pull-right">
                 <a class="tour-link" href='' data-role="end">No thanks</a>
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                <button  class="btn btn-default tour-button" data-role="next">Start a tour &rarr;</button>
+                <button  class="btn btn-default tour-button" data-role="next">Start tour &rarr;</button>
               </div>
           </div>
         </div>
@@ -112,18 +112,20 @@ AFV.tour = do ->
           """
         }
 
-        {
-          element: ".js_play_pause_icon"
-          title: 'View slideshow'
-          content: """
-          <p>Press Play to view the yearly progression as a slideshow.</p>
+        # {
+        #   element: ".js_play_pause_icon"
+        #   title: 'View slideshow'
+        #   content: """
+        #   <p>Press Play to view the yearly progression as a slideshow.</p>
 
-          """
-        }
+        #   """
+        # }
         {
           element: ".js_tour_overview"
           placement: 'bottom'
           title: 'View overview tab'
+          onNext: ->
+            $('[href="#tab-two"]').click()
           content: """
           <p>This tab shows the total number of AFVs and carbon emissions by year. Select a state on the left to see data for just that state. Click the state again to deselect it.</p>
 
@@ -135,8 +137,7 @@ AFV.tour = do ->
           template: e
           placement: 'bottom'
           content: """
-          <p>Use these tabs to view more in-depth information about AFVs, fuel types, and AFV manufacturers.</p>
-
+          <p>Use these tabs to view more in-depth information about AFVs, fuel types, AFV models, and AFV manufacturers.</p>
           """
         }
       ]
