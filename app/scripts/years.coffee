@@ -40,7 +40,7 @@ AFV.years = do ->
   _renderYearsUI = (target) ->
     target.empty()
     yearsCount = years.length
-    yearWidth = yearsWidth/(yearsCount + 1)
+    yearWidth = yearsWidth/(yearsCount)
 
     now = localStorage['nowShowing']
 
@@ -54,7 +54,7 @@ AFV.years = do ->
     playPauseButton = """
       <div class="playControls js_play_pause_controls" data-play-state="play" style='width: #{yearWidth}px'><em class="icon icon-pause js_play_pause_icon"></em></div>
     """
-    target.append(playPauseButton)
+    # target.append(playPauseButton)
 
     while i < yearsCount
 
