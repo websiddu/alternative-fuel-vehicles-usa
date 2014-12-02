@@ -22,10 +22,12 @@ window.AFV = do ->
   _playerDataAll = null
   _playerDataCarbon = null
 
+  _playerDataTotal = null
+  _playerDataRatio = null
+
   _carbonMinMax = []
   _playerMinMax = []
 
-  _playerDataTotal  = []
 
   _nowShowing = ''
 
@@ -77,7 +79,7 @@ window.AFV = do ->
     AFV.tour.restart()
 
   _firstRun = ->
-    for key in ['all', 'total', 'carbon']
+    for key in ['all', 'total', 'ratio', 'carbon']
       _nowShowing = key
       _renderMasterMap key
 
@@ -106,6 +108,15 @@ window.AFV = do ->
           _invokeAll()
           _firstRunFlag = true
         )
+      when 'ratio'
+        d3.json('data/us.states.ratio.json', (err, data) ->
+          _playerDataRatio = AFV.utils.stripGeometry(data)
+          _minMax[_nowShowing] = AFV.utils.setMinMax(_playerDataRatio, 'ratio')
+          _playerData = data
+          _invokeAll()
+          _firstRunFlag = true
+        )
+
 
 
   _invokeAll = ->

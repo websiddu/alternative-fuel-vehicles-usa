@@ -113,12 +113,12 @@ AFV.sidebar = do ->
         .axisLabel('Number of AFVs')
         .tickFormat( (d) ->
           prefix = d3.formatPrefix(d)
-          prefix.scale(d) + prefix.symbol
+          parseFloat(prefix.scale(d).toFixed(2)) + prefix.symbol
         )
 
       chart.yAxis2
         .axisLabel('Carbon emission (MMTCO2)')
-        .tickFormat(d3.format('.2f'))
+        .tickFormat(d3.format('.1f'))
         # .tickFormat( (d) ->
         #   prefix = d3.formatPrefix(d)
         #   prefix.scale(d) + prefix.symbol

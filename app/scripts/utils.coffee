@@ -38,11 +38,15 @@ AFV.utils = do ->
     for key, value of data
       i = 0
       _splitData[key] = [] if _splitData[key] is undefined
-      while i < window.years.length
-        _years[years[i]] = [] if _years[years[i]] is undefined
-        _years[years[i]].push(parseFloat(value[years[i]]))
-        _splitData[key].push(parseFloat(value[years[i]]))
-        i++
+      while i < (window.years.length)
+        if years[i]
+          _years[years[i]] = [] if _years[years[i]] is undefined
+          if value[years[i]] isnt null
+            _years[years[i]].push(parseFloat(value[years[i]]))
+            _splitData[key].push(parseFloat(value[years[i]]))
+          i++
+
+
     @storeLocal(_years, type, 'years')
     @calculateAvg(_years, type) if type is 'carbon'
     @calculateSum(_years, type) if type isnt 'carbon'
@@ -53,7 +57,7 @@ AFV.utils = do ->
     sumArr = []
     for key, value of years
       ttl = value.reduce (p, c, i, arr) ->
-        p + c
+        parseFloat(p) + parseFloat(c)
       sumArr.push ttl
     @storeLocal(sumArr, type, 'years_sum')
 
@@ -93,7 +97,8 @@ AFV.utils = do ->
         set = ['#f3cbcb', '#a30707']
       when 'total'
         set = ['#afdeff', '#1d6fa8']
-
+      when 'ratio'
+        set = ['#cce4b5', '#3a7501']
 
     return set
 
