@@ -18,7 +18,7 @@ AFV.tab4 = do ->
         .showMaxMin(false)
 
       chart.yAxis
-        .axisLabel("Number of Models's")
+        .axisLabel("Number of Models")
         .orient('left')
         .showMaxMin(false)
         .tickFormat( (d) ->

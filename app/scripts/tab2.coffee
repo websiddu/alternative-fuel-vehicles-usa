@@ -67,7 +67,6 @@ AFV.tab2 = do ->
       chart
 
 
-
   _loadInitalVehicleTypeGraph = ->
     myData = _perpareDataForVehType(window.veh_types)
     AFV.tab2.initVehicleTypeGraph(myData)
