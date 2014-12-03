@@ -94,6 +94,9 @@ AFV.tab3 = do ->
 
       chart
 
+  loadInitalVehicleTypeGraph: ->
+    _loadInitalVehicleTypeGraph()
+
   init: ->
     _getVehicleTypeData()
     # setTimeout ->

@@ -93,6 +93,9 @@ AFV.fc = do ->
 
       chart
 
+  loadInitalVehicleTypeGraph: ->
+    _loadInitalVehicleTypeGraph()
+
   init: ->
     _getFuelConsumpationData()
     _loadInitalVehicleTypeGraph()

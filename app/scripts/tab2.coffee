@@ -126,6 +126,10 @@ AFV.tab2 = do ->
 
       chart
 
+  loadInitalVehicleTypeGraph: ->
+    _loadInitalVehicleTypeGraph()
+
+
   init: ->
     _initGraph()
     _getVehicleTypeData()

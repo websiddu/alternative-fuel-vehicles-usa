@@ -184,6 +184,9 @@ window.AFV = do ->
       $('.currentState').text('USA')
       e.target.feature.properties['isActive'] = false
       AFV.sidebar.totalAFVs(window.tab1_data)
+      AFV.tab2.loadInitalVehicleTypeGraph()
+      AFV.tab3.loadInitalVehicleTypeGraph()
+      AFV.fc.loadInitalVehicleTypeGraph()
       # AFV.sidebar.initCarbonEmissions(us_total_carbon)
 
   _highlightFeature = (e) ->
