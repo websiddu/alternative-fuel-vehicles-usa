@@ -12,6 +12,8 @@ AFV.legend = do ->
         unit = 'Number of Alternative Fuel vehicles'
       when 'total'
         unit = 'Total Number of vehicles'
+      when 'ratio'
+        unit = 'Percentage of AFVs'
 
   generateGradient: ->
     now = localStorage['nowShowing']
