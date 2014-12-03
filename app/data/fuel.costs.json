@@ -4,7 +4,6 @@
     "color": "#967ADC",
     "type": "area",
     "yAxis": 1,
-
     "values": [
       {
         "x": "4/10/00",
@@ -201,7 +200,7 @@
     ]
   },
   {
-    "key": "Ethanol (E85)",
+    "key": "Ethanol, 85 percent",
     "color": "#F6BB42",
     "type": "line",
     "yAxis": 1,
@@ -401,7 +400,7 @@
     ]
   },
   {
-    "key": "Natural Gas (CNG)",
+    "key": "Compressed Natural Gas",
     "color": "#4A89DC",
     "type": "line",
     "yAxis": 1,

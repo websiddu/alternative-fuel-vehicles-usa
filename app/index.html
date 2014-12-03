@@ -26,52 +26,40 @@
         <div class="pull-right">
           <ul class="list-inline nav-links">
             <li>
-              <a href="http://websiddu.github.io/afv-report/" class="c4" target="_blank">
+              <a href="http://websiddu.github.io/afv-report/" class="c6" target="_blank">
                 <em class="icon icon-document" data-placement="bottom" title="Final report!"  data-toggle="tooltip" rel='tooltip' data-html="true"> </em>
               </a>
             </li>
-
-
-
-              <li>
-              <a href="#" class="c4" >
+            <li></li>
+            <li>
+              <a href="#" class="c8">
                 <em class="icon icon-info" data-placement="bottom" title="More about data!"  data-toggle="tooltip" rel='tooltip' data-html="true"> </em>
               </a>
             </li>
-
-
-
             <li>
-              <a href="#" class="c4" >
+              <a href="#" class="c8" >
                 <em class="icon icon-users" data-placement="bottom" title="<p style='text-align: left'><strong>Team</strong> <br> Ivan Koveshnikov <br>Laurel R Stone <br> Sangeun Lee <br> Siddhartha Gudipati</p>"  data-toggle="tooltip" rel='tooltip' data-html="true"> </em>
               </a>
             </li>
-
             <li>
             </li>
-
             <li>
-              <a href="#" class="c4" >
+              <a href="#" class="c1" >
                 <em class="icon icon-twitter" data-placement="bottom" title="Like this? then tweet!"  data-toggle="tooltip" rel='tooltip'> </em>
               </a>
             </li>
-
             <li>
-              <a href="https://github.com/websiddu/alternative-fuel-vehicles-usa" class="c4" target="_blank" >
+              <a href="https://github.com/websiddu/alternative-fuel-vehicles-usa" class="c1" target="_blank" >
                 <em class="icon icon-github" data-placement="bottom" title="Checkout the source code!"  data-toggle="tooltip" rel='tooltip'> </em>
               </a>
             </li>
-
             <li>
-
             </li>
-
             <li>
-              <a href="#" class="js_restart_tour c3" >
+              <a href="#" class="js_restart_tour c2" >
                 <em class="icon icon-help" data-placement="bottom" title="Restart the tour!"  data-toggle="tooltip" rel='tooltip'></em>
               </a>
             </li>
-
           </ul>
         </div>
       </header>
@@ -99,180 +87,179 @@
         </select>
         <div class="clearfix"></div>
       </div>
-      <div class="sidebar animated fadeInRightBig">
-        <div class="sidebar-wrapper">
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active js_tour_overview"><a href="#tab-one" role="tab" data-toggle="tab">Overview</a></li>
-            <li role="presentation" class="js_tour_afv"><a href="#tab-two" role="tab" data-toggle="tab">AF Vehicles</a></li>
-            <li role="presentation" class="js_tour_fuel"><a href="#tab-three" role="tab" data-toggle="tab">Alternative Fuels Types</a></li>
-            <li role="presentation" class="js_tour_manf"><a href="#tab-four" role="tab" data-toggle="tab">AFV Models</a></li>
-            <li role="presentation" class="js_tour_manf"><a href="#tab-five" role="tab" data-toggle="tab">AFV Manufacturers</a></li>
-          </ul>
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="tab-one">
-              <br>
-              <div class="h520">
-                <div class="side-graph-title">
-                  Number of AFVs and Carbon emissions Over the years <span class="currentState js_currentState">USA</span>
+      <div class="sidebar-parent">
+        <div class="sidebar animated fadeInRightBig">
+          <div class="sidebar-wrapper">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active js_tour_overview"><a href="#tab-one" role="tab" data-toggle="tab">Overview</a></li>
+              <li role="presentation" class="js_tour_afv"><a href="#tab-two" role="tab" data-toggle="tab">AF Vehicles</a></li>
+              <li role="presentation" class="js_tour_fuel"><a href="#tab-three" role="tab" data-toggle="tab">Alternative Fuels Types</a></li>
+              <li role="presentation" class="js_tour_manf"><a href="#tab-four" role="tab" data-toggle="tab">AFV Models</a></li>
+              <li role="presentation" class="js_tour_manf"><a href="#tab-five" role="tab" data-toggle="tab">AFV Manufacturers</a></li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="tab-one">
+                <br>
+                <div class="h520">
+                  <div class="side-graph-title">
+                    Number of AFVs and Carbon emissions Over the years <span class="currentState js_currentState">USA</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-8">
+                      <label for=""> Select multiples states to compare</label>
+                    <select id="stateSelector" multiple="multiple" style="width: 100%" class="populate placeholder"></select>
+                    <small class="help-text text-muted"> For design purposes we limit the number of comparision to 4 states</small>
+                  </div>
+                  <div class="col-lg-2"></div>
                 </div>
-                <div class="row">
-                  <div class="col-lg-1"></div>
-                  <div class="col-lg-8">
-                    <label for=""> Select multiples states to compare</label>
-                  <select id="stateSelector" multiple="multiple" style="width: 100%" class="populate placeholder"></select>
-                  <small class="help-text text-muted"> For design purposes we limit the number of comparision to 4 states</small>
-                </div>
-                <div class="col-lg-2"></div>
-              </div>
-              <div id="linegraph">
-                <svg class="ng-svg h520"></svg>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="side-graph-title">
-                </div>
-                <div id="bullet">
-                  <svg class="ng-svg"></svg>
+                <div id="linegraph">
+                  <svg class="ng-svg h520"></svg>
                 </div>
               </div>
-            </div>
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="tab-two">
-            <br>
-            <div class="" style="height: 330px;">
-              <div class="side-graph-title">
-                Number of AFVs based on vehicle types (2004 - 2011) <span class="currentState">USA</span>
-              </div>
-              <div id="multiline-split">
-                <svg class="ng-svg"  style="height: 300px;"></svg>
-              </div>
-            </div>
-            <div class="">
-              <div class="side-graph-title">
-                Number of AFVs based on vehicle weight class (1994 - 2011)<!--  <span class="currentState">USA</span> -->
-              </div>
-              <div id="bar-split">
-                <svg class="ng-svg" style="height: 250px;"></svg>
-              </div>
-            </div>
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="tab-three">
-            <br>
-            <div class="side-graph large">
-              <div class="side-graph-title">
-                Alternative Fuel consumption over the years (2004 - 2011) <span class="currentState">USA</span>
-              </div>
-              <div id="fuel-consumption">
-                <svg class="ng-svg large"></svg>
-              </div>
-            </div>
-
-            <div class="side-graph large">
-              <div class="side-graph-title">
-                Avg Retail Fuel Prices in the U.S (Gasoline vs AF)
-              </div>
-              <div id="fuel-cost">
-                <svg class="ng-svg large"></svg>
-              </div>
-<!--               <p><small> Source: <a href="http://www.afdc.energy.gov/uploads/publication/alternative_fuel_price_report_july_2014.pdf" target="_blank">Clean Cities Alternative Fuel Price Reports</a></small></p> -->
-            </div>
-
-          <div class="clearfix"></div>
-          <br>
-          <br>
-            <div class="side-graph">
-              <div class="side-graph-title">
-                Number of AFVs based on Fuel type (2004 - 2011) <span class="currentState">USA</span>
-              </div>
-              <div id="fuel-split">
-                <svg class="ng-svg large"></svg>
-              </div>
-            </div>
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="tab-four">
-            <br>
-            <div class="side-graph h320">
-              <div class="side-graph-title">
-                Number of models offered by Fuel type
-              </div>
-              <div id="models-split">
-                <svg class="ng-svg h320"></svg>
-              </div>
-              <div class="row">
-                <div class="col-lg-1">
-                </div>
-                <div class="col-lg-10">
-                  <p><small class="text-muted text-center">Notes: *Electric Vehicles do not include neighborhood electric vehicles (NEVs), low speed electric vehicles, or two-wheeled electric vehicles. Conversion models were counted for natural gas and propane vehicles for the first time in 2012.</small></p>
-                  <small class="help-text text-muted"> Since 2003, vehicles capable of using Ethanol(85 percent) have represented the largest share of models offered. This is largely because the technology required for thanol(85 percent) vehicles is comparatively inexpensive and compatible with gasoline vehicles.</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="tab-five">
-            <br>
-            <div class="">
-              <div class="row">
-                <div class="col-lg-1">
-                </div>
-                <div class="col-lg-4">
-                  <label for="">Year</label>
-                  <br>
-                  <select name="years" id="s_years" multiple="" style="width: 100%;">
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option selected value="2015">2015</option>
-                  </select>
-                  <small class="text-muted">
-                  Select multiple years
-                  </small>
-                </div>
-                <div class="col-lg-6">
-                  <label for="">Make</label>
-                  <br>
-                  <input name="" id="s_make" style="width:100%;"></input>
-                  <small class="text-muted">
-                  For brevity and simplicity selection is limited to 4 items at a time.
-                  </small>
-                </div>
-              </div>
-              <br>
               <div class="row">
                 <div class="col-lg-12">
-                  <div id="models">
-                    <svg class="ng-svg" style="height: 340px;"></svg>
+                  <div class="side-graph-title">
+                  </div>
+                  <div id="bullet">
+                    <svg class="ng-svg"></svg>
                   </div>
                 </div>
               </div>
-              <br>
             </div>
-            <div class="row">
-              <div class="col-lg-6">
+            <div role="tabpanel" class="tab-pane fade" id="tab-two">
+              <br>
+              <div class="" style="height: 330px;">
                 <div class="side-graph-title">
-                  Miles per gallon vs Green house gas emissions
+                  Number of AFVs based on vehicle types (2004 - 2011) <span class="currentState">USA</span>
                 </div>
-
-                <div id="greenhouse">
-                  <svg class="ng-svg" style="height: 150px;"></svg>
+                <div id="multiline-split">
+                  <svg class="ng-svg"  style="height: 300px;"></svg>
                 </div>
-                <strong>
-                  Reduce your greenhouse gas emission by choosing a car with better gas milage.
-                </strong>
-                <small>
-                  *GHG &mdash; Green house gas <a href="http://epa.gov/climatechange/index.html" target="_blank"> More info </a>
-                </small>
-
               </div>
-              <div class="col-lg-1"></div>
-              <div class="col-lg-5">
-                 More filtering options in the tabularu visulization.
-                 <br>
-                 <br>
-                 <div class="text-center">
-                  <a href="https://public.tableausoftware.com/views/ModelsandCars/VehiclesPurchasing?:embed=y&:display_count=no" class='btn btn-xs btn-success' target="_blank"> More filters here &rarr;</a>
-                  <small>(external link)</small>
+              <div class="">
+                <div class="side-graph-title">
+                  Number of AFVs based on vehicle weight class (1994 - 2011)<!--  <span class="currentState">USA</span> -->
+                </div>
+                <div id="bar-split">
+                  <svg class="ng-svg" style="height: 250px;"></svg>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="tab-three">
+              <br>
+              <div class="side-graph large">
+                <div class="side-graph-title">
+                  Alternative Fuel consumption over the years (2004 - 2011) <span class="currentState">USA</span>
+                </div>
+                <div id="fuel-consumption">
+                  <svg class="ng-svg large"></svg>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
+              <br>
+              <div class="side-graph">
+                <div class="side-graph-title">
+                  Number of AFVs based on Fuel type (2004 - 2011) <span class="currentState">USA</span>
+                </div>
+                <div id="fuel-split">
+                  <svg class="ng-svg large"></svg>
+                </div>
+              </div>
+              <div class="side-graph large">
+                <div class="side-graph-title">
+                  Avg Retail Fuel Prices in the U.S (Gasoline vs AF)
+                </div>
+                <div id="fuel-cost">
+                  <svg class="ng-svg large"></svg>
+                </div>
+                <!--               <p><small> Source: <a href="http://www.afdc.energy.gov/uploads/publication/alternative_fuel_price_report_july_2014.pdf" target="_blank">Clean Cities Alternative Fuel Price Reports</a></small></p> -->
+              </div>
+
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="tab-four">
+              <br>
+              <div class="side-graph h320">
+                <div class="side-graph-title">
+                  Number of models offered by Fuel type
+                </div>
+                <div id="models-split">
+                  <svg class="ng-svg h320"></svg>
+                </div>
+                <div class="row">
+                  <div class="col-lg-1">
+                  </div>
+                  <div class="col-lg-10">
+                    <p><small class="text-muted text-center">Notes: *Electric Vehicles do not include neighborhood electric vehicles (NEVs), low speed electric vehicles, or two-wheeled electric vehicles. Conversion models were counted for natural gas and propane vehicles for the first time in 2012.</small></p>
+                    <small class="help-text text-muted"> Since 2003, vehicles capable of using Ethanol(85 percent) have represented the largest share of models offered. This is largely because the technology required for thanol(85 percent) vehicles is comparatively inexpensive and compatible with gasoline vehicles.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="tab-five">
+              <br>
+              <div class="">
+                <div class="row">
+                  <div class="col-lg-1">
+                  </div>
+                  <div class="col-lg-4">
+                    <label for="">Year</label>
+                    <br>
+                    <select name="years" id="s_years" multiple="" style="width: 100%;">
+                      <option value="2012">2012</option>
+                      <option value="2013">2013</option>
+                      <option value="2014">2014</option>
+                      <option selected value="2015">2015</option>
+                    </select>
+                    <small class="text-muted">
+                    Select multiple years
+                    </small>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="">Make</label>
+                    <br>
+                    <input name="" id="s_make" style="width:100%;"></input>
+                    <small class="text-muted">
+                    For brevity and simplicity selection is limited to 4 items at a time.
+                    </small>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div id="models">
+                      <svg class="ng-svg" style="height: 340px;"></svg>
+                    </div>
+                  </div>
+                </div>
+                <br>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="side-graph-title">
+                    Miles per gallon vs Green house gas emissions
+                  </div>
+                  <div id="greenhouse">
+                    <svg class="ng-svg" style="height: 150px;"></svg>
+                  </div>
+                  <strong>
+                  Reduce your greenhouse gas emission by choosing a car with better gas milage.
+                  </strong>
+                  <small>
+                  *GHG &mdash; Green house gas <a href="http://epa.gov/climatechange/index.html" target="_blank"> More info </a>
+                  </small>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5">
+                  More filtering options in the tabularu visulization.
+                  <br>
+                  <br>
+                  <div class="text-center">
+                    <a href="https://public.tableausoftware.com/views/ModelsandCars/VehiclesPurchasing?:embed=y&:display_count=no" class='btn btn-xs btn-success' target="_blank"> More filters here &rarr;</a>
+                    <small>(external link)</small>
+                  </div>
                 </div>
               </div>
             </div>
