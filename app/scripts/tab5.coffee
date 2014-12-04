@@ -45,8 +45,8 @@ AFV.tab5 = do ->
               </div>
               <div class="si-tooltip-second-half">
                   <small>Save/Spend</small> <br>
-                  <span class="si-mpg">
-                  #{car.money.toFixed(2)} <small>$</small>
+                  <span class="si-mpg label label-#{_getIcon(car.money)}" style="padding: 2px 3px; font-size: 17px;">
+                  #{car.money.toFixed(2)} <small style="color: #fff;">$</small>
                   </span>
               </div>
             </div>
@@ -83,6 +83,14 @@ AFV.tab5 = do ->
     d3.json 'data/afv.models.json', (err, dat) ->
       _fullData = dat
       localStorage['vehFullData'] = JSON.stringify(dat)
+
+  _getIcon = (val) ->
+    if(val  > 0)
+      return "success"
+    else if val is 0
+      return "info"
+    else
+      return "danger"
 
 
   _initSelect2 = ->

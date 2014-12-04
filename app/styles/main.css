@@ -7834,32 +7834,38 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
 .icon-help:before {
   content: "\f10b";
 }
-.icon-info:before {
+.icon-icon_6639:before {
   content: "\f10c";
 }
-.icon-leaf-energy:before {
+.icon-info:before {
   content: "\f10d";
 }
-.icon-leaf:before {
+.icon-leaf-energy:before {
   content: "\f10e";
 }
-.icon-pause:before {
+.icon-leaf:before {
   content: "\f10f";
 }
-.icon-play:before {
+.icon-pause:before {
   content: "\f110";
 }
-.icon-solr:before {
+.icon-play:before {
   content: "\f111";
 }
-.icon-tree:before {
+.icon-solr:before {
   content: "\f112";
 }
-.icon-twitter:before {
+.icon-tree:before {
   content: "\f113";
 }
-.icon-users:before {
+.icon-twitter:before {
   content: "\f114";
+}
+.icon-up:before {
+  content: "\f115";
+}
+.icon-users:before {
+  content: "\f116";
 }
 @charset "UTF-8";
 /*!
