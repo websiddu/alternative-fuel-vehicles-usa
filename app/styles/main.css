@@ -4724,9 +4724,6 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
-.modal-open {
-  overflow: hidden;
-}
 .modal {
   display: none;
   overflow: hidden;
@@ -4828,7 +4825,7 @@ button.close {
 }
 @media (min-width: 768px) {
   .modal-dialog {
-    width: 600px;
+    width: 800px;
     margin: 30px auto;
   }
   .modal-content {
@@ -10865,7 +10862,7 @@ header {
   top: 0;
   left: 0;
   position: fixed;
-  z-index: 1265;
+  z-index: 1036;
   right: 0;
   border-bottom: solid 2px #8CC051;
   box-shadow: 0 0 5px #888;
@@ -10898,12 +10895,23 @@ header h1 {
 .nav-links a:focus {
   text-decoration: none;
 }
+.credits-list .credits-list-item {
+  text-align: center;
+}
+.credits-list .credits-list-item img {
+  height: 100px;
+  width: 100px;
+  background: #eee;
+  padding: 3px;
+  border-radius: 100%;
+  border: solid 3px #ddd;
+}
 /* Sidebar */
 .sidebar {
   width: 100%;
   background-color: #fff;
   box-shadow: 0px 10px 10px #888;
-  z-index: 1065;
+  z-index: 1035;
   padding: 20px;
   margin-top: 40px;
   min-height: 95%;
